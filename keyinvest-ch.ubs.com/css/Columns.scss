@@ -1,0 +1,8 @@
+.Columns {
+  &.row {
+    margin: 0 -20px;
+    > .column {
+      padding: 0 20px;
+    }
+  }
+}

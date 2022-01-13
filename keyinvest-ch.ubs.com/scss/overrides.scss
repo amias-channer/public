@@ -1,0 +1,116 @@
+// Different device sizes
+
+// extra small, small, medium, large, extra large
+$mediaQueryMobileBreakpoint: 320px;
+$mediaQueryTabletBreakpoint: 600px;
+$mediaQueryNotebookBreakpoint: 1024px;
+$mediaQueryDesktopBreakpoint: 1280px;
+
+
+$mediaQueryMaxMobileBreakpoint: 599px;
+$mediaQueryMaxTabletBreakpoint: 1023px;
+$mediaQueryMaxNotebookBreakpoint: 1279px;
+
+$mediaQueryExtraSmallMaxContentWidth: 287px;
+$mediaQueryMobileMaxContentWidth: 288px;
+$mediaQueryTabletMaxContentWidth: 552px;
+$mediaQueryNotebookMaxContentWidth: 976px;
+$mediaQueryDesktopMaxContentWidth: 1184px;
+
+$mediaQueryMobile: sm;
+$mediaQueryTablet: md;
+$mediaQueryNotebook: lg;
+$mediaQueryDesktop: xl;
+
+// Overwrite bootstrap's grid breakpoints
+$grid-breakpoints: (
+        xs: 0,
+        sm: $mediaQueryMobileBreakpoint,
+        md: $mediaQueryTabletBreakpoint,
+        lg: $mediaQueryNotebookBreakpoint,
+        xl: $mediaQueryDesktopBreakpoint
+);
+
+// Overwrite bootstrap's container max widths
+$container-max-widths: (
+        xs: $mediaQueryExtraSmallMaxContentWidth,
+        sm: $mediaQueryMobileMaxContentWidth,
+        md: $mediaQueryTabletMaxContentWidth,
+        lg: $mediaQueryNotebookMaxContentWidth,
+        xl: $mediaQueryDesktopMaxContentWidth
+);
+
+// Colors
+
+// Bootstrap colors override
+$blue: #007099;
+$red: #E60000;
+$black: #1C1C1C;
+$white: #FFFFFF;
+$green: #6A7D39;
+
+// UBS Custom colors
+$ubs-cod: $black;
+$ubs-carbon: #646464;
+$ubs-link: $blue;
+$ubs-link-hover: #005079;
+$ubs-gallery: #EEEEEE;
+$ubs-error: #9A3D37;
+$ubs-yellow: #F2BB3A;
+$ubs-green: #6A7D39;
+$ubs-atlantic: #427C99;
+
+// Body
+$body-color: $ubs-cod;
+$border-radius: 2px;
+$border-radius-lg: 2px;
+$border-radius-sm: 2px;
+
+// Links
+$link-hover-color: #005079;
+
+// Overwrite bootstrap's grid gutter width
+$grid-gutter-width: 0;
+
+// Custom input
+$custom-control-cursor: pointer;
+
+  // Remove border effect on input or button focus
+$input-btn-focus-box-shadow: none;
+$input-btn-focus-width: 0;
+
+// Setting default font-family
+$font-family-sans-serif: $mainFont, Helvetica, Arial, sans-serif !default;
+$font-family-serif: $mainFont, Georgia, "Times New Roman", Times, serif !default;
+
+// Navigation
+$nav-pills-link-color: $black;
+$nav-pills-link-active-color: $black;
+$nav-pills-link-active-bg: $white;
+$dropdown-link-active-color: $black;
+$dropdown-link-active-bg: #DEDEDE;
+
+$dropdown-link-color: $black;
+$dropdown-link-hover-color: $black;
+$dropdown-link-hover-bg: #DEDEDE;
+$dropdown-border-radius: none;
+
+// Breadcrumb
+$breadcrumb-divider: '>';
+$breadcrumb-divider-color: #646464;
+$breadcrumb-bg: none;
+$breadcrumb-padding-x: 0;
+$breadcrumb-padding-y: 0;
+$breadcrumb-active-color: #646464;
+
+// Printing
+$print-page-size: a3 !default;
+$print-body-min-width: $mediaQueryDesktopMaxContentWidth !default;
+
+// Tooltip
+$tooltip-opacity: 1;
+$tooltip-padding-y: 15px;
+$tooltip-padding-x: 15px;
+$tooltip-color: #222222;
+$tooltip-bg: #DEE2E9;
+$tooltip-font-size: 12px;

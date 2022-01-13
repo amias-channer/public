@@ -1,0 +1,1 @@
+export default "<svg viewBox=\"0 0 24 24\"><path d=\"M12 21.6a9.6 9.6 0 1 0 0-19.2 9.6 9.6 0 0 0 0 19.2zm0-17.2a7.6 7.6 0 1 0 0 15.2 7.6 7.6 0 0 0 0-15.2zm1 4.4h-2v-2h2v2zm0 8.4h-2V10h2v7.2z\" fill=\"currentColor\" fill-rule=\"evenodd\"/></svg>";

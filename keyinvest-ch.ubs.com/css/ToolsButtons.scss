@@ -1,0 +1,32 @@
+.ToolsButtons {
+
+  border: 1px solid #DBDBDB;
+  box-sizing: border-box;
+  margin-top: 35px;
+
+  .btn {
+    border-left: 1px solid #DBDBDB;
+    padding: 2px 15px;
+    line-height: 15px;
+
+    .Icon {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  #secondaryMarketButton {
+    line-height: 28px;
+    font-size: 14px;
+    color: #427C99;
+  }
+}
+
+.secondaryMarketButtonTooltip {
+  .inner-content {
+    text-align: left;
+    font-size: 12px;
+    max-width: 550px;
+  }
+
+}

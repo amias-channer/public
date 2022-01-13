@@ -1,0 +1,103 @@
+@import "../variables";
+
+.Developers {
+
+  .sea_gradient {
+    height: 400px;
+  }
+
+  .developers_header {
+    margin-top:45px;
+    color:  #1C1F27;
+    font-size: 1.9rem;
+  }
+
+  .developers_main_content {
+    background: linear-gradient(#fff 90%, #BAF3FF 100%);
+    height: 100%;
+    padding-bottom: 50px;
+
+    .developers_row {
+      border-bottom: 1px solid #F2F2F2;
+      padding-bottom: 10px;
+
+      .col {
+        margin-top: 60px;
+
+        @media(max-width: $bp-small) {
+          margin-top: 20px;
+        }
+      }
+
+      h3 {
+        margin: 0px 0px 10px 0px;
+        color: #1C1F27;
+        letter-spacing: 0.0357143em;
+        font-size: 1.4rem;
+
+        @media(max-width: $bp-small) {
+          font-size: .9rem;
+        }
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: rgba(46, 54, 59, 0.6);
+        letter-spacing: 0.0357143em;
+
+        @media(max-width: $bp-small) {
+          font-size: .75rem;
+        }
+      }
+
+      img {
+        width: 335px;      
+        display: inline-block;
+        position: relative; 
+
+        @media(min-width: $bp-large) {
+          top: -20px;
+        }
+
+        @media(max-width: 768px) {
+          width: 100%;
+        }
+      }
+
+      .developer_button {
+        margin-top: 10px;
+        max-width: 279px;
+        max-height: 50px;
+        padding: 10px 20px;
+        font-size: .9rem;
+        cursor: pointer;
+        position: relative;
+
+        .chevron {
+          position: relative;
+          top: 1px;
+          margin-left: 10px;
+        }
+
+        @media(max-width: $bp-small) { 
+          padding: 5px 13px;
+          font-size: .6rem;
+
+          .chevron {
+            top: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .collapsible {
+    .active {
+      .spin {
+        @media(max-width: $bp-small) {
+          top: 45%;
+        }
+      }
+    }
+  }
+}

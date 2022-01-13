@@ -1,0 +1,104 @@
+/* CUSTOM BUTTONS */
+.btn-red {
+  @include button-variant($ubs-error, $ubs-error);
+}
+
+.btn-green {
+  @include button-variant($ubs-green, $ubs-green);
+}
+
+.btn-primary {
+  @include button-variant($ubs-yellow, $ubs-yellow);
+  background-color: $ubs-yellow;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: $mainFont;
+  border: none;
+  color: #1c1c1c;
+}
+
+.btn-gray {
+  @include button-variant(#DEDEDE, #DEDEDE);
+}
+
+.btn-atlantic {
+  @include button-variant($ubs-atlantic, $ubs-atlantic);
+}
+
+.btn-chart-toggle {
+  @include button-variant(#F1F1F1, #F1F1F1);
+  color: #333333;
+  background-color: #F1F1F1;
+  font-family: $mainFontLight;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.5;
+  padding: 0 10px;
+  &:not(:disabled):not(.disabled).active {
+    opacity: 1;
+    box-sizing: border-box;
+    border: 1px solid #D3D3D1;
+    border-radius: 3px;
+    background-color: #F1F1F1;
+  }
+}
+
+.btn-light-gray {
+  @include button-variant(#EEEEEE, #EEEEEE);
+}
+
+.btn-white {
+  @include button-variant($white, $white);
+}
+
+/* Example of arrowed button is in Scene Slider */
+.btn-arrowed {
+  padding: 10px 16px 10px 16px;
+  position: relative;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+
+  &:after {
+    transition: $btn-transition;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-left: 16px solid;
+    position: absolute;
+    top: -1px;
+    right: -17px;
+  }
+
+  /* GREEN ARROWED BUTTON */
+  &.btn-green:not(:disabled):not(.disabled):active {
+    border-color: #4c5a29;
+
+    &:after {
+      border-left-color: #4c5a29;
+    }
+  }
+
+  &.btn-green:hover {
+    border-color: #54632d;
+
+    &:after {
+      border-left-color: #54632d;
+    }
+  }
+
+  &.btn-green:after {
+    border-left-color: $green;
+  }
+}
+
+.buy-sell-button {
+  min-width: 87px;
+  color: #FFFFFF;
+  font-family: $mainFont;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  padding: 2px;
+}

@@ -1,0 +1,31 @@
+@import "../../../../../scss/global";
+
+.PriceTiles {
+  .last-update-field {
+    color: #AAAAAA;
+    font-family: $mainFont;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    padding-top: 10px;
+    .field-key {
+      padding-right: 4px;
+      &:after {
+        content: ':';
+      }
+    }
+
+  }
+  .price-field {
+    border-left: 4px solid #FFFFFF;
+    background-color: #F2F2F2;
+    min-width: 100px;
+    .field-key, .field-value {
+      border-left: none;
+    }
+    .field-value {
+      text-align: right;
+    }
+  }
+}
+

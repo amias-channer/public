@@ -1,0 +1,26 @@
+@import '../../../scss/global';
+
+.ValidationErrorMessage {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  margin-top: 10px;
+  color: #1C1C1C;
+  font-family: $mainFont;
+  font-size: 12px;
+  background: #F6E1DF;
+  &:before {
+    content: '\ ';
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #F6E1DF;
+  }
+  > div {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,125 @@
+@import "../../../scss/global";
+.FilterProductTypeDropdown {
+
+  .items-group {
+    padding: 10px 10px 32px 12px;
+    > .custom-checkbox:first-child {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #e6e6e6;
+      padding-bottom: 2px;
+      margin-right: 24px;
+    }
+    > span:first-child {
+      color: #333333;
+      font-size: 16px;
+      line-height: 19px;
+      font-family: $mainFontLightBold;
+      border-bottom: 2px solid #DADADA;
+      display: block;
+      padding-bottom: 4px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .TextInput .input-container span.title {
+    color: #009FD3;
+  }
+
+  &.active {
+    position: initial;
+  }
+
+  .list:first-child {
+    overflow-y: auto;
+    > ul {
+      >li {
+        border-bottom: 2px solid #DADADA;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .list {
+      .list {
+        margin-left: 20px;
+      }
+    }
+
+  }
+
+
+  .list {
+    overflow: unset;
+    max-height: initial;
+    padding-top: 0;
+    margin-bottom: 0;
+
+    ul li {
+      cursor: pointer;
+      padding: 0;
+      margin: 5px 0;
+      > span.not-visible {
+        display: none;
+      }
+
+      > span {
+
+        display: block;
+        padding: 7px 10px;
+        &:hover {
+          background-color: #e6e6e6;
+        }
+
+        &.active {
+          background-color: #e6e6e6;
+        }
+
+        &:focus {
+          background-color: #F5F5F5;
+          outline: none;
+        }
+      }
+    }
+
+    > .ArrowKeysListNavigation ul li {
+      padding-bottom: 0;
+    }
+  }
+
+  .buttons {
+    margin-top: 10px;
+  }
+
+  .masonry-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+  }
+  .masonry-grid_column {
+    padding: 10px 10px 20px 12px;
+    background-clip: padding-box;
+  }
+
+  .masonry-grid_column > div {
+    margin-bottom: 30px;
+  }
+
+  .elements-group {
+    > .FilterListItem:first-child {
+      color: #333;
+      font-size: 16px;
+      line-height: 19px;
+      font-family: $mainFontLightBold;
+      border-bottom: 2px solid #dadada;
+      display: block;
+      padding-bottom: 4px;
+      margin-bottom: 5px;
+    }
+  }
+  .nesting-level-0 {
+    > .NestableListItem:first-child {
+      font-family: $mainFontLightBold;
+    }
+  }
+}

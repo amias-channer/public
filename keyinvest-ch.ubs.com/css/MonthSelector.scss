@@ -1,0 +1,11 @@
+
+$items-per-row: 6;
+$column-width: percentage(1 / $items-per-row);
+
+.MonthSelector {
+  .grid-calendar {
+    .grid-cell {
+      width: $column-width;
+    }
+  }
+}

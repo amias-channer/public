@@ -1,0 +1,124 @@
+@import "../../scss/global";
+.WatchlistAddProductPopup {
+  margin-top: 0;
+
+  .modal-content {
+    padding: 25px 10px 20px 10px;
+  }
+
+  .modal-dialog {
+    margin-top: 0;
+    max-width: 584px;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 33px;
+    color: #1C1C1C;
+    font-family: $mainFontLight;
+    max-width: calc(100% - 60px);
+  }
+
+  .input-group {
+    margin: 25px 0 28px 0;
+    .input-holder {
+      margin-bottom: 1rem;
+    }
+  }
+  .input-holder {
+    margin-right: 15px;
+  }
+
+  .input-label {
+    display: inline-block;
+    margin-bottom: 17px;
+  }
+
+  &.modal-dialog .modal-content {
+    padding: 29px 34px;
+  }
+
+  .modal-body {
+    padding: 16px 0;
+  }
+
+  .modal-footer {
+    padding: 0;
+  }
+
+  .Button {
+    font-size: 12px;
+    max-width: 174px;
+  }
+
+  .ButtonsGroup {
+    margin: 15px 0 0 0;
+  }
+
+  .total-sum {
+    span {
+      display: inline;
+      &:first-child {
+        margin-right: 12px;
+        color: #1C1C1C;
+      }
+
+      &:nth-child(2) {
+        color: #222222;
+        font-family: $mainFontBold;
+      }
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 22px;
+    right: 35px;
+  }
+
+  .icon-close {
+    font-size: 20px;
+  }
+
+  .product-name {
+    font-family: $mainFontBold;
+  }
+
+  input[type="text"] {
+    &::-webkit-input-placeholder { /* Edge */
+      color: #979797;
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #979797;
+    }
+
+    &::placeholder {
+      color: #979797;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .WatchlistAddProductPopup {
+
+    h1 {
+      max-width: unset;
+    }
+
+    .modal-content {
+      padding: 25px 50px 40px 50px;
+    }
+
+    .input-group {
+      .input-holder {
+        margin-bottom: 0;
+      }
+    }
+
+    .close-button {
+      top: 26px;
+      right: 26px;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+@import '../../../../scss/global';
+
+.TrendRadarSignal {
+  background-color: #F2F2F2;
+  padding: 10px;
+  margin-bottom: 16px;
+  .notice-message {
+    font-size: 14px;
+  }
+  .signal-top-inline-fields {
+    margin: 14px 0 23px 0;
+    .InlineKeyValueTable {
+      line-height: 16px;
+      .key-value-field {
+        margin-right: 0;
+        .label, .value {
+          font-size: 14px;
+        }
+        .label {
+          font-family: $mainFont;
+          color: #333333;
+        }
+        .value {
+          font-family: $mainFontBold;
+          text-align: right;
+          float: right;
+        }
+      }
+      .separator {
+        display: none;
+      }
+    }
+  }
+
+  .signal-chart-preview {
+    .Image {
+      min-height: 171px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #D7D7D7;
+    }
+  }
+  .signal-bottom-fields {
+    max-width: 350px;
+    margin-top: 14px;
+    .InlineKeyValueTable {
+      line-height: 14px;
+      .key-value-field {
+        .label, .value {
+          line-height: 14px;
+          font-size: 12px;
+        }
+        .label {
+          font-family: $mainFont;
+          color: #333333;
+        }
+        .value {
+          font-family: $mainFontBold;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+      .separator {
+        color: #D8D8D8;
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+  .sub-title {
+    font-family: $mainFontLightBold;
+    font-size: 18px;
+    margin-bottom: 16px;
+    margin-top: 26px;
+  }
+
+  .details-button {
+    font-size: 14px;
+    line-height: 16px;
+    font-family: $mainFont;
+    padding: 8px 30px;
+  }
+}
+@include media-breakpoint-up($mediaQueryTablet) {
+  .TrendRadarSignal {
+    padding: 15px;
+    .signal-top-inline-fields {
+      .InlineKeyValueTable {
+        .key-value-field {
+          line-height: 16px;
+          margin-right: 10px;
+
+          .label {
+            float: none;
+          }
+          .value {
+            float: none;
+          }
+        }
+        .separator {
+          display: inline-block;
+          color: #D8D8D8;
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .signal-columns-fields {
+      .generic-field {
+        .field-key {
+          padding-bottom: 14px;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .TrendRadarSignal {
+    .signal-body {
+      .right-side {
+        padding-left: 40px;
+      }
+    }
+    .signal-columns-fields {
+      margin-bottom: 0;
+    }
+    .sub-title {
+      margin-top: 15px;
+    }
+    .details-button {
+      margin-top: 24px;
+    }
+  }
+}

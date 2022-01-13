@@ -1,0 +1,73 @@
+@import '../../../../scss/global';
+
+.LevelFiltersContainer {
+  background-color: #EFEFEF;
+  margin-bottom: 3px;
+  position: relative;
+
+  .Filter {
+    padding: 5px 10px;
+
+    &.active {
+      padding: 10px 10px 5px 10px;
+    }
+  }
+
+  &.secondLevel {
+    .filters-wrapper {
+      padding: 10px 0;
+    }
+  }
+
+  &.thirdLevel {
+    padding-bottom: 5px;
+  }
+
+  > button {
+      cursor: pointer;
+      margin-top: 3px;
+      color: #919191;
+      font-size: 16px;
+      line-height: 20px;
+  }
+
+  &.toggleable {
+    .toggle-button {
+      color: $blue;
+      .toggle-icon {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 13px;
+      }
+    }
+    .filters-wrapper {
+      display: none;
+    }
+
+    &.showFilters {
+      .filters-wrapper {
+        display: flex;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .LevelFiltersContainer {
+    margin: 4px 0;
+
+    .Filter {
+      padding: 10px;
+    }
+
+    &.secondLevel {
+      margin: 12px 0 4px 0;
+
+
+      .filters-wrapper {
+        padding: 10px 0;
+      }
+    }
+
+  }
+}

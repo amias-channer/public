@@ -1,0 +1,231 @@
+@import "../../scss/global";
+
+.TrendRadarAlarmPopup {
+  .modal-content {
+    padding: 25px 10px 25px 10px;
+  }
+
+  .top-section {
+    margin-bottom: 20px;
+    h1 {
+      font-family: $mainFontLight;
+      font-size: 30px;
+      line-height: 33px;
+      color: #1C1C1C;
+      font-weight: 100;
+    }
+  }
+
+  .secondLevel {
+    .form-field {
+      padding-right: 20px;
+    }
+  }
+
+
+  .firstLevel {
+    .BackendSearchableDropdownList {
+      &.active {
+        &:first-child {
+          .input-group {
+            border-right: 2px solid #009BD2;
+          }
+        }
+      }
+    }
+  }
+
+  .icon-bell {
+    margin-right: 10px;
+    vertical-align: bottom;
+  }
+
+  .icon-close {
+    font-size: 20px;
+    margin-right: 14px;
+  }
+
+  .StandardDropdown.alarm-type-select {
+    .dropdown-head {
+      padding: 0;
+    }
+
+    .dropdown-toggle {
+      min-width: 246px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+
+    .dropdown-menu {
+      min-width: 270px;
+      margin-top: -50px;
+    }
+
+    .dropdown-item {
+      padding: 10px 24px;
+      font-size: 16px;
+      line-height: 20px;
+      color: #1C1C1C;
+    }
+  }
+
+  .bottom-section {
+    margin-bottom: 80px;
+
+    .Button {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 14px;
+    }
+  }
+
+  .alarm-data {
+    border: 1px solid #c0c0c0;
+    padding: 0 15px;
+    min-height: 145px;
+  }
+
+  .email-notification {
+    margin-top: 29px;
+
+    .CheckboxInput {
+      padding-left: 29px;
+    }
+
+    .notification-disclaimer {
+      padding-top: 12px;
+      color: #646464;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .save {
+    padding-right: 15px;
+  }
+
+  .LevelCreateAlertForm {
+
+    .TextInput {
+      min-width: 246px;
+    }
+
+  }
+
+  .form-field {
+    margin-bottom: 20px;
+  }
+
+  .form-buttons {
+    margin-top: 25px;
+  }
+
+  .button-save, .button-cancel {
+    padding: 4px 16px;
+    line-height: 31px;
+    font-size: 14px;
+    font-family: $mainFont;
+    max-height: 41px;
+  }
+
+  .CreateAlertForm {
+    &.quoteAlert {
+      .BackendSearchableDropdownList {
+        margin-top: 20px;
+      }
+    }
+
+    &.monitorPattern {
+      margin-top: 22px !important;
+
+      .monitoredPattern {
+        margin-bottom: 8px;
+      }
+    }
+
+    &.patternBreakout {
+      .patternTypeIds {
+        .input-group {
+          border-left: none;
+        }
+      }
+    }
+
+    .alertName {
+      padding-top: 20px;
+    }
+  }
+
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .TrendRadarAlarmPopup {
+    .CreateAlertForm {
+      &.quoteAlert {
+        .BackendSearchableDropdownList {
+          margin-top: 38px;
+          margin-right: 10px;
+        }
+      }
+
+      .IconInputText input {
+        min-width: 300px;
+      }
+    }
+  }
+
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .TrendRadarAlarmPopup {
+    .modal-content {
+      padding: 31px 34px 33px 29px;
+    }
+
+    .modal-dialog {
+      min-width: 800px;
+    }
+
+    .top-section {
+      margin-bottom: 54px;
+    }
+
+    .CreateAlertForm {
+      &.quoteAlert {
+        &.secondLevel {
+          margin-top: 25px !important;
+        }
+
+        .BackendSearchableDropdownList {
+          margin-top: 38px;
+          margin-right: 10px;
+        }
+
+        .alarm-data {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+
+}
+
+@include media-breakpoint-up($mediaQueryDesktop) {
+  .TrendRadarAlarmPopup {
+    .IconInputText input {
+      min-width: 660px;
+    }
+
+    .CreateAlertForm {
+      &.patternBreakout {
+        .breakoutDirections {
+          padding-right: 60px;
+        }
+
+        .minReturnExpectation {
+          padding-right: 60px;
+        }
+      }
+    }
+  }
+}

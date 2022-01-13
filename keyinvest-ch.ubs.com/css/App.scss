@@ -1,0 +1,37 @@
+@import '../scss/global';
+.App {
+  .main-container {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+
+  &.flatex-mode {
+    .main-container {
+      margin-top: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .App {
+    .main-container {
+      margin-top: 128px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .App {
+    .main-container {
+      margin-top: 168px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryDesktop) {
+  .App {
+    .main-container {
+      margin-top: 160px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../scss/global';
+
+.DownloadLink {
+  color: #007099;
+  font-family: $mainFontLight;
+  font-size: 14px;
+  line-height: 25px;
+  position: relative;
+  &:hover {
+    text-decoration: none;
+  }
+  .Icon {
+    font-size: 20px;
+    color: #444444;
+    padding-right: 5px;
+  }
+}

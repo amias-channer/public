@@ -1,0 +1,14 @@
+@import '../variables';
+
+.slider_container {
+  margin:5px;
+  // margin-bottom: 30px;
+}
+
+.tooltip-range {
+  color: black;
+}
+
+.rc-slider-track, .rc-slider-track-1 {
+  background-color: $blue!important;
+}

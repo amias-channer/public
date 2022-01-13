@@ -1,0 +1,124 @@
+@import "../variables";
+
+p.labeled {
+  padding: 4px 0 6px !important;
+}
+
+.pill {
+  box-sizing: border-box;
+  border-radius: 100px;
+  opacity: 0.5;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 0;
+  margin: 4px 4px;
+  color: white;
+
+  &.checked {
+    opacity: 1;
+  }
+
+  label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 2px 12px;
+    text-transform: none;
+    text-align: center;
+    color: inherit;
+  }
+}
+
+.opensea-input {
+  border: solid 1px #B7B7B7!important;
+  border-radius: 5px!important;
+  box-shadow: none!important;
+  text-indent: 10px!important;
+
+  &:focus {
+    border-color: orange!important;
+    outline: orange!important;
+  }
+}
+
+textarea.opensea-input {
+  height: auto;
+  resize: none;
+  box-sizing: border-box;
+  text-indent: 0px!important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.input-token-container, .asset-sell-input-container {
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.1);
+  position: relative;
+  height: 52px;
+
+  .input-token, .asset-sell-input-label {
+    width: 44px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 54px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: $light-text;
+    background: rgb(241,241,241);
+    border-radius: 6px 0 0 6px;
+    border-right: 1px solid rgba(0,0,0,0.1);
+  }
+  .input-token {
+    cursor: pointer;
+    width: 70px;
+    img {
+      margin-right: -5px;
+    }
+    .material-icons {
+      vertical-align: text-top;
+    }
+  }
+  .asset-sell-input-label {
+    width: 60px;
+    left: auto;
+    right: 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 12px;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    border-right: 0px none transparent;
+  }
+
+  .input-token-amount, .asset-sell-input {
+    height: 50px;
+    width: 100%;
+    padding-left: 60px;
+    border-radius: 6px;
+    background-color: #FFF;
+
+    input {
+      width: 100%;
+      border: 0px solid transparent;
+      outline: none !important;
+      font-size: 16px;
+      color: rgba(0,0,0,0.87);
+      height: 48px;
+      line-height: 48px;
+      font-weight: 400;
+      border-radius: 6px;
+      border-bottom: none !important;
+      box-shadow: none !important;
+
+      &:disabled {
+        color: rgba(0,0,0,0.27);
+      }
+    }
+  }
+
+  // For token inputs
+  .input-token-amount {
+    padding-left: 85px;
+  }
+}

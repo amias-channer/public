@@ -1,0 +1,84 @@
+.GetStarted {
+  .GetStarted_main_content {
+    // TODO, this get used alot in different pages, need to generalize and refactor
+    background: linear-gradient(#fff 90%, #BAF3FF 100%);
+    height: 100%;
+    padding-bottom: 100px;
+    text-align: center;
+
+    .GetStarted_header {
+      margin: 0px;
+      padding-top: 60px;
+      color: #1C1F27;
+      font-size: 2rem;
+      text-transform: initial;
+    }
+
+    .step {
+      margin-top: 50px;
+      text-align: center;
+
+      h6 {
+        color: #1c1f27;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 20px;
+        text-transform: initial;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: black;
+        font-weight: 400;
+      }
+    }
+
+    .collapsible {
+      margin-top: 60px;
+
+      .collapsible-header {
+        color: #2E363B;
+        font-weight: 600;
+      }
+
+      .collapsible-body {
+        margin-left: 50px;
+        .collapsible-body-container {
+          a {
+            color: #3291E9;
+            text-decoration: none;
+            font-size: 1.3rem;
+          }
+
+          span {
+            font-size: 1.3rem;
+            font-weight: 400;
+
+            ul {
+              display: list-item;
+              padding-left: 23px;
+              padding-top: 20px;
+              li {
+                list-style-type: disc;
+              }
+            }
+
+            .video-container {
+              margin-top: 20px;
+            }
+
+            strong {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+
+    .Questions {
+      margin-top: 70px;
+    }
+  }
+}

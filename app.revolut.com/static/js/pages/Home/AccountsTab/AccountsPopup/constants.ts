@@ -1,0 +1,2 @@
+export const ACCOUNTS_COUNT_TO_SHOW_SEARCH = 10
+export const ACCOUNT_ITEM_AVATAR_SIZE = 40

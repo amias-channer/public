@@ -1,0 +1,231 @@
+@import "../../../scss/global";
+
+.NavigationMenu {
+
+  text-align: left;
+  display: inline-block;
+
+  .nav-side-menu {
+    padding: 30px 25px;
+    background: $white;
+    transform: translate(0, 0);
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    max-width: calc(100vw - 55px);
+    width: 350px;
+    display: none;
+    box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.36);
+  }
+
+  .overlay {
+    background-color: #979899;
+    background-color: rgba(29,31,32,0.46);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+  }
+  .show.nav-side-menu {
+    display: block;
+    background-color: $white;
+    z-index: 1001;
+    overflow: auto;
+  }
+
+  .nav-item.tools-menu {
+    > .nav-link {
+      &:after {
+        border: none;
+        display: inline-block!important;
+        font-family: $iconFont;
+        content: "\e91e";
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  .navbar-nav, .nav-pills {
+    list-style: none;
+    /*padding-left: 25px;
+    padding-right: 19px;*/
+    width: 100%;
+
+    > li {
+      border-bottom: 1px solid #E1E1E1;
+    }
+
+    > li.has-submenu {
+      > div.dropdown-menu {
+        list-style: none;
+        padding: 0;
+        border: none;
+
+        a.dropdown-item {
+          border-bottom: 1px solid #E1E1E1;
+          padding-left: 32px;
+
+          &:last-child {
+            border: none;
+          }
+        }
+
+        li > a {
+          padding-left: 32px;
+        }
+      }
+    }
+
+    > li.show .dropdown-menu {
+      display: block;
+    }
+    > li.show.has-submenu {
+      > a {
+        background: #DEDEDE;
+      }
+    }
+
+    > li a {
+      padding: 12px 0 12px 12px;
+      border-bottom: 5px solid $white;
+      color: $black;
+      font-family: $mainFont, sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      text-decoration: none;
+      display: block;
+
+    }
+  }
+
+
+  .navbar-nav li > div {
+    display: none;
+  }
+
+  .navbar-nav li.show > div {
+    display: block;
+  }
+
+  button.toggler {
+    line-height: 1px;
+    i {
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+
+
+  &.mobile {
+    .nav-item.has-submenu {
+      .nav-link.dropdown-toggle {
+        &:after {
+          font-family: $iconFont;
+          border: none;
+          content: "\e90b";
+          float: right;
+          margin-right: 12px;
+          font-weight: bold;
+          font-size: 18px;
+        }
+      }
+      &.show {
+        .nav-link.dropdown-toggle {
+          &:after {
+            content: "\e90d";
+          }
+        }
+      }
+    }
+
+  }
+
+  &.desktop {
+    display: block;
+    .nav-pills .nav-item {
+      border-bottom: none;
+      &:hover {
+        background-color: $ubs-gallery;
+        > .nav-link {
+          border-bottom: 5px solid $ubs-gallery;
+          &.active {
+            background-color: $ubs-gallery;
+          }
+        }
+      }
+
+      &.show.has-submenu {
+        div.dropdown-menu a.dropdown-item{
+          padding-left: 0;
+        }
+        .dropdown-toggle {
+          background: $ubs-carbon;
+          color: $white;
+          border-bottom: 5px solid $ubs-carbon;
+        }
+      }
+
+      .dropdown-menu {
+        padding: 17px 25px;
+        min-width: 200px;
+        box-shadow: 2px 2px 9px 0 rgba(0,0,0,0.36);
+        margin-top: 0;
+        margin-left: -26px;
+      }
+      .dropdown-item {
+        margin: 0;
+        padding: 0;
+
+        &:hover, &.active {
+          background-color: #DEDEDE;
+        }
+
+        > span {
+          padding: 12px;
+          display: block;
+        }
+      }
+      > .nav-link {
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 7px;
+
+        &.active {
+          border-bottom: 5px solid $ubs-carbon;
+        }
+      }
+      .nav-link {
+        border-radius: 0;
+        font-size: 14px;
+        line-height: 22px;
+        color: $black;
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .nav-item.tools-menu {
+      margin-left: auto;
+      > .nav-link {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .NavigationMenu {
+    .nav-side-menu {
+      right: auto;
+      left: 0;
+    }
+  }
+}

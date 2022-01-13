@@ -1,0 +1,28 @@
+@import "../variables";
+
+.home {
+  margin-top: 50px !important;
+}
+
+.erc20-list {
+  margin-top: 20px !important;
+}
+
+.asset {
+  border: 1px solid #ececec;
+  padding: 20px;
+}
+
+.collection {
+  border: none;
+}
+
+.card-content {
+  .collection {
+    border: none;
+  }
+
+  .collection-item {
+    padding: 7px 10px 3px !important;
+  }
+}

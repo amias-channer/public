@@ -1,0 +1,124 @@
+@import '../variables.scss';
+
+.auction_card {
+  width: 300px;
+  margin: auto!important;
+
+  .card-image {
+    max-width: 200px;
+  }
+}
+
+.auction_item {
+  text-align:center!important;
+}
+
+.auction_description {
+  text-align: center;
+  color: #82817D;
+  margin: 40px 0px !important;
+
+  strong {
+    color: #2A2826;
+  }
+}
+
+.auction_form_input {
+  margin-bottom: 10px;
+  position: relative;
+  height: 60px;
+  border-bottom: solid 2px #F5F3F0;
+  
+  label {
+    font-size: 1.2rem!important;
+    position: absolute;
+    display: block;
+    top: 16%;
+  }
+
+  input[type=number] {
+    position: relative;
+    margin-bottom: 0px!important;
+    border:none !important;
+    text-align: center;
+
+    &:active, &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+  }
+}
+
+.input_container {
+  position: relative;
+  border: solid 2px #F5F3F0!important;
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  .input_container--controls {
+    position: absolute;
+    top:0;
+    right: 0;
+    background: #F9F8F6;
+    height:100%;
+    border-left: solid 2px #F5F3F0;
+
+    span {
+      display: block;
+      color: $blue;
+      font-size: .7rem;
+      cursor: pointer;
+      padding:0px 5px;
+      height: 50%;
+    }
+
+    .down_arrow {
+      transform: rotate(180deg);
+      position:absolute;
+      bottom: .1px;
+    }
+
+    .stripe {
+      width: 100%;
+      position:absolute;
+      top: 50%;
+      left:0;
+      height: 2px;
+      background:#F5F3F0;
+    }
+  }
+}
+
+.ether::before {
+  content: "Ξ";
+  position: absolute;
+  color: #B7B7B6;
+  font-size: 1.2rem;
+  top: 20%;
+  left: -20px;
+}
+
+.days::before {
+  content: "Days";
+  position: absolute;
+  color: #B7B7B6;
+  font-size: 1.2rem;
+  top: 20%;
+  left: -45px;
+}
+
+.instruction-image {
+  display: block;
+}
+
+@media (max-width:480px) {
+  .instruction-image {
+    display:none!important;
+  }
+}

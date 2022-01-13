@@ -1,0 +1,25 @@
+@import "../../scss/global";
+
+.Popup {
+  .popup-container {
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 9px 0 rgba(0,0,0,0.36);
+    margin-top: 25vh;
+    left: 0;
+    z-index: 9999;
+    padding: 29px;
+    width: 100%;
+    .close-button {
+      position: absolute;
+      right: 3px;
+      cursor: pointer;
+      .Icon {
+        font-size: 20px;
+      }
+    }
+    .inner-container {
+      padding-right: 16px;
+    }
+  }
+}

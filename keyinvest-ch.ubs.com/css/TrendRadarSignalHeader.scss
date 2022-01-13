@@ -1,0 +1,39 @@
+@import '../../../../../scss/global';
+
+.TrendRadarSignalHeader {
+  font-family: $mainFontLightBold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  .positive {
+    background-color: $green;
+  }
+  .negative {
+    background-color: #9a3d37;
+  }
+  .signal-direction {
+    margin-right: 6px;
+  }
+  .signal-title {
+    margin-top: 7px;
+    span {
+      padding: 6px 0;
+    }
+    .signal-title-separator {
+      padding: 6px 15px;
+      color: #646464;
+    }
+  }
+  .flyout-icon-col {
+    border-left: 1px solid #D8D8D8;
+    padding-top: 5px;
+  }
+}
+@include media-breakpoint-up($mediaQueryTablet) {
+  .TrendRadarSignalHeader {
+    .signal-title {
+      margin-top: 0;
+    }
+  }
+}
+

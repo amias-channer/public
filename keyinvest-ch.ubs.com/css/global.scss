@@ -1,0 +1,37 @@
+/*
+ * Global variables - to be recognized in different scss files
+ * It will be imported in most of the components
+ * THIS FILE SHOULD CONTAIN ONLY VARIABLES DECLARATION (no styles implementations)
+ */
+
+$mainFont: 'FrutigerW04-55Roman';
+$mainFontBold: 'FrutigerW04-55RomanBold';
+$mainFontLight: 'FrutigerW04-45Light';
+$mainFontLightBold: 'FrutigerW04-45LightBold';
+$iconFont: 'icomoon';
+
+$button-color-dark             : #444444;
+$button-color-standard         : #E6E6E6;
+$button-color-olive            : #6A7D39;
+$button-color-chestnut         : #9A3D37;
+$button-color-atlantic         : #427C99;
+$button-color-atlantic-dark    : #5a6f89;
+$button-color-highlighted      : #F2BB3A;
+
+@import "overrides"; // Override bootstrap variables with custom variables
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Export SCSS variables to Javascript
+//noinspection CssInvalidPseudoSelector
+:export {
+  mediaQueryMobileBreakpoint: $mediaQueryMobileBreakpoint;
+  mediaQueryTabletBreakpoint: $mediaQueryTabletBreakpoint;
+  mediaQueryNotebookBreakpoint: $mediaQueryNotebookBreakpoint;
+  mediaQueryDesktopBreakpoint: $mediaQueryDesktopBreakpoint;
+
+  mediaQueryMaxMobileBreakpoint: $mediaQueryMaxMobileBreakpoint;
+  mediaQueryMaxTabletBreakpoint: $mediaQueryMaxTabletBreakpoint;
+  mediaQueryMaxNotebookBreakpoint: $mediaQueryMaxNotebookBreakpoint;
+}

@@ -1,0 +1,42 @@
+@import '../../../scss/global';
+
+.ChartSwitcher {
+  margin-top: 15px;
+  .chart-radio-container {
+    margin-bottom: 20px;
+
+    .custom-radio {
+      cursor: pointer;
+      .custom-control-input:checked ~ .custom-control-label::before {
+        border-color: #979797;
+      }
+      .custom-control-label {
+        cursor: pointer;
+        color: #333333;
+        font-family: $mainFontLightBold;
+        font-size: 16px;
+        line-height: 28px;
+        padding-left: 2px;
+        &:before {
+          cursor: pointer;
+          border-color: #979797;
+          width: 19px;
+          height: 19px;
+          top: 4px;
+        }
+        &:after {
+          cursor: pointer;
+          width: 13px;
+          height: 13px;
+          top: 7px;
+        }
+      }
+    }
+  }
+  .toggles-list {
+    margin-left: 20px;
+    .ChartToggle {
+      margin-right: 10px;
+    }
+  }
+}

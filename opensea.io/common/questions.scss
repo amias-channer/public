@@ -1,0 +1,67 @@
+.Questions {
+  text-align: start;
+  margin-top: 30px;
+  padding-top: 20px;
+
+  @media (max-width: 768px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $bp-large) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h6 {
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    @media (max-width: $bp-small) {
+      font-size: 1rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+
+    @media (max-width: $bp-small) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .email_us {
+    @media (max-width: $bp-small) {
+      text-align: center;
+    }
+
+    @media (min-width: $bp-small) and (max-width: 768px) {
+      margin-top: 33px;
+    }
+    .email_button {
+      font-size: 1rem;
+      text-transform: none;
+      width: 180px;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+
+      @media (min-width: $bp-large) {
+        top: 30px;
+      }
+
+      @media (max-width: 768px) {
+        width: 180px;
+      }
+
+      @media (max-width: $bp-small) {
+        padding: 4px 5px;
+        width: 160px;
+      }
+
+      .chevron {
+        margin-left: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,236 @@
+@import "../variables";
+
+.animated {
+  transition: all 0.5s ease-out;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+  &.infinite {
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spinForward {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-size {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+}
+
+@keyframes pulse-opacity {
+  0% {
+    opacity: 1;
+  }
+  16.666%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loader {
+  $size: 50px;
+
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin: #{-1*$size/2};
+  border: 5px solid #e2e2e2; /* Light grey */
+  border-top: 5px solid $blue; /* Blue */
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  animation: spinForward 2s linear infinite;
+
+  @media(max-width: $bp-small) {
+    zoom: 0.7;
+  }
+}
+
+.Loading {
+  $anim-speed: 600ms;
+  $triw: 30px;
+  $trih: $triw*0.9;
+  
+  transform: translate(-50%, -50%) rotate(30deg);
+  &.small {
+    transform: translate(-50%, -50%) rotate(30deg) scale(0.7);
+    &.grayscale {
+      filter: grayscale(1);
+    }
+  }
+
+  height: $trih * 3;
+  width: $triw * 3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  .tri {
+    position: absolute;
+    opacity: 0;
+    animation: pulse-opacity $anim-speed ease-in infinite;
+    border-top: $trih solid white;
+    border-left: $triw/2 solid transparent;
+    border-right: $triw/2 solid transparent;
+    border-bottom: 0px;
+    &.upwards {
+      border-top: 0px;
+      border-bottom: $trih solid white;
+      border-left: $triw/2 solid transparent;
+      border-right: $triw/2 solid transparent;
+    }
+
+    &:nth-child(1) {
+      left: $triw/2;
+      border-bottom-color: $light-green;
+    }
+    &:nth-child(2) {
+      left: $triw;
+      animation-delay: $anim-speed/6;
+      border-top-color: $lighter-green;
+    }
+    &:nth-child(3) {
+      left: $triw*1.5;
+      animation-delay: $anim-speed/6*2;
+      border-bottom-color: $sea-green;
+    }
+    &:nth-child(4) {
+      left: $triw*1.5;
+      top: $trih;
+      animation-delay: $anim-speed/6*3;
+      border-top-color: $primary-4;
+    }
+    &:nth-child(5) {
+      top:$trih;
+      left: $triw;
+      animation-delay: $anim-speed/6*4;
+      border-bottom-color: $primary-5;
+    }
+    &:nth-child(6) {
+      top:$trih;
+      left: $triw/2;
+      animation-delay: $anim-speed/6*5;
+      border-top-color: $primary-6;
+    }
+  }
+}
+
+@keyframes rotate-up {
+  100% {
+    transform: rotateZ(-90deg);
+  }
+}
+
+@keyframes rotate-down {
+  100% {
+    transform: rotateZ(90deg);
+  }
+}
+
+@keyframes rotateFadeIn {
+  0% {
+    opacity: 0;
+    
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes animateIn {
+  0% {
+    right: -1000px;
+  }
+
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes animateMenuIn {
+  0%{
+    transform: translateX(-1000px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes animateMenuDown {
+  0%{
+    transform: translateY(-1000px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bop {
+  0% {
+    transform:translateY(-3px);
+  }
+
+  100% {
+    transform:translateY(0px);
+  }
+}
+
+@keyframes dim {
+  0% {
+    opacity: 1
+  }
+
+  100%{
+    opacity: 0.6;
+  }
+}
+
+@keyframes fadeOutScale {
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+}

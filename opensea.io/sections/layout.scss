@@ -1,0 +1,297 @@
+@import "../variables";
+
+.Sidebar {
+  $footer-height: 50px;
+
+  padding: 0;
+  padding-bottom: $footer-height;
+  background-color: $bg-sidebar;
+  color: white;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.4);
+
+  .category_letter_image {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    line-height: 31px;
+    border-radius: 50%;
+    border: solid 1px #e2e2e2;
+  }
+
+  .category_letter_image--alt {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+  }
+
+  .sidebar_filter_img {
+    margin: -5px 0 0 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  hr {
+    margin: #{2 * $margin-default} #{-1 * $margin-default};
+  }
+
+  &.fixed {
+    bottom: 0;
+    top: 64px;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    position: fixed;
+    height: auto;
+
+    @media (max-width: $bp-small) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &.fixed-with-rinkeby {
+    @media (min-width: $bp-small) {
+      top: 128px;
+    }
+  }
+
+  &.fixed-embedded {
+    top: 0px !important;
+
+    // hide close buttons
+    .close-sidebar-button {
+      display: none;
+    }
+  }
+
+  h6 {
+    text-transform: uppercase;
+    color: $sidebar-text;
+    font-size: 13px;
+    margin: 8px 0 12px;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+  }
+
+  .switch {
+    margin: 15px -15px 0 0;
+  }
+
+  p {
+    opacity: 0.6;
+    font-size: 0.8rem;
+    letter-spacing: 0.02rem;
+    transform: translateZ(0.1px); // fix Safari bug
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    height: auto;
+    overflow: hidden;
+    background-color: $bg-sidebar-dark;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    // border-top: 1px solid $sidebar-text;
+    box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  &.fixed,
+  footer {
+    width: $sidebar-width;
+    @media (max-width: $bp-tablet-small) {
+      width: $sidebar-width - 50px;
+    }
+  }
+}
+
+.Results {
+  --webkit-overflow-scrolling: touch;
+  //position: fixed;
+  bottom: 0;
+  //top: $nav-height;
+  right: 0;
+  left: $sidebar-width;
+  width: calc(100vw - (#{$sidebar-width} + (#{$padding-default * 2})));
+  position: relative;
+  height: 100%;
+  top: 5px;
+  padding: $padding-default;
+
+  @media (max-width: $bp-small) {
+    width: auto;
+  }
+}
+
+.Sidebar {
+  .mobile-toggle {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -8px;
+  }
+}
+
+@media (max-width: $bp-small) {
+  .Results {
+    position: static;
+
+    .SearchBar input {
+      font-size: 11px;
+    }
+  }
+  .Sidebar {
+    &.fixed {
+      position: static;
+      width: auto;
+      overflow: hidden;
+      height: 50px;
+      &.forceShow {
+        height: auto;
+      }
+    }
+
+    footer {
+      position: static;
+      width: 100%;
+    }
+  }
+}
+
+.Sidebar_transparent {
+  background-color: transparent;
+  box-shadow: none;
+
+  .CategoryMenu {
+    background: transparent;
+  }
+}
+
+@media (max-width: $bp-small) {
+  .Sidebar_hidden {
+    overflow: hidden;
+    height: 50px;
+
+    &.forceShow {
+      height: auto;
+    }
+  }
+}
+
+.side-scroll {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.breadcrumb-bar {
+  height: $breadcrumb-bar-height;
+  box-shadow: 0 1px 8px -3px #999;
+  background-color: #f5f5f5;
+}
+
+.flex_table {
+  display: flex;
+  width: 100%;
+  $min_col_width: 100px;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .flex_table--header {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 5px 15px 5px;
+    min-height: 40px;
+
+    // I used a header cause this is the only infer, also other h tags are so opinionated with materialize
+    h6 {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      width: 20%;
+      min-width: $min_col_width;
+
+      &.small {
+        width: 15%;
+      }
+    }
+  }
+
+  .flex_table--body {
+    width: 100%;
+
+    .placeholder {
+      text-transform: none;
+    }
+
+    .table_row {
+      display: flex;
+      padding: 20px 10px;
+      width: 100%;
+
+      &:nth-child(even) {
+        background: rgba(0, 0, 0, 0.01);
+      }
+
+      .table_cell {
+        font-size: 15px;
+        color: $light-text;
+        line-height: 16px;
+        width: 20%;
+        padding-top: 4px;
+
+        &.offset-right {
+          padding-left: 20px;
+          @media (max-width: $bp-small) {
+            padding-left: 5px;
+          }
+        }
+
+        &:nth-child(1) {
+          color: rgba(0, 0, 0, 0.7);
+          font-weight: 600;
+
+          .material-icons {
+            font-size: 18px;
+            margin-right: 10px;
+          }
+        }
+
+        &.table_row_rank {
+          width: 50px;
+        }
+      }
+    }
+  }
+}
+
+.scrolling-wrapper {
+  @media (max-width: $bp-small) {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    .fit-content {
+      width: fit-content;
+    }
+  }
+
+  @media (max-width: $bp-tablet-small) and (min-width: $bp-small) {
+    .tablet-width-scrolling-wrapper {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+    }
+
+    .tablet-width-fit-content {
+      width: 900px !important;
+    }
+  }
+}

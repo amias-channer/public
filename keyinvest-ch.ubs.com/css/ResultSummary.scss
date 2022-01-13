@@ -1,0 +1,32 @@
+@import "../../scss/global";
+.ResultSummary {
+  margin-top: 23px;
+  margin-bottom: 34px;
+
+  .results-summary-row {
+    border: 1px solid #D8D8D8;
+  }
+
+  .results-count-col {
+    padding: 9px 16px;
+    color: #333333;
+    font-size: 19px;
+    line-height: 21px;
+    font-family: $mainFontLight;
+  }
+
+  .ExportButton {
+    border-left: 1px solid #D8D8D8;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    padding: 0 16px;
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .ResultSummary {
+    margin-top: 16px;
+    margin-bottom: 48px;
+  }
+}

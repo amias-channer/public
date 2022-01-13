@@ -1,0 +1,17 @@
+@import "../../../scss/global";
+
+.Annotations {
+  margin-top: 50px;
+  .annotation {
+    sup {
+      padding-right: 10px;
+    }
+    > span {
+      padding-right: 10px;
+      color: #646464;
+      font-family: $mainFontLight;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

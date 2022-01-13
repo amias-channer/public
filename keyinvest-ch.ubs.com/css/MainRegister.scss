@@ -1,0 +1,79 @@
+@import "../../scss/global";
+
+$error-color-red : #E60000;
+
+.main-register-loader.is-loading {
+  margin-top: 40px;
+}
+.MainRegister {
+  h1 {
+    color: #1C1C1C;
+    font-size: 30px;
+    line-height: 33px;
+    font-weight: 200;
+    font-family: $mainFontLight;
+    margin-bottom: 14px;
+  }
+
+  .search-box-container {
+    padding: 24px 16px 20px 16px;
+    margin-top: 25px;
+    background-color: #EFEFEF;
+    margin-bottom: 44px;
+  }
+
+  input[type="text"] {
+    background-color: #FFFFFF;
+  }
+
+  .search-button {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    background-color: #6A7D39;
+    padding: 11px 0;
+  }
+
+  .CheckboxInput {
+    margin-left: 30px;
+  }
+
+  .error-text {
+    color: $error-color-red;
+  }
+
+  .error-input {
+    border: 1px solid $error-color-red;
+  }
+
+  .SearchBar .icon-glass {
+    font-size: 26px;
+  }
+
+  .btn-white.disabled {
+    opacity: 1;
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .MainRegister {
+    .search-bar-container {
+      padding-right: 25px;
+    }
+
+    .search-button {
+     margin-top: 0;
+     padding: 9px 0;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .MainRegister {
+    .search-button {
+      width: 100px;
+    }
+  }
+}

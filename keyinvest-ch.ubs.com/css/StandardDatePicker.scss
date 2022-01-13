@@ -1,0 +1,90 @@
+.StandardDatePicker {
+
+  &.month-year-picker-view-open {
+    .DayPicker_weekHeaders {
+      display: none;
+    }
+    .DayPickerNavigation {
+     display: none;
+    }
+  }
+
+  .DayPicker_transitionContainer {
+    min-height: 290px;
+  }
+
+  .top-label {
+    display: block;
+    font-size: 11px;
+    position: absolute;
+    z-index: 1;
+    left: 8px;
+  }
+
+  .standard-date-picker-wrapper {
+    display: inline-block;
+    border: 2px solid #dbdbdb;
+    position: relative;
+  }
+
+  .DayPickerNavigation_button__default {
+    border: none;
+  }
+
+  .CalendarDay__default {
+    border: none;
+  }
+
+  .CalendarMonth_caption {
+   font-size: 13px;
+  }
+
+  .CalendarDay__today {
+    border-bottom: 2px solid #ff686d;
+  }
+
+  .DateInput_input {
+    font-size: 14px;
+    padding: 14px 0 0 8px;
+    border-bottom: none;
+  }
+
+  .DateInput_input__focused {
+    border-bottom: none;
+  }
+
+  .SingleDatePicker_picker {
+    z-index: 12;
+  }
+
+  .SingleDatePickerInput__withBorder {
+    border: none;
+  }
+
+  .SingleDatePickerInput_calendarIcon {
+    padding: 6px;
+    margin: 0 2px 0 0;
+    background: #ececec;
+  }
+
+  .CalendarDay__selected {
+    background: #828282;
+    border-radius: 3px;
+  }
+
+  &.focused {
+    .top-label {
+      color: #009BD2;
+    }
+    .standard-date-picker-wrapper {
+      border: 2px solid #009BD2;
+    }
+
+    .SingleDatePickerInput_calendarIcon {
+      background: #828282;
+      color: #FFFFFF;
+      border-radius: 3px;
+    }
+  }
+
+}

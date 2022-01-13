@@ -1,0 +1,118 @@
+@import "../../../scss/global";
+
+.publications-download-loader.is-loading {
+  margin-top: 40px;
+}
+.PublicationsDownload {
+  h1 {
+    color: #1C1C1C;
+    font-size: 30px;
+    line-height: 33px;
+    font-family: $mainFontLight;
+    margin-bottom: 14px;
+  }
+
+  p {
+    margin-bottom: 24px;
+  }
+
+  .PublicationDownloadableItem {
+
+    padding: 24px 0;
+    border-bottom: 1px solid #D7D7D7;
+
+    h3 {
+      font-size: 16px;
+      color: #1C1C1C;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+
+    .icon-pdf {
+     font-size: 24px;
+     margin-right: 11px;
+    }
+
+    .order-checkbox {
+      margin-top: 20px;
+      margin-left: 30px;
+    }
+
+    img {
+      max-width: 100px;
+      min-height: 142px;
+    }
+  }
+
+  .PublicationsForm {
+    h1 {
+      margin-top: 25px;
+      margin-bottom: 16px;
+    }
+
+
+
+    .custom-control {
+      display: inline-flex;
+    }
+
+    .row-radio-controls {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .PublicationsDownload {
+    .PublicationDownloadableItem {
+      h3 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .PublicationsDownload {
+
+    .PublicationsForm {
+      .col {
+        &:nth-child(odd) {
+          padding-right: 20px;
+        }
+
+        &:nth-child(even) {
+          padding-left: 20px;
+        }
+      }
+    }
+
+    .PublicationDownloadableItem {
+      padding: 25px 0 40px 0;
+    }
+
+    .publications-rows > .row:first-child {
+        .PublicationDownloadableItem {
+          border-top: 1px solid #D7D7D7;
+        }
+    }
+
+    .publication-item-col {
+      padding-left: 26px;
+      padding-right: 26px;
+    }
+
+    .publication-items-row {
+      margin: 0 -28px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryDesktop) {
+  .PublicationsDownload {
+
+    .PublicationDownloadableItem {
+      padding: 32px 0 47px 0;
+    }
+  }
+}

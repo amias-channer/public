@@ -1,0 +1,23 @@
+@import '../../../scss/global';
+
+.FileDownloadJob {
+  margin-bottom: 10px;
+  .file-icon {
+    padding-right: 10px;
+    font-size: 20px;
+  }
+  .message {
+    color: #1C1C1C;
+    font-family: $mainFontLight;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .JobProgressBar {
+    margin-top: 7px;
+  }
+  .close-button {
+    .Icon {
+      font-size: 22px;
+    }
+  }
+}

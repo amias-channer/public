@@ -1,0 +1,324 @@
+@import "../variables";
+
+a {
+  &.etherscan {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 8px;
+    color: $sea-green;
+    border-radius: 4px;
+    border: 1px solid $sea-green;
+  }
+}
+
+hr {
+  padding: 0;
+  margin: 30px 0;
+  opacity: 0.2;
+  border: none;
+  border-top: 1px solid #8c8c8c;
+  color: #8c8c8c;
+  text-align: center;
+}
+
+.no-padding-left-right {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.no-padding-left {
+  padding-left: 0px !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0px;
+}
+
+.margin-top {
+  margin-top: $margin-default !important;
+}
+
+.margin-left {
+  margin-left: $margin-default !important;
+}
+
+.margin-left-small {
+  margin-left: #{$margin-default / 3} !important;
+}
+
+.margin-right {
+  margin-right: $margin-default !important;
+}
+
+.margin-bottom {
+  margin-bottom: $margin-default !important;
+}
+
+.padded {
+  padding: $padding-default !important;
+}
+
+.padded-small {
+  padding: #{$padding-default / 3} !important;
+}
+
+.padding-top {
+  padding-top: $padding-default !important;
+}
+
+.padding-left {
+  padding-left: $padding-default !important;
+}
+
+.padding-right {
+  padding-right: $padding-default !important;
+}
+
+.padding-bottom {
+  padding-bottom: $padding-default !important;
+}
+
+.align-start {
+  text-align: start !important;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.align-end {
+  text-align: end !important;
+}
+
+.valign {
+  vertical-align: middle;
+  display: inline-block !important;
+}
+
+.blurred {
+  filter: blur(4px);
+}
+
+.relative {
+  position: relative !important;
+}
+
+.layer1 {
+  z-index: 5;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.clearfix {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.placeholder {
+  opacity: 0.4;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.faded {
+  opacity: 0.3;
+}
+
+*:not(:hover) > .show-on-hover {
+  display: none !important;
+}
+
+*:hover > .hide-on-hover {
+  display: none !important;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+@media only screen and (min-width: $bp-large) {
+  .full-width-large-only {
+    width: 100% !important;
+  }
+  html,
+  body {
+    max-width: 100%;
+  }
+}
+
+.generic_input {
+  border: solid 1px $input-grey !important;
+  border-radius: 5px !important;
+  padding-left: 15px !important;
+  padding-right: 5px !important;
+  width: calc(100% - 20px) !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease;
+
+  &:focus {
+    border-color: #56ccf2 !important;
+    background: white;
+  }
+
+  &:disabled {
+    background-color: #e2e2e2;
+    color: black !important;
+  }
+}
+
+.datepicker-container {
+  input {
+    color: #039be5;
+    cursor: pointer;
+    height: 19px !important;
+    margin-bottom: 0px !important;
+    width: auto !important;
+    border-bottom: none !important;
+  }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.img-cover {
+  object-fit: cover;
+}
+
+.img-contain {
+  object-fit: contain;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.chevron {
+  display: inline-block;
+  background: url("../../public/static/images/right-chevron.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+}
+
+.grey-chevron {
+  display: inline-block;
+  background: url("../../public/static/images/grey-chevron.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+}
+
+.blue-chevron {
+  display: inline-block;
+  background: url("../../public/static/images/blue-chevron.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+}
+
+span.badge {
+  position: absolute;
+  top: 6px;
+  right: -12px;
+  color: white;
+  font-size: 12px;
+  height: auto !important;
+  padding: 0px 4px;
+  border-radius: 12px;
+  min-width: 30px;
+}
+
+.truncated-link {
+  width: 50%;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+// Minimal input, wrap your input in a div, give it this class and voila
+
+.minimal_input {
+  border: solid 1px #e0e0e0;
+  border-radius: 5px;
+  color: rgba(46, 54, 59, 0.6);
+  font-size: 1.2rem;
+  height: 55px;
+  padding: 5px 10px;
+
+  input {
+    border: none !important;
+    &:focus {
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.external-link {
+  margin-left: 0px;
+  color: #828282;
+  font-size: 1rem;
+  background-image: url("../../public/static/images/external-link.png");
+  background-size: 1rem;
+  background-position: 100% 32%;
+  background-repeat: no-repeat;
+  padding-right: 30px;
+}
+
+.fullpage-gradient {
+  height: 100%;
+  background-image: linear-gradient(to bottom, #fbfbfb 80%, rgb(214, 247, 254));
+
+  &.suppress-gradient {
+    background-image: none !important;
+  }
+}
+
+.centered-text {
+  text-align: center !important;
+}
+
+blockquote {
+  margin: 16px 0;
+  padding-left: 1.25rem;
+  border-left: 4px solid $blue;
+}

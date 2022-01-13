@@ -1,0 +1,63 @@
+@import '../../../../../scss/global';
+
+.generic-field {
+  min-width: 110px;
+  .field-key, .field-value {
+    border-left: 1px solid #D8D8D8;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .field-key {
+    font-size: 12px;
+    line-height: 14px;
+    color: #919191;
+  }
+  .field-value {
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 3px;
+  }
+}
+
+.MarketLeverageInstrumentDetails {
+  .generic-field {
+    min-width: 77px;
+    .field-key {
+      padding-top: 7px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .field-value {
+      padding-top: 10px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &.mobile-mode {
+      padding-top: 10px;
+      .field-key, .field-value {
+        border-left: none;
+        padding: 0;
+        display: inline-block;
+      }
+      .field-value {
+        text-align: right;
+        float: right;
+      }
+    }
+  }
+}
+
+
+@include media-breakpoint-down($mediaQueryTablet) {
+  .MarketLeverageInstrumentDetails {
+    .generic-field {
+      &:not(.price-field){
+        &:last-child {
+          .field-key, .field-value {
+            border-right: 1px solid #D8D8D8;
+          }
+        }
+      }
+    }
+  }
+}

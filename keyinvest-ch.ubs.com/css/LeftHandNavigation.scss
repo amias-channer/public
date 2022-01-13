@@ -1,0 +1,49 @@
+@import "../../scss/global";
+
+.LeftHandNavigation {
+  padding-bottom: 20px;
+  .LeftHandNavigationItems {
+    .is-sub-nav {
+      margin-left: 15px;
+    }
+
+    .link-wrapper {
+      border-bottom: 1px solid #BEBEBE;
+      position: relative;
+    }
+    .link {
+      font-family: $mainFont;
+      color: #646464;
+      font-size: 14px;
+      line-height: 18px;
+      text-decoration: none;
+      padding: 16px 0;
+      display: block;
+      &.active, &:hover {
+        font-family: $mainFontLightBold;
+      }
+    }
+    .toggle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .LeftHandNavigation {
+    padding-right: 33px;
+    width: 251px;
+  }
+}
+
+@include media-breakpoint-up($mediaQueryDesktop) {
+  .LeftHandNavigation {
+    padding-bottom: 0;
+    padding-right: 53px;
+    width: 234px;
+  }
+}

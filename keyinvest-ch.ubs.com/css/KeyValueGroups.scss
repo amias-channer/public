@@ -1,0 +1,40 @@
+@import "../../../scss/global";
+.KeyValueGroups {
+  .KeyValueGroup {
+    margin-bottom: 24px;
+
+    .key-col {
+      color: #646464;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .value-col {
+      color: #222222;
+      font-size: 14px;
+      line-height: 22px;
+      font-family: $mainFontBold;
+      text-align: right;
+    }
+
+    .Icon {
+      &.icon-edit {
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 12px;
+      }
+    }
+
+    .prepend-text {
+      margin-right: 4px;
+    }
+    .append-text {
+      margin-left: 6px;
+    }
+    .EditableText {
+      input[type="text"] {
+        max-width: 130px;
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export const ACCOUNT_CARD_HEIGHT = 207

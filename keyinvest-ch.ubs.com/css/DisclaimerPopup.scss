@@ -1,0 +1,219 @@
+@import '../../scss/global';
+
+body.modal-open #root {
+  overflow: hidden;
+}
+.DisclaimerPopup {
+  margin-top: 0;
+
+  .modal-content {
+    padding: 12px 10px 0 10px;
+  }
+
+  .modal-body {
+    padding-top: 0;
+  }
+
+  .CmsComponent {
+    margin-top: 10px;
+  }
+
+  .modal-footer {
+    margin-bottom: 40px;
+    padding: 0;
+    .checkboxes-container {
+      padding-left: 30px;
+    }
+  }
+
+  .icon-Information {
+    margin-left: 8px;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 19px;
+  }
+
+  .language-select-label {
+    color: #222222;
+    line-height: 17px;
+    font-size: 15px;
+    display: inline;
+    vertical-align: middle;
+    font-weight: 100;
+    margin-right: 10px;
+  }
+
+  .LanguageSelector {
+    display: inline;
+  }
+
+  .btn-adjust-cookies {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .error {
+    &, label > span, span {
+      color: red;
+    }
+  }
+  .country-select {
+    line-height: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 20px;
+    border: none;
+    color: $blue;
+  }
+  .element-container {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 0;
+    .form-check-inline {
+      margin-right: 5px;
+    }
+    label {
+      color: #222222;
+      font-family: $mainFont;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    //noinspection CssInvalidPropertyValue
+    select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      padding-right: 1.25EM;
+      appearance: none;
+      position: relative;
+      background-color: transparent;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' height='15px' width='15px'%3E%3Ctext x='0' y='10' fill='1C1C1C'%3E%E2%96%BE%3C/text%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 1.5EM 1EM;
+      background-position: right 100%;
+      background-clip: border-box;
+      -moz-background-clip: border-box;
+      -webkit-background-clip: border-box;
+      border: 1px solid #1C1C1C;
+      margin-left: 5px;
+    }
+  }
+  .buttons-container {
+    button {
+      flex-grow: 0;
+      min-width: 150px;
+      height: 40px;
+      color: #FFFFFF;
+      font-family: $mainFont;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      &.cancel {
+        color: #1C1C1C;
+      }
+    }
+  }
+
+  .action-buttons {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    .Button {
+      border-radius: 0;
+      min-height: 41px;
+      font-size: 12px;
+      line-height: 16px;
+      color: #1C1C1C;
+      min-width: 155px;
+      &.btn-accept.green {
+        background-color: #6A7D39;
+        color: white;
+      }
+      &:active,
+      &:focus,
+      &:disabled {
+        span {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  .col-btn-accept {
+    padding-right: 5px;
+  }
+
+  .col-btn-cancel {
+    padding-left: 5px;
+  }
+
+  .info-text {
+    padding: 9px 10px 7px 11px;
+    background-color: #DEE2E9;
+  }
+
+  .cookies {
+    h2 {
+      font-size: 32px;
+      line-height: 40px;
+      color: #1C1C1C;
+      font-family: $mainFontLight;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .DisclaimerPopup {
+    .cookies {
+      background-color: rgba(216,216,216,0.2);
+      padding: 20px;
+      margin-bottom: 24px;
+
+      h2 {
+        font-size: 48px;
+        font-family: $mainFontLight;
+        margin-bottom: 16px;
+      }
+    }
+
+    .RadioSwitch {
+      display: block;
+    }
+
+    .btn-accept, .btn-cancel {
+      width: 100%;
+    }
+
+    .col-btn-accept {
+      padding-right: 1px;
+    }
+
+    .col-btn-cancel {
+      padding-left: 1px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .DisclaimerPopup {
+    .modal-content {
+      padding: 25px 50px 40px 50px;
+    }
+
+    .action-buttons {
+      position: static;
+    }
+
+    .col-btn-accept {
+      padding-right: 5px;
+    }
+
+    .col-btn-cancel {
+      padding-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.Discord {
+  position: fixed;
+  z-index: 1000;
+  right: 2.2rem;
+  bottom: 2.2rem;
+  overflow: hidden;
+  width: 3rem;
+  height: 3rem;
+  -webkit-transition: width 0s .25s;
+  transition: width 0s .25s;
+
+
+
+  .Discord-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background: #7289da;
+    border-radius: 2rem 2rem;
+    -webkit-transition: opacity .25s,-webkit-transform .25s;
+    transition: opacity .25s,-webkit-transform .25s;
+    transition: transform .25s,opacity .25s;
+    transition: transform .25s,opacity .25s,-webkit-transform .25s;
+  }
+
+  .Discord-icon--message {
+    opacity: 1;
+    -webkit-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+    color: white;
+    text-align: center;
+    line-height: 3.2rem;
+  }
+
+  .Discord-icon--plane {
+    opacity: 0;
+    -webkit-transform: translateZ(0) scale(0);
+    transform: translateZ(0) scale(0);
+    width: 32px;
+    height: 32px;
+  }
+
+
+  .Discord-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 4rem;
+    width: 12rem;
+    height: 3rem;
+    color: #fff;
+    background: #7289da;
+    border-radius: 3rem 3rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    opacity: 0;
+    -webkit-transition: opacity .25s;
+    transition: opacity .25s;
+  }
+
+  &:hover {
+    width: 14rem;
+    -webkit-transition: width 0s 0s;
+    transition: width 0s 0s;
+    right: 1.1rem;
+
+    .Discord-icon--message {
+      opacity: 0;
+      -webkit-transform: translate3d(-10.8rem,0,0) scale(0);
+      transform: translate3d(-10.8rem,0,0) scale(0);
+    }
+
+    .Discord-icon--plane {
+      opacity: 1;
+      transform: translate3d(-10.8rem,-0.4rem,0) scale(1);
+    }
+
+    .Discord-text {
+      opacity: 1;
+    }
+  }
+}

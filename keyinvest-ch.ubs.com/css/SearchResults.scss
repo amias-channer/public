@@ -1,0 +1,43 @@
+@import '../../../../scss/global';
+
+.SearchResults .search-results-list {
+  .separator:not(:first-of-type) {
+    border-bottom: 1px solid #BEBEBE;
+    margin-top: 20px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 39px;
+    font-family: $mainFontLightBold;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    color: #444444;
+  }
+  a {
+    font-size: 16px;
+    padding-left: 20px;
+    line-height: 39px;
+    font-family: $mainFontLight;
+    color: #007099;
+    display: block;
+    &:focus {
+      background-color: #F5F5F5;
+      outline: none;
+      text-decoration: underline;
+    }
+    &:hover {
+      background-color: #F5F5F5;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .SearchResults .search-results-list {
+    h5 {
+      color: #1C1C1C;
+    }
+    a {
+      color: #1C1C1C;
+    }
+  }
+}

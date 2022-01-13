@@ -1,0 +1,33 @@
+.RadioSwitch {
+
+  margin: 9px 0;
+
+  .react-switch {
+    margin-right: 10px;
+  }
+
+  .label-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+  }
+
+  .text {
+    align-items: center;
+    height: 100%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    display: flex;
+    font-size: 12px;
+    &.checked-text {
+      justify-content: flex-end;
+    }
+
+    &.unchecked-text {
+      justify-content: center;
+      padding-right: 20px;
+    }
+  }
+
+
+}

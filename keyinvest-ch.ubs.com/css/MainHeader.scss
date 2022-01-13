@@ -1,0 +1,181 @@
+@import "../../scss/global";
+
+.MainHeader {
+  transition: all 0.2s linear;
+  border-bottom: 0.5px solid #BEBEBE;
+  background: $white;
+
+  padding-top: 8px;
+  > .container {
+    padding-bottom: 8px;
+  }
+  .logo {
+     a.logo-link {
+      text-decoration: none;
+      align-items: center;
+      display: flex;
+       img {
+        height: 21.18px;
+      }
+       span {
+        font-family: $mainFontLight;
+        color: #1C1C1C;
+        font-size: 16px;
+        line-height: 18px;
+        padding-left: 12.7px;
+
+        transition: all 0.1s linear;
+      }
+    }
+  }
+
+  .rating {
+    display: none;
+    text-align: right;
+    padding-right: 30px;
+    font-family: $mainFontLight;
+    span {
+      padding: 0 5px;
+    }
+  }
+  .tools {
+    button.btn-outline {
+      line-height: 1px;
+      .Icon {
+        font-size: 18px;
+      }
+    }
+    .LoginButton {
+      padding-left: 9px;
+    }
+
+    .search-bar-wrapper:not(.search-bar-focused) {
+        width: 200px;
+    }
+    .SearchBar {
+      padding-left: 10px;
+    }
+  }
+  &.is-flatex-header {
+    padding-top: 0;
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .scrolled {
+    &.MainHeader {
+      .rating, .rating-column {
+        display: none;
+      }
+      .language-selector-column {
+        display: none;
+      }
+      .tools {
+        margin-left: auto!important;
+      }
+    }
+  }
+  .MainHeader {
+    padding-top: 17px;
+    > .container {
+      padding-bottom: 12px;
+    }
+
+    .rating {
+      display: block;
+      color: #919191;
+      font-size: 12px;
+      line-height: 14px;
+      border-top: 0.5px solid #BEBEBE;
+      padding: 5px 0;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .scrolled {
+    &.MainHeader {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.29);
+
+      > .container {
+        padding-bottom: 6px;
+        padding-top: 6px;
+      }
+
+      .logo {
+        a.logo-link {
+          display: inline;
+          img {
+            width: 0;
+          }
+          span {
+            font-family: $mainFont;
+            padding-left: 13px;
+            font-size: 16px;
+          }
+        }
+      }
+      .HeaderContext {
+        font-family: $mainFont;
+        font-size: 16px;
+        > span {
+          padding-left: 10px;
+        }
+        .context-separator {
+          color: #AAAAAA;
+        }
+      }
+    }
+  }
+
+  .MainHeader {
+    padding-top: 28px;
+    .logo {
+      a.logo-link {
+        img {
+          height: 32px;
+        }
+
+        span {
+          color: $black;
+          font-size: 18px;
+          line-height: 20px;
+          padding-left: 24px;
+        }
+      }
+    }
+    .rating {
+      border-top: none;
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryDesktop) {
+
+  .MainHeader {
+    padding-top: 37px;
+    padding-bottom: 0;
+    .logo {
+      a.logo-link {
+        img {
+          height: auto;
+        }
+        span {
+          color: $black;
+          font-size: 30px;
+          line-height: 33px;
+          padding-left: 29px;
+        }
+      }
+    }
+    .rating {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}

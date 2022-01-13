@@ -1,0 +1,88 @@
+@import "./variables";
+@import "./fonts";
+@import "./common/slick-carousel";
+
+@import "materialize/materialize";
+
+html {
+  background-color: $bg-app;
+  font-family: $font !important;
+  line-height: 1.5;
+}
+
+html.landing {
+  background-color: $bg-landing;
+}
+.bg-not-found {
+  background-color: $bg-404;
+}
+
+.row {
+  &.offset {
+    margin-top: $margin-default;
+  }
+  &.offset-2 {
+    margin-top: #{2 * $margin-default};
+  }
+}
+
+.container-small {
+  width: 100%;
+  max-width: $bp-small;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: $bp-large) {
+  .container {
+    width: 80% !important;
+  }
+}
+
+.Notice {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+@import "./common/colors";
+@import "./common/generic";
+
+@import "./common/buttons";
+@import "./common/nprogress";
+@import "./common/cards";
+@import "./common/forms";
+@import "./common/titles";
+@import "./common/searchbar";
+@import "./common/categorybar";
+@import "./common/simpleslider";
+@import "./common/dropdownheading";
+@import "./common/tabs";
+@import "./common/animations";
+@import "./common/questions";
+@import "./common/partners";
+@import "./common/discord";
+@import "./common/rc-slider";
+@import "./common/paginator";
+@import "./common/bids";
+@import "./common/recentactivity";
+@import "./common/wethmodal";
+@import "./common/share";
+
+@import "./sections/layout";
+@import "./sections/home";
+@import "./sections/account";
+@import "./sections/landing";
+@import "./sections/categories";
+@import "./sections/rankings";
+@import "./sections/assetdetail";
+@import "./sections/auctions";
+@import "./sections/activity";
+@import "./sections/traits";
+@import "./sections/privacy";
+@import "./sections/tos";
+@import "./sections/assetPages";
+@import "./sections/assetSell";
+@import "./sections/developers";
+@import "./sections/listed.scss";
+@import "./sections/getStarted.scss";

@@ -1,0 +1,121 @@
+@import '../../../scss/global';
+.colorBar .inner-wrapper.color-bar {
+  border-bottom: 6px solid #dbdbdb;
+}
+
+.value.positive, .diff.positive {
+  color: $green;
+}
+.value.negative, .diff.negative {
+  color: $ubs-error;
+}
+.value.neutral, .diff.neutral {
+  color: $black;
+}
+
+.percentBar {
+  .value-percent{
+    text-align: right;
+    padding: 0 0 0 10px;
+  }
+  .value-bar > span {
+    max-width: 100px;
+    display: block;
+    height: 14px;
+    width:0;
+    margin-top: 6px;
+  }
+
+  &.negative {
+    .value-bar {
+      > span {
+        background-color: #9A3D37;
+      }
+    }
+    .bar-negative-zone > span {
+      float: right;
+    }
+    .bar-positive-zone > span {
+      display: none;
+    }
+  }
+  &.positive {
+    .value-bar {
+      > span {
+        background-color: #6A7D39;
+      }
+    }
+    .bar-negative-zone > span {
+      display: none;
+    }
+  }
+}
+
+
+/* Trend */
+.colorBar, .TrendPeriod .trend {
+  &.trend-neutral,
+  &.trend-no-data .inner-wrapper {
+    border-bottom-color:#dbdbdb;
+  }
+  &.trend-positive-010 .inner-wrapper {
+    border-bottom-color:#F0F2EB;
+  }
+  &.trend-positive-020 .inner-wrapper {
+    border-bottom-color:#E1E5D7;
+  }
+  &.trend-positive-030 .inner-wrapper {
+    border-bottom-color:#D2D8C3;
+  }
+  &.trend-positive-040 .inner-wrapper {
+    border-bottom-color:#C3CBB0;
+  }
+  &.trend-positive-050 .inner-wrapper {
+    border-bottom-color:#B4BE9C;
+  }
+  &.trend-positive-060 .inner-wrapper {
+    border-bottom-color:#A6B188;
+  }
+  &.trend-positive-070 .inner-wrapper {
+    border-bottom-color:#96A474;
+  }
+  &.trend-positive-080 .inner-wrapper {
+    border-bottom-color:#889761;
+  }
+  &.trend-positive-090 .inner-wrapper {
+    border-bottom-color:#798A4C;
+  }
+  &.trend-positive-100 .inner-wrapper {
+    border-bottom-color:#6A7D39;
+  }
+  &.trend-negative-010 .inner-wrapper {
+    border-bottom-color:#F5EBEB;
+  }
+  &.trend-negative-020 .inner-wrapper {
+    border-bottom-color:#EBD8D7;
+  }
+  &.trend-negative-030 .inner-wrapper {
+    border-bottom-color:#E1C4C3;
+  }
+  &.trend-negative-040 .inner-wrapper {
+    border-bottom-color:#D7B1AF;
+  }
+  &.trend-negative-050 .inner-wrapper {
+    border-bottom-color:#CC9E9B;
+  }
+  &.trend-negative-060 .inner-wrapper {
+    border-bottom-color:#C28B87;
+  }
+  &.trend-negative-070 .inner-wrapper {
+    border-bottom-color:#B87773;
+  }
+  &.trend-negative-080 .inner-wrapper {
+    border-bottom-color:#AE645F;
+  }
+  &.trend-negative-090 .inner-wrapper {
+    border-bottom-color:#A4504B;
+  }
+  &.trend-negative-100 .inner-wrapper {
+    border-bottom-color:#9A3D37;
+  }
+}

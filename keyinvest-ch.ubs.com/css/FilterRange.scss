@@ -1,0 +1,32 @@
+@import "../../../scss/global";
+.FilterRange {
+  .text-input-column {
+    &:nth-child(even) {
+      padding-left: 5px;
+    }
+    &:nth-child(odd) {
+      padding-right: 5px;
+    }
+  }
+  h4 {
+    font-family: $mainFont;
+    color: #1C1C1C;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+}
+
+@include media-breakpoint-only($mediaQueryDesktop) {
+  .FilterRange {
+
+    .filter-container {
+      padding-right: 32px;
+    }
+
+    input {
+      max-width: 122px;
+    }
+  }
+}

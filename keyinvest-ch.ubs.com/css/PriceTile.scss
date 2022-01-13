@@ -1,0 +1,45 @@
+@import '../../../scss/global';
+
+.PriceTile {
+  /* height: 106px; */
+  min-width: 164px;
+  .inner-wrapper {
+    background-color: #F2F2F2;
+    padding: 10px;
+    margin: 0 2px;
+  }
+  .title, .volume {
+    color: #666666;
+    font-family: $mainFontLight;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .price {
+    color: #333333;
+    font-family: $mainFont;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: right;
+    padding-top: 17px;
+  }
+  .volume {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+  }
+  .trade-buttons-container {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .btn {
+      font-size: 14px;
+      margin: 0 2px;
+      padding: 8px 12px;
+      &:hover {
+        &+.Brokers {
+          display: block;
+        }
+      }
+    }
+  }
+}

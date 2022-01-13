@@ -1,0 +1,22 @@
+.ToolsBar {
+  border-top: 1px solid #DBDBDB;
+  border-bottom: 1px solid #DBDBDB;
+  border-left: 1px solid #DBDBDB;
+
+  > .col {
+    border-right: 1px solid #D8D8D8;
+    padding: 0 10px;
+    line-height: 35px;
+  }
+
+  .Icon {
+    font-size: 26px;
+    line-height: 25px;
+    vertical-align: middle;
+  }
+
+  .toolbar-item {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

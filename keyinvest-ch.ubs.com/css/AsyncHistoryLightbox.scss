@@ -1,0 +1,17 @@
+@import '../../../scss/global';
+
+.AsyncHistoryLightboxPopup {
+  margin-top: 0;
+  .modal-content {
+    min-height: 250px;
+  }
+  .title {
+    font-family: $mainFontLight;
+    color: #333333;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .close-button {
+    font-size: 22px;
+  }
+}

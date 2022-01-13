@@ -1,0 +1,2 @@
+export const AMOUNT_SUGGESTIONS_VALUES = [0, 10_00, 20_00, 50_00] as const
+export const AMOUNT_SUGGESTIONS_VALUES_WITHOUT_0 = [10_00, 20_00, 50_00, 100_00] as const

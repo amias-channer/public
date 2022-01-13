@@ -1,0 +1,10 @@
+@import '../../scss/global';
+
+.ColoredValue {
+  &.positive {
+    color: $green;
+  }
+  &.negative {
+    color: $ubs-error;
+  }
+}

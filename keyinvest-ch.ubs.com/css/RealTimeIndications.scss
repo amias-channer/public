@@ -1,0 +1,14 @@
+@import '../../scss/global';
+
+.RealTimeIndications {
+  .wrapper {
+    margin: 0 -8px;
+  }
+  .note {
+    color: #1D1F20;
+    font-family: $mainFontLight;
+    font-size: 14px;
+    line-height: 33px;
+    padding-bottom: 10px;
+  }
+}

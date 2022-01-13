@@ -1,0 +1,1 @@
+export const AMOUNT_SUGGESTIONS_VALUES = [100_00, 250_00, 500_00, 1000_00] as const

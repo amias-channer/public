@@ -1,0 +1,68 @@
+@import '../../../scss/global';
+
+.UnderlyingChartTable {
+  margin-top: 40px;
+
+  > table {
+    > thead {
+      > tr {
+        > th.toggle-column, > th:first-child {
+          width: 30px;
+          max-width: 30px;
+          min-width: 30px;
+        }
+        > th:last-child {
+          border-left: none;
+        }
+      }
+    }
+    > tbody {
+      border: 1px solid #D9D9D9;
+      > tr >td.price {
+        min-width: 200px;
+      }
+    }
+  }
+  .no-border {
+    border-left: none;
+  }
+  .red {
+    color: #CC2028;
+    font-family: $mainFontLightBold;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .field-name, .field-value {
+    font-family: $mainFontLight;
+    font-size: 16px;
+    line-height: 25px;
+  }
+ .field-name {
+   font-family: $mainFont;
+   font-weight: bold;
+
+  }
+  .field-name + .field-value {
+    margin-right: 10px;
+  }
+  .row-open {
+    border-bottom: none;
+  }
+  .details-row {
+    > td {
+      padding-bottom: 30px;
+    }
+  }
+  .details-row, .row-open {
+    background-color: #F2F2F2;
+  }
+  .UnderlyingChartTableKeyValue {
+    padding-top: 10px;
+    &.left-table {
+      padding-right: 15px;
+    }
+    &.right-table {
+      padding-left: 15px;
+    }
+  }
+}

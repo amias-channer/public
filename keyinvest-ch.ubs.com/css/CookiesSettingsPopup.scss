@@ -1,0 +1,142 @@
+@import '../../scss/global';
+.CookiesSettingsPopup {
+
+  .modal-content {
+    padding: 12px 10px 0 10px;
+  }
+
+  .modal-body {
+    padding: 0 4px;
+  }
+
+  .modal-footer {
+    margin-bottom: 40px;
+  }
+
+
+  .language-select-label {
+    color: #222222;
+    line-height: 17px;
+    font-size: 15px;
+    display: inline;
+    vertical-align: middle;
+    font-weight: 100;
+    margin-right: 10px;
+  }
+
+  .CookiesSection {
+    margin-top: 16px;
+  }
+
+  .LanguageSelector {
+    display: inline;
+  }
+
+  .info-text {
+    padding: 9px 10px 7px 11px;
+    background-color: #DEE2E9;
+  }
+
+  .cookies {
+    h2 {
+      font-size: 32px;
+      line-height: 40px;
+      color: #1C1C1C;
+      font-family: $mainFontLight;
+      margin-bottom: 16px;
+    }
+  }
+
+  .RadioSwitch {
+    display: block;
+  }
+
+  .icon-Information {
+    margin-left: 8px;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 19px;
+  }
+
+  .col-btn-accept {
+    padding-right: 5px;
+  }
+
+  .col-btn-cancel {
+    padding-left: 5px;
+  }
+
+  .action-buttons {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    .Button {
+      border-radius: 0;
+      min-height: 41px;
+      font-size: 12px;
+      line-height: 16px;
+      color: #1C1C1C;
+      min-width: 155px;
+      &.btn-accept {
+        background-color: #6A7D39;
+        color: white;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .CookiesSettingsPopup {
+    .btn-accept, .btn-cancel {
+      width: 100%;
+    }
+
+    .modal-content {
+      padding-top: 23px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .col-btn-accept {
+      padding-right: 1px;
+    }
+    .col-btn-cancel {
+      padding-left: 1px;
+    }
+  }
+}
+
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .CookiesSettingsPopup {
+
+    .modal-dialog {
+      max-width: 810px;
+      margin-top: 0;
+    }
+
+    .modal-content {
+      padding: 57px 102px 93px 102px;
+    }
+
+    .modal-footer {
+      padding: 0;
+    }
+
+    .action-buttons {
+      margin-top: 28px;
+      position: static;
+    }
+
+    .col-btn-accept {
+      padding-right: 5px;
+    }
+
+    .col-btn-cancel {
+      padding-left: 5px;
+    }
+  }
+}
+

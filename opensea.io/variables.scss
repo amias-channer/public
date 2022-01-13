@@ -1,0 +1,75 @@
+$red: #de5a4d;
+$green: #3ab971;
+$blue: #3291e9;
+$orange: #ffa80c;
+$yellow: #ffd20c;
+$grey: #9b9b9b;
+$ultralight-grey: #f2f2f2;
+$black: #1c1f27;
+$dark-grey: #282c33;
+$purple: #9c27b0;
+$light-green: rgb(0, 201, 164);
+$lighter-green: rgb(0, 255, 208);
+$sea-green: #00d7d1;
+$dark-green: #007f7c;
+
+$primary-0: #fbfbfb; // background of app
+$primary-1: $sea-green; // #b3c5f5; // nav color, some links, buttons
+$primary-2: #d8f6fe; // background of landing
+$primary-3: #336cad;
+$primary-4: #0095be; // Used for the Sea
+$primary-5: #007296; // Logo color
+$primary-6: #1c1f27; // background of app nav
+
+// Backgrounds
+$bg-landing: $primary-2;
+$bg-app: $primary-0;
+$bg-404: #cee7fd;
+$bg-sidebar: #2f333b;
+$bg-nav: $primary-6;
+$bg-sidebar-dark: $dark-grey;
+
+// Breakpoints
+$bp-xxl: 1400px;
+$bp-xl: 1200px;
+$bp-large: 993px;
+$bp-medium: 815px;
+$bp-small: 600px;
+
+$bp-tablet-large: 1024px;
+$bp-tablet-small: 768px;
+$bp-phone-xlarge: 414px;
+$bp-phone-large: 411px;
+$bp-phone-medium: 375px;
+$bp-phone-small: 360px;
+$bp-phone-xsmall: 320px;
+
+$border-radius: 5px;
+$hero-height: 400px;
+
+$nav-height: 64px;
+$nav-height-small: 56px;
+$nav-link-blue: #3194ed;
+$nav-grey: #444851;
+$nav-border-color: #252831;
+$breadcrumb-bar-height: 60px;
+
+$sidebar-width: 300px;
+$sort-width: 200px;
+
+$padding-default: 15px;
+$margin-default: $padding-default;
+
+$category-color: #8e94a0;
+$category-alt-color: #959aa4;
+$light-text: #9e9e9e;
+$sidebar-text: #949da5;
+$rounded-icon: #656c7d;
+$assets-blue: #004c63;
+$account-blue: #2e80ed;
+$account-grey: $grey;
+$medium-grey: #4a4a4a;
+$input-grey: #e2e2e2;
+$pale-background-blue: #edfbff;
+$medium-blue: #2d9cdb;
+$ultra-pale: #fcfcfc;

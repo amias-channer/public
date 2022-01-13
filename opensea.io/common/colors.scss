@@ -1,0 +1,70 @@
+@import "../variables";
+
+// TEXT
+.green-text {
+  color: $green !important;
+}
+.sea-green-text {
+  color: $sea-green !important;
+}
+.red-text {
+  color: $red !important;
+}
+.orange-text {
+  color: $orange !important;
+}
+.yellow-text {
+  color: $orange !important;
+}
+.blue-text {
+  color: $blue !important;
+}
+.grey-text {
+  color: $grey !important;
+}
+.black-text {
+  color: $black !important;
+}
+.purple-text {
+  color: $purple !important;
+}
+
+// BACKGROUNDS
+.green {
+  background-color: $green !important;
+}
+.sea-green {
+  background-color: $sea-green !important;
+}
+.red {
+  background-color: $red !important;
+}
+.orange {
+  background-color: $orange !important;
+}
+.yellow {
+  background-color: $orange !important;
+}
+.blue {
+  background-color: $blue !important;
+}
+.grey {
+  background-color: $grey !important;
+}
+.purple {
+  background-color: $purple !important;
+}
+
+// BORDERS
+.green-border {
+  border: 1px solid $green !important;
+}
+.red-border {
+  border: 1px solid $red !important;
+}
+.blue-border {
+  border: 1px solid $blue !important;
+}
+.purple-border {
+  border: 1px solid $purple !important;
+}

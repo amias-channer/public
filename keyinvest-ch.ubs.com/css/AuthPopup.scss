@@ -1,0 +1,69 @@
+@import "../../../scss/global";
+
+.AuthPopup {
+  position: relative;
+  .popup-container {
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 9px 0 rgba(0,0,0,0.36);
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 23px 1px 35px 16px;
+    width: 100%;
+    height: calc(100vh);
+    .close-button {
+      position: absolute;
+      right: 0;
+      .Icon {
+        font-size: 20px;
+      }
+    }
+    .inner-container {
+      padding-right: 16px;
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+
+  .AuthPopup {
+    .popup-container {
+      > div {
+        overflow-y: auto !important;
+        overflow-x: hidden;
+      }
+      > div > div {
+        overflow: hidden !important;
+        margin-bottom: 0 !important;
+      }
+      .inner-container {
+        padding-left: 16px;
+        padding-right: 30px;
+      }
+      padding: 23px 1px 35px 1px;
+      .close-button {
+        position: absolute;
+        right: 16px;
+      }
+
+      .DropdownField .StandardDropdown .dropdown-menu {
+        left: 0 !important;
+      }
+      .StandardDatePicker .SingleDatePicker_picker {
+       left: -18px !important;
+      }
+    }
+  }
+}
+
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .AuthPopup {
+    .popup-container {
+      width: 320px;
+      height: auto;
+    }
+  }
+}

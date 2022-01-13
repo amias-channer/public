@@ -1,0 +1,47 @@
+@import "../../../scss/global";
+
+.CountrySelector {
+  .no-bootstrap-style {
+    transform: none!important;
+    position: relative!important;
+  }
+    padding-left: 10px;
+  .dropdown-menu-styled {
+    padding: 17px 25px;
+    min-width: 200px;
+    box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.36);
+    margin-top: 0;
+    margin-left: -26px;
+    border: none;
+    .dropdown-item {
+      margin: 0;
+      padding: 0;
+
+      border-bottom: 1px solid #E1E1E1;
+
+      &:last-child {
+        border: none;
+      }
+
+      &:hover, &.active {
+        background-color: #DEDEDE;
+      }
+
+      > span {
+        padding: 12px;
+        display: block;
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  }
+  .toggle-btn {
+    padding: 0;
+    font-size: 14px;
+    color: $black;
+    &:after {
+      border-top-color: $black;
+      border-bottom-color: $black;
+    }
+  }
+}

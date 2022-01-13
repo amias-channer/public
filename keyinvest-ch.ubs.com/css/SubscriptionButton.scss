@@ -1,0 +1,50 @@
+@import "../../../scss/global";
+.SubscriptionButton {
+  margin-top: 10px;
+  .Button.btn-size-medium {
+    min-width: 187px;
+    max-height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .Popup {
+    .popup-container {
+      max-width: 320px;
+      margin-top: 45vh;
+    }
+
+    h1 {
+      font-family: $mainFontLight;
+      font-size: 30px;
+      line-height: 33px;
+      margin-bottom: 32px;
+      max-width: 220px;
+    }
+
+    p {
+      margin-bottom: 32px;
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .SubscriptionButton {
+    .Popup {
+      .popup-container {
+        position: relative;
+        max-width: 615px;
+        margin: 25vh auto 0;
+      }
+
+      h1 {
+        max-width: unset;
+      }
+    }
+  }
+}

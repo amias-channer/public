@@ -1,0 +1,67 @@
+@import '../../../scss/global';
+.FlyoutMenu {
+  position: relative;
+  .flyout-menu-wrapper {
+    padding: 10px 15px;
+    box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.36);
+    background-color: #FFFFFF;
+    position: absolute;
+    right: 0;
+    z-index: 4;
+    min-width: 210px;
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+      margin-bottom: 6px;
+      li {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 10px;
+        font-family: $mainFont;
+        border-bottom: 1px solid #EEEEEE;
+        cursor: pointer;
+        color: $blue;
+        white-space: nowrap;
+        &:hover {
+          background-color: #DEDEDE;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .Icon {
+      margin-right: 5px;
+      font-size: 15px;
+      color: #444444;
+    }
+  }
+
+  .Icon {
+    &.icon-more {
+      font-size: 24px;
+      color: #646464;
+      cursor: pointer;
+    }
+    &.flyout-menu-open {
+      background-color: #646464;
+      color: #FFFFFF;
+    }
+  }
+  .toggle-button {
+    padding: 5px 8px;
+    &.flyout-menu-open, &.flyout-menu-open * {
+      background-color: #646464;
+      color: #FFFFFF!important;
+    }
+  }
+
+  ul li a {
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}

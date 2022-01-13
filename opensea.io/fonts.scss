@@ -1,0 +1,76 @@
+$font: "Avenir Next", "Avenir", "Avenir Next Local", sans-serif;
+
+@font-face {
+  font-family: "Avenir Next Local";
+  src: url("../public/static/fonts/avenir/AvenirNext-Heavy.woff2")
+      format("woff2"),
+    url("../public/static/fonts/avenir/AvenirNext-Heavy.woff") format("woff");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Avenir Next Local";
+  src: url("../public/static/fonts/avenir/AvenirNext-Bold.woff2")
+      format("woff2"),
+    url("../public/static/fonts/avenir/AvenirNext-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Avenir Next Local";
+  src: url("../public/static/fonts/avenir/AvenirNext-Demi.woff2")
+      format("woff2"),
+    url("../public/static/fonts/avenir/AvenirNext-Demi.woff2") format("woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Avenir Next Local";
+  src: url("../public/static/fonts/avenir/AvenirNext-Medium.woff2")
+      format("woff2"),
+    url("../public/static/fonts/avenir/AvenirNext-Medium.woff2") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Avenir Next Local";
+  src: url("../public/static/fonts/avenir/AvenirNext-Regular.woff2")
+      format("woff2"),
+    url("../public/static/fonts/avenir/AvenirNext-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Avenir Next Local";
+  src: url("../public/static/fonts/avenir/AvenirNext-Italic.woff2")
+      format("woff2"),
+    url("../public/static/fonts/avenir/AvenirNext-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Avenir Next Local";
+  src: url("../public/static/fonts/avenir/AvenirNext-Light.woff2")
+      format("woff2"),
+    url("../public/static/fonts/avenir/AvenirNext-Light.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Avenir Next Local";
+  src: url("../public/static/fonts/avenir/AvenirNext-Thin.woff2")
+      format("woff2"),
+    url("../public/static/fonts/avenir/AvenirNext-Thin.woff") format("woff");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Avenir Next Local";
+  src: url("../public/static/fonts/avenir/AvenirNext-ThinItalic.woff2")
+      format("woff2"),
+    url("../public/static/fonts/avenir/AvenirNext-ThinItalic.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: italic;
+}

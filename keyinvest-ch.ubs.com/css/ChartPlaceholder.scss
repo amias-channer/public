@@ -1,0 +1,14 @@
+.ChartPlaceholder {
+  position: relative;
+  .content {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+  }
+  &.loader {
+    .content {
+      position: static;
+    }
+  }
+}

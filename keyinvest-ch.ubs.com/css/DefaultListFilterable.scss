@@ -1,0 +1,15 @@
+@import "../../scss/global";
+.DefaultListFilterable {
+  h1 {
+    color: #333333;
+    font-size: 48px;
+    font-family: $mainFontLight;
+    line-height: 52px;
+    margin-top: 55px;
+    margin-bottom: 45px;
+  }
+  .group-description-title {
+    font-size: 34px;
+    margin: 25px 0 10px 0;
+  }
+}

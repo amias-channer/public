@@ -1,0 +1,64 @@
+@import "../../scss/global";
+
+.Button {
+
+  font-family: $mainFont;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  &.disabled {
+    cursor: default;
+  }
+
+  &.btn-color-dark {
+    @include button-variant($button-color-dark, $button-color-dark);
+  }
+
+  &.btn-color-olive {
+    @include button-variant($button-color-olive, $button-color-olive);
+  }
+
+  &.btn-color-chestnut {
+    @include button-variant($button-color-chestnut, $button-color-chestnut);
+  }
+
+  &.btn-color-atlantic {
+    @include button-variant($button-color-atlantic, $button-color-atlantic);
+  }
+
+  &.btn-color-standard {
+    @include button-variant($button-color-standard, $button-color-standard);
+  }
+
+  &.btn-color-atlantic-dark {
+    @include button-variant($button-color-atlantic-dark, $button-color-atlantic-dark);
+  }
+
+  &.btn-color-highlighted {
+    @include button-variant($button-color-highlighted, $button-color-highlighted);
+  }
+
+  &.btn-color-transparent {
+    background-color: unset;
+    color: #1C1C1C;
+    border: 1px solid #1C1C1C;
+  }
+
+  &.btn-size-small {
+    font-size: 12px;
+    line-height: 11px;
+    max-height: 24px;
+  }
+
+  &.btn-size-medium {
+    font-size: 14px;
+    line-height: 18px;
+    max-height: 32px;
+  }
+
+  &.btn-size-standard {
+    font-size: 16px;
+    line-height: 24px;
+    max-height: 38px;
+  }
+}

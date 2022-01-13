@@ -1,0 +1,72 @@
+@import '../variables';
+
+.bid-history-offer-btn {
+  height: auto;
+  padding: 0px 15px;
+  min-width: 100px;
+  color: #FFF;
+  text-align: center;
+  background: $blue;
+  line-height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  .btn-content {
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 1px;
+    width: auto!important;
+  }
+}
+  
+.bid-history-offer-btn-secondary {
+  background: white;
+  border: 1px solid $light-text;
+
+  span {
+    color: $light-text;
+  }
+}
+
+.accept-offer-modal-content {
+  padding: 5px 0 10px 0;
+
+  span {
+    display: block;
+    margin-top: 15px;
+  }
+
+  p {
+    margin: 20px auto;
+    max-width: 420px;
+  }
+
+  .cancel-auction-btn {
+    width: 49%;
+    text-align: center;
+    background: $blue;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+    color: #FFF;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 15px;
+
+    span {
+      font-size: 15px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      margin-top: 0;
+      display: inline-block;
+    }
+
+    .chevron {
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      margin-left: 10px;
+    }
+  }
+}

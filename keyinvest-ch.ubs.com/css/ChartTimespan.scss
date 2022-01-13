@@ -1,0 +1,38 @@
+@import "../../../scss/global";
+
+.ct-chart-timespans {
+
+  .dropdown {
+    margin-bottom: 17px;
+
+    .btn {
+      background-color: white;
+      border-color: #BEBEBE;
+      color: #1C1C1C;
+      height: 46px;
+      border-radius: 0;
+      text-align: left;
+      position: relative;
+      min-width: 87px;
+      font-size: 16px;
+    }
+
+    .dropdown-toggle {
+      &:before {
+        background: #BEBEBE;
+        content: '';
+        position: absolute;
+        right: 31px;
+        top: 3px;
+        height: 36px;
+        width: 1px;
+      }
+
+      &:after {
+        position: absolute;
+        right: 10px;
+        bottom: 11px;
+      }
+    }
+  }
+}

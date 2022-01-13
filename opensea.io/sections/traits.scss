@@ -1,0 +1,122 @@
+@import "../variables";
+
+.Traits {
+  .trait_asset {
+    border-bottom: solid 1px #BDBDBD;
+
+    .trait_asset-header, .external-link {
+      display: inline-block;
+    }
+
+    .trait_asset-header {
+      font-size: 2rem!important;
+    }
+  }
+
+  .trait_content {
+    margin: 30px 0px;
+    /*border-right: solid 1px #E0E0E0;*/
+
+    .trait_row {
+
+      margin-bottom: 20px;
+      .trait_prop {
+        margin-top: 0px;
+        font-size: 1.8rem;
+      }
+
+      .trait_stat {
+        width:132px;
+        border-right: solid 1px #E0E0E0;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+        display: inline-block;
+
+        @media(max-width:480px) {
+          width: 100px;
+        }
+
+        &:nth-child(n + 2) {
+          margin-left: 10px;
+        }
+
+        span {
+          display: block;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .trait_stat-header {
+          font-size: 20px;
+          color: #2D9CDB;
+        }
+
+        .trait_stat-sub {
+          font-size: 13px;
+          font-weight: 100;
+          color: #828282;
+        }
+      }
+
+      .trait_property {
+        padding: 10px;
+        text-align: center;
+        border: solid 1px #2D9CDB;
+        background-color: #EDFBFF;
+        display: inline-block;
+        border-radius: 6px;
+        margin-bottom: 10px;
+
+        &:nth-child(2n + 1) {
+          margin-left: 10px;
+        }
+
+        span {
+          display: block;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow:ellipsis;
+        }
+
+        .trait_property-header {
+          color: black;
+          font-size: 13px;
+        }
+        .trait_property-sub {
+          color: #4f4f4f;
+          font-size: 9px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:802px) and (min-width: 445px){
+  .Traits {
+    .trait_asset {
+      .trait_asset-header {
+        font-size: 1.2rem!important;
+      }
+  
+      .external-link {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width:444px) {
+  .Traits {
+    .trait_asset {
+      .trait_asset-header {
+        font-size: 1rem!important;
+      }
+  
+      .external-link {
+        font-size: .8rem;
+      }
+    }
+  }
+}

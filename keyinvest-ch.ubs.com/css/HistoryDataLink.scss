@@ -1,0 +1,20 @@
+.HistoryDataLink {
+  .field {
+    padding-top: 14px;
+    &:first-of-type {
+      border-top: 3px solid #d9d9d9;
+    }
+  }
+
+  .content {
+    .Icon, .history-csv-link {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .Icon:before {
+      font-size: 25px;
+      margin-right: 10px;
+    }
+  }
+}

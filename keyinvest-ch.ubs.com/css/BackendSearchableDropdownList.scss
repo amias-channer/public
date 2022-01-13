@@ -1,0 +1,96 @@
+@import "../../scss/global";
+.BackendSearchableDropdownList {
+  &.active {
+    box-shadow: 0 4px 10px 1px rgba(0,0,0,0.2);
+    background-color: #FFFFFF;
+
+    .menu {
+      width: 100%;
+      display: block;
+      padding: 10px;
+      left: 0;
+      position: absolute;
+      background-color: #FFFFFF;
+      z-index: 5;
+      box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .input-group {
+      border: 2px solid #009BD2;
+      margin-top: -3px;
+    }
+  }
+
+  .TextInput .input-container span.title {
+    color: #009FD3;
+  }
+
+  .list {
+    padding-top: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    max-height: 310px;
+
+    > ul, > .ArrowKeysListNavigation ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding-bottom: 20px;
+        &.selected {
+          background-color: #e6e6e6;
+        }
+      }
+    }
+
+    input[type="checkbox"] {
+      margin-right: 8px;
+      background-color: #FFFFFF;
+      border: 5px solid #c0c0c0;
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+
+  .buttons {
+    > div {
+      padding: 0 5px 0 5px;
+      > button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        border-radius: 2px;
+        border:none;
+      }
+    }
+  }
+
+  .TextInput {
+
+    input {
+      color: #1c1c1c;
+      font-size: 16px;
+    }
+
+    input::placeholder, input::-moz-placeholder, input::-ms-input-placeholder {
+      font-size: 16px;
+      color: #919191;
+    }
+  }
+
+  .selected-single-item {
+    background-color: #EEEEEE;
+  }
+
+  .ListItem .btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}

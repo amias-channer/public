@@ -1,0 +1,14 @@
+@import "../../../scss/global";
+
+.LoginForm {
+  font-family: $mainFontLight;
+
+  .form-loading-icon{
+    position: relative;
+  }
+
+  .is-loading {
+    left: 42%;
+    top: 29%;
+  }
+}

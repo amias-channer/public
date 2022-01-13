@@ -1,0 +1,73 @@
+@import "../../../scss/global";
+
+.ProductInstrumentTable {
+  h3 {
+    color: #333333;
+    font-size: 32px;
+    font-family: $mainFontLight;
+    line-height: 40px;
+    margin-bottom: 36px;
+  }
+
+  span.highlight {
+    color: #EF1010;
+  }
+
+  > table > thead > tr {
+    > th > span {
+      display: block;
+      color: #1C1C1C;
+      font-size: 16px;
+      line-height: 22px;
+
+      &.sortable {
+        cursor: pointer;
+
+        &:hover {
+          &:not(.sorted):after {
+            font-family: $iconFont;
+            content: '\e906';
+            font-size: 8px;
+            padding-left: 5px;
+            position: absolute;
+          }
+        }
+      }
+
+      .sort-icon {
+        font-size: 8px;
+        padding-left: 5px;
+      }
+    }
+
+    > th:first-child {
+      min-width: 150px;
+    }
+  }
+
+  > table {
+
+    .termsheet-link {
+      text-align: center;
+
+      .icon-pdf {
+        font-size: 25px;
+        z-index: 99999;
+      }
+    }
+  }
+
+  .Flyout {
+    .content {
+      text-align: left;
+      min-width: 195px;
+      > a, > div {
+        padding-top: 10px;
+      }
+    }
+    /*.termsheet, .add-watchlist {
+      text-align: left;
+    }*/
+  }
+
+}

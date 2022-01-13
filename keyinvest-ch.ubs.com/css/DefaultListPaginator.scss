@@ -1,0 +1,66 @@
+@import "../../scss/global";
+$color-blue : #007099;
+.ProductInstrumentTablePagingComponent {
+  > ul {
+    list-style: none;
+    padding-left: 0;
+    > li {
+      display: inline-block;
+      padding: 5px 10px;
+    }
+    .table-pagination-jump-prev,
+    .table-pagination-jump-next {
+      > a:after {
+        content: '\...';
+      }
+    }
+    .table-pagination-next {
+      > a:after {
+        content: '\e910';
+      }
+    }
+    .table-pagination-prev {
+      > a:after {
+        content: '\e90e';
+      }
+    }
+    .table-pagination-item-active {
+      color: $white;
+      border-bottom: 1px solid $color-blue;
+    }
+    .table-pagination-item-link {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      cursor: pointer;
+      color: $color-blue;
+      &:after{
+        font-family: $iconFont;
+        line-height: 30px;
+      }
+
+    }
+    .table-pagination-item {
+      cursor: pointer;
+      color: $color-blue;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .CustomSelectItemsCountDropdown {
+      .dropdown {
+        border: 1px solid #BEBEBE;
+      }
+
+      .dropdown-toggle {
+        min-width: 160px;
+        text-align: left;
+
+        &:after {
+          margin-left: 35px;
+        }
+      }
+    }
+  }
+}
+

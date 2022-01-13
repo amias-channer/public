@@ -1,0 +1,340 @@
+@import "../../../../scss/global";
+@import "../../chartist-settings";
+
+@keyframes pushUp {
+  from {
+    stroke: #6A7D39;
+  }
+
+  to {
+    stroke: transparent;
+  }
+}
+
+@keyframes pushDown {
+  from {
+    stroke: #9A3D37;
+  }
+
+  to {
+    stroke: transparent;
+  }
+}
+
+.Chart {
+  background: #fff;
+  font-family: $mainFontLight;
+  position: relative;
+  width: 100%;
+
+  &.chart-tick-negative-0 .ct-series:nth-child(1)  .ct-point:last-of-type,
+  &.chart-tick-negative-1 .ct-series:nth-child(2)  .ct-point:last-of-type,
+  &.chart-tick-negative-2 .ct-series:nth-child(3)  .ct-point:last-of-type,
+  &.chart-tick-negative-3 .ct-series:nth-child(4)  .ct-point:last-of-type,
+  &.chart-tick-negative-4 .ct-series:nth-child(5)  .ct-point:last-of-type,
+  &.chart-tick-negative-5 .ct-series:nth-child(6)  .ct-point:last-of-type,
+  &.chart-tick-negative-6 .ct-series:nth-child(7)  .ct-point:last-of-type,
+  &.chart-tick-negative-7 .ct-series:nth-child(8)  .ct-point:last-of-type,
+  &.chart-tick-negative-8 .ct-series:nth-child(9)  .ct-point:last-of-type,
+  &.chart-tick-negative-9 .ct-series:nth-child(10)  .ct-point:last-of-type {
+    stroke: transparent;
+    stroke-width: 9px;
+    animation-name: pushDown;
+    animation-duration: 3s;
+  }
+
+  &.chart-tick-positive-0 .ct-series:nth-child(1) .ct-point:last-of-type,
+  &.chart-tick-positive-1 .ct-series:nth-child(2) .ct-point:last-of-type,
+  &.chart-tick-positive-2 .ct-series:nth-child(3) .ct-point:last-of-type,
+  &.chart-tick-positive-3 .ct-series:nth-child(4) .ct-point:last-of-type,
+  &.chart-tick-positive-4 .ct-series:nth-child(5) .ct-point:last-of-type,
+  &.chart-tick-positive-5 .ct-series:nth-child(6) .ct-point:last-of-type,
+  &.chart-tick-positive-6 .ct-series:nth-child(7) .ct-point:last-of-type,
+  &.chart-tick-positive-7 .ct-series:nth-child(8) .ct-point:last-of-type,
+  &.chart-tick-positive-8 .ct-series:nth-child(9) .ct-point:last-of-type,
+  &.chart-tick-positive-9 .ct-series:nth-child(10) .ct-point:last-of-type {
+    stroke: transparent;
+    stroke-width: 9px;
+    animation-name: pushUp;
+    animation-duration: 3s;
+  }
+
+  .btn-wrapper {
+    border-bottom: 1px solid #BEBEBE;
+    margin-bottom: 17px;
+
+    .btn {
+      padding: 10px 15px 10px 17px;
+      background: #fff;
+      font-size: 16px;
+      color: #1C1C1C;
+      font-family: $mainFontLight;
+      display: inline-block;
+      border: 1px solid #BEBEBE;
+      border-bottom: none;
+
+      &:hover {
+        background-color: #D7D7D7;
+      }
+
+      &.active {
+        background-color: #444444;
+        color: #ffffff;
+      }
+    }
+
+    .dropdown {
+      .dropdown-menu {
+        width: 100%;
+      }
+
+      .dropdown-toggle:after {
+        vertical-align: bottom;
+        margin-left: 11px;
+        margin-bottom: 11px;
+      }
+
+      .btn {
+        padding: 4px 0 3px 0;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        color: #000000;
+
+        >span {
+          display: inline-block;
+          width: calc(100% - 27px);
+          height: 100%;
+          padding-top: 13px;
+          padding-left: 10px;
+          padding-bottom: 17px;
+          border-right: 1px solid #AAAAAA;
+        }
+      }
+    }
+  }
+
+  .ct-chart {
+    user-select: none;
+  }
+
+  .ct-tooltip {
+    background: #FFF;
+    border-radius: 3px;
+    border: 1px solid #979797;
+    color: #646464;
+    font-size: 12px;
+    position: absolute;
+    padding: 5px;
+    display: none;
+    min-width: 100px;
+    user-select: none;
+    z-index: 1;
+
+    &:before {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 9px solid #979797;
+      content: "";
+      left: 4px;
+      position: absolute;
+      bottom: -9px;
+    }
+
+    &:after {
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 8px solid #fff;
+      content: "";
+      left: 5px;
+      position: absolute;
+      bottom: -8px;
+    }
+
+    &.reverse {
+      &:before {
+        left: auto;
+        right: 4px;
+      }
+
+      &:after {
+        left: auto;
+        right: 5px;
+      }
+    }
+
+    .bullet {
+      height: 10px;
+      width: 10px;
+      display: inline-block;
+      background: black;
+      margin: 0 6px 0 0;
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  .ct-grids {
+
+    .ct-grid-background-even {
+      fill: #F7F7F7;
+    }
+
+    .ct-grid-background-odd {
+      fill: #fff;
+    }
+
+    .ct-targetline {
+      stroke: #000;
+      stroke-width: 1px;
+
+      &.vertical {
+        stroke: #CC2028;
+      }
+
+      &.previous-close {
+        stroke: #D8D8D8;
+        stroke-width: 1px;
+      }
+    }
+
+    .ct-targetline-rect {
+
+      &.deri-neutral-min,
+      &.deri-neutral-max,
+      &.deri-neutral {
+        fill: transparent;
+      }
+
+      &.deri-bearish {
+        fill: rgb(236, 216, 216);
+      }
+
+      &.deri-bullish,
+      &.deri-bullish-global {
+        fill: rgb(225, 229, 217);
+      }
+    }
+
+    .ct-targetline-label {
+      color: #000;
+      font-family: $mainFontLight;
+      text-anchor: start;
+      font-size: 13px;
+      white-space: nowrap;
+      position: relative;
+      padding: 0 0 0 10px;
+
+      &.vertical {
+        fill: #CC2028;
+      }
+
+      &.rect {
+        display: inline-block;
+        right: 100px;
+        width: 100px;
+        text-align: end;
+        padding: 0 5px 0 0;
+      }
+    }
+
+  }
+
+  .ct-point {
+    stroke-width: 0;
+  }
+
+  .ct-series {
+    &.disabled {
+      opacity: 0;
+    }
+
+    .ct-line.ct-threshold-above {
+      stroke: #6A7D39 !important;
+    }
+
+    .ct-line.ct-threshold-below {
+      stroke: #9A3D37 !important;
+    }
+  }
+
+  .ct-scrollbar {
+    margin: 10px 0 0 0;
+    position: relative;
+
+    .ct-scrollbar-chart {
+      .ct-grid {
+        stroke: #c1c1c1;
+
+        &:first-child {
+          stroke: none;
+        }
+      }
+
+      .ct-labels {
+        transform: translate(5px, -40px);
+
+        foreignObject {
+          &:first-child {
+            display: none;
+          }
+        }
+
+      }
+
+      .ct-line {
+        stroke: #e9e9e9;
+      }
+
+      .ct-area {
+        fill: #000;
+        fill-opacity: 0.05;
+      }
+    }
+
+    .ct-scrollbar-tracks {
+      .ct-scrollbar-track {
+        cursor: pointer;
+        background: rgba(50, 50, 50, 0.08);
+        height: 40px;
+        top: 0;
+      }
+    }
+
+    .ct-scrollbar-handle {
+      background: #646464;
+      cursor: pointer;
+      height: 100%;
+      width: 11px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      margin-left: -5px;
+
+      &:before {
+        width: 0;
+        height: 0;
+        border-left: 11px solid #fff;
+        border-bottom: 13px solid transparent;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+
+      &:last-child {
+        &:before {
+          border-right: 11px solid #fff;
+          border-left: none;
+        }
+      }
+    }
+
+  }
+
+}

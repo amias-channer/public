@@ -1,0 +1,107 @@
+@import '../../../../scss/global';
+
+.Brokers {
+  display: none;
+  &:hover {
+    display: block;
+  }
+  position: absolute;
+  background: #FFFFFF;
+  top: 38px;
+  z-index: 99;
+  text-align: center;
+  width: 100%;
+  box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.31);
+  .broker {
+    line-height: 40px;
+    border-bottom: 1px solid #F3F3F3;
+    a {
+      color: #646464;
+      display: block;
+      border-bottom: 1px solid #dedede;
+      height: 40px;
+      text-decoration: none;
+
+      &.cash {
+        background:url('../../../../assets/images/logos.png') no-repeat scroll 6px -229px #fff;
+      }
+      &.ubs {
+        background:url('../../../../assets/images/logos.png') no-repeat scroll 2px 2px #fff;
+      }
+      &.postfinance {
+        background:url('../../../../assets/images/logos.png') no-repeat scroll 6px -39px #FFCC00;
+      }
+      &.brokerjet {
+        background:url('../../../../assets/images/logos.png') no-repeat scroll 6px -78px #fff;
+      }
+      &.comdirect {
+        background:url('../../../../assets/images/logos.png') no-repeat scroll 27px -115px #fff;
+      }
+      &.cortalconsors {
+        background:url('../../../../assets/images/logos.png') no-repeat scroll 6px -155px #fff;
+      }
+      &.dabbank {
+        background:url('../../../../assets/images/logos.png') no-repeat scroll 6px -194px #18171D;
+      }
+      &.swissquote {
+        background:url('../../../../assets/images/logos.png') no-repeat scroll 6px -269px #FFF;
+      }
+      &.flatex {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -368px #FFF;
+      }
+      &.dkb {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -41px #FFF;
+      }
+
+      &.s-broker {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -84px #FFF;
+      }
+
+      &.hellobank {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -121px #FFF;
+      }
+
+      &.ing {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -167px #FFF;
+      }
+
+      &.finanzen-broker {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -205px #FFF;
+      }
+
+      &.targoBank {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -249px #FFF;
+      }
+
+      &.db-maxblue {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -291px #FFF;
+      }
+
+      &.onvista-bank {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -412px #FFF;
+      }
+
+      &.justTRADE {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -451px #FFF;
+      }
+
+      &.broker-1822-direct {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -491px #FFF;
+      }
+
+      &.consorsbank {
+        background:url('../../../../assets/images/broker_logos.png') no-repeat scroll -5px -532px #FFF;
+      }
+      &:hover {
+        /* background-color: #DEDEDE; */
+      }
+      i {
+        position: absolute;
+        line-height: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        right: 5px;
+      }
+    }
+  }
+}

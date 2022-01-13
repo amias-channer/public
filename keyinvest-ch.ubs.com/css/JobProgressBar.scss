@@ -1,0 +1,13 @@
+.JobProgressBar {
+  background-color: #CCCCCC;
+  height: 5px;
+  .bar {
+    display: block;
+    background: #E63100;
+    z-index: 2;
+    height: 5px;
+    &.completed {
+      background: #6A7D39;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../scss/global';
+
+.Flyout {
+  position: relative;
+  text-align: center;
+  .content {
+    display: none;
+    position: absolute;
+    background: #FFFFFF;
+    z-index: 1;
+    padding: 11px 16px 13px 12px;
+    color: #007099;
+    line-height: 16px;
+    font-size: 14px;
+    font-family: $mainFont;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.36);
+    right: 12px;
+    min-width: 190px;
+  }
+  > .toggle-button {
+    display: block;
+    line-height: 16px;
+  }
+  i.icon-more {
+    font-size: 25px;
+    color: #646464;
+    cursor: pointer;
+  }
+
+  &.active {
+    .content {
+      display: block;
+    }
+
+    i.icon-more {
+      color: #FFFFFF;
+      background: #646464;
+      border-radius: 2px;
+    }
+  }
+}

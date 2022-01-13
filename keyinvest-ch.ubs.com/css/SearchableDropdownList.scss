@@ -1,0 +1,91 @@
+@import "../../scss/global";
+.SearchableDropdownList {
+  .dropdown-toggler {
+    background: #ffffff;
+    color: #000000;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #A1A1A1;
+    font-size: 16px;
+    position: relative;
+
+    .dropdown-toggler-icon {
+      position: absolute;
+      font-size: 8px;
+      top: 0;
+      right: 0;
+      height: 75%;
+      width: 30px;
+      border-left: 1px solid #AAAAAA;
+      vertical-align: middle;
+      margin: 5px 0;
+
+      .icon-triangle-down {
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+        color: #444444;
+      }
+    }
+    .pushable-fields {
+      float: right;
+      margin-right: 20px;
+    }
+    .pushable-field {
+      display: inline-block;
+      margin: 0 4px;
+      font-family: $mainFontLight;
+
+      &.field-decimal-value {
+        font-size: 16px;
+      }
+      &.field-percentage-value {
+        font-size: 11px;
+      }
+    }
+
+    .selected-item {
+      display: inline-block;
+    }
+
+    .is-loading:after {
+      width: 25px;
+      height: 25px;
+      top: 16px;
+      left: 15px;
+    }
+
+  }
+
+  .DropdownSearch{
+
+    input[type=text] {
+      background: #f6f6f6;
+    }
+
+    .items-list {
+      max-height: 300px;
+      overflow-y: scroll;
+      margin-top: 10px;
+
+      strong {
+        font-size: 14px;
+      }
+
+      .dropdown-item {
+        font-size: 14px;
+        white-space: normal;
+        padding: 0.35rem 0.5rem;
+
+        &.selected {
+          background: #F2F2F2;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      padding: 0.5rem 0.5rem;
+      width: 100%;
+    }
+  }
+}

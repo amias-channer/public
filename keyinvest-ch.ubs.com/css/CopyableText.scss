@@ -1,0 +1,10 @@
+@import "../../scss/global";
+
+.CopyableText {
+  cursor: pointer;
+  display: inline-block;
+  &:before {
+    content: '';
+    display: block;
+  }
+}

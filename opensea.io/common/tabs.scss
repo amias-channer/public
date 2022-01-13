@@ -1,0 +1,33 @@
+@import "../variables";
+
+.tabs {
+  background-color: transparent !important;
+
+  $color: $nav-border-color;
+
+  // background-color: $primary-2 !important;
+  // border-radius: 20px;
+  
+  .tab a {
+    color: $color !important;
+    // display: block;
+    // width: 100%;
+    // height: 100%;
+    // padding: 0 24px;
+    font-size: 15px !important;
+    font-weight: 500;
+
+    &:hover, &.active {
+      color: $color !important;
+    }
+  }
+
+  .indicator {
+    background-color: $color !important;
+  }
+
+  .material-icons {
+    position: relative;
+    top: 5px;
+  }
+}

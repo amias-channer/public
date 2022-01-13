@@ -1,0 +1,73 @@
+@import './global';
+
+$tooltip-color-info-warning: #FFF3D8;
+$tooltip-color-info: #DEE2E9;
+
+.tooltip {
+  .tooltip-inner {
+    font-family: $mainFont;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: left;
+  }
+}
+
+.tooltip.info-warning,
+.tooltip.bell {
+  .tooltip-inner {
+    background-color: $tooltip-color-info-warning;
+  }
+  &.bs-tooltip-top .arrow::before {
+    border-top-color: $tooltip-color-info-warning;
+  }
+
+  &.bs-tooltip-right .arrow::before {
+    border-right-color: $tooltip-color-info-warning;
+  }
+
+  &.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: $tooltip-color-info-warning;
+  }
+
+  &.bs-tooltip-left .arrow::before {
+    border-left-color: $tooltip-color-info-warning;
+  }
+}
+
+.tooltip.info, .tooltip.delay {
+  .tooltip-inner {
+    background-color: $tooltip-color-info;
+  }
+  &.bs-tooltip-top .arrow::before {
+    border-top-color: $tooltip-color-info;
+  }
+
+  &.bs-tooltip-right .arrow::before {
+    border-right-color: $tooltip-color-info;
+  }
+
+  &.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: $tooltip-color-info;
+  }
+
+  &.bs-tooltip-left .arrow::before {
+    border-left-color: $tooltip-color-info;
+  }
+}
+
+.bs-tooltip-auto {
+  &[x-placement^="top"] {
+    @extend .bs-tooltip-top;
+  }
+  &[x-placement^="right"] {
+    @extend .bs-tooltip-right;
+  }
+  &[x-placement^="bottom"] {
+    @extend .bs-tooltip-bottom;
+  }
+  &[x-placement^="left"] {
+    @extend .bs-tooltip-left;
+    padding: 0 0.3rem;
+    margin-right: 15px;
+  }
+}

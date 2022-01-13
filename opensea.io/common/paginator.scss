@@ -1,0 +1,180 @@
+.Paginator {
+  width: 98.8vw;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+
+  .pages {
+    display: block;
+    width: 100%;
+    height: 85%;
+    position: relative;
+    display: flex;
+    .page {
+      transition: transform .10s ease;
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+  }
+
+  .controls {
+    width: 95%;
+    height: 15%;
+    display:flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+      margin: 0px 30px;
+
+    .left_control {
+      width: 50%;
+      height: 100%;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .right_control {
+      width: 50%;
+      height: 100%;
+
+    }
+    .paginator_controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      position: relative;
+  
+      i,span {
+        color: rgba(255,255,255,0.6);
+      }
+
+      &:hover {
+        i,span {
+          color: white;
+        }
+      }
+  
+      i{
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.Paginator_horizontal {
+  flex-wrap: wrap;
+  .pages {
+    flex-wrap: nowrap;
+
+    
+    .page {
+      flex-direction: column;
+      flex-wrap: wrap;
+      min-width: 100%;
+      @media(min-width: $bp-small) {
+        &:nth-child(n + 2) {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  .controls {
+    .collectibles_all {
+      width: 100%;
+      display: inline-block;
+    }
+
+    .paginator_controls {
+      flex-direction: row;
+      width: 100%;
+      display: block;
+      text-align: center;
+      height: 100%;
+      
+  
+      i, span {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 50px;
+      }
+      
+      span, i {
+        position: relative;
+      }
+    }
+  }
+}
+
+.Paginator_vertical {
+
+  flex-wrap: wrap;
+    flex-direction: row;
+    overflow-y: scroll;
+    height: 100%;
+
+    .pages {
+      overflow-y: scroll;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 90%;
+
+      .page {
+        flex-direction: row;
+        height: auto;
+      }
+    }
+
+    
+
+    .controls {
+      width: 100%;
+
+
+      .collectibles_all {
+        height: 15%;
+        width: 60vw!important;
+        display: block;
+        margin: 0px auto!important;
+      }
+    }
+}
+
+@media(max-width: $bp-small) {
+  .Paginator {
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-y: scroll;
+    height: 100%;
+
+    .pages {
+      overflow-y: scroll;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 89%;
+
+      .page {
+        flex-direction: row;
+        height: auto;
+      }
+    }
+
+    .controls {
+      height: 11%;
+
+      .left_control {
+        width: 100%;
+        border: none;
+        .collectibles_all {
+          line-height: 45px;
+        }
+      }
+
+      .right_control {
+        display: none;
+      }
+      .paginator_controls {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "../../../scss/global";
+
+.MarketLeverageInstrument {
+  position: relative;
+  border: 1px solid #D8D8D8;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: $white;
+  &:hover {
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+  }
+  .instrument-header {
+    cursor: pointer;
+    outline: none;
+  }
+  .type-ic {
+    display: block;
+    height: 35px;
+    width: 35px;
+    color: $white;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 10px;
+    &.long, &.call {
+      background-color: $green;
+    }
+    &.short, &.put {
+      background-color: #9a3d37;
+    }
+  }
+
+  .name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .toggle-details {
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 10px 0 10px 15px;
+    border-left: 1px solid #D8D8D8;
+    display: block;
+  }
+  .LeverageDetailsKeyValueTable {
+    border-top: 1px solid #d8d8d8;
+    padding-top: 10px;
+    margin: 10px 0;
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .MarketLeverageInstrument {
+    .LeverageDetailsKeyValueTable {
+      border-top: none;
+      padding-bottom: 12px;
+      margin: 0;
+    }
+  }
+}

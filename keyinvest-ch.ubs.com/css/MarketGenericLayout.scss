@@ -1,0 +1,28 @@
+@import "../../../scss/global";
+.MarketGenericLayout {
+  h2 {
+    margin-top: 59px;
+    color: #1C1C1C;
+    font-family: $mainFontLight;
+  }
+  .MarketInstrumentDetails {
+    margin-top: 20px;
+  }
+
+  .MarketIndicatorTileWithChart {
+    width: 227px;
+    margin-right: 10px;
+
+    &:nth-child(5n) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-only($mediaQueryTablet) {
+  .MarketGenericLayout {
+    .MarketIndicatorTileWithChart {
+      width: 265px;
+    }
+  }
+}

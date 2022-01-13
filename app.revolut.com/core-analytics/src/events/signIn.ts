@@ -1,0 +1,165 @@
+import { RetailEventOptions, COAWebEvent } from 'aqueduct-web'
+
+import { OBJECT_TYPES } from './objectTypes'
+
+const SIGN_IN_EVENTS = {
+  signInStarted: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.succeeded,
+    object: 'SignInStarted',
+    description: 'Track that sign in flow has been started',
+    objectType: OBJECT_TYPES.DATA,
+  },
+  signInSucceeded: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.succeeded,
+    object: 'SignInSucceeded',
+    description: 'Track that sign in has been succeeded (channel)',
+    objectType: OBJECT_TYPES.DATA,
+  },
+  screenChanged: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.opened,
+    object: 'SignInScreen',
+    description: 'Track changing sign in screen (screen)',
+    objectType: OBJECT_TYPES.PAGE,
+  },
+  authenticationMethodScreenOpened: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.opened,
+    object: 'SignInAuthenticationMethodScreen',
+    description: 'Track opening authentication method screen sign in ',
+    objectType: OBJECT_TYPES.PAGE,
+  },
+  authenticationMethodScreenClosed: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.closed,
+    object: 'SignInAuthenticationMethodScreen',
+    description: 'Track closing authentication method screen sign in ',
+    objectType: OBJECT_TYPES.PAGE,
+  },
+  authenticationMethodSelected: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.selected,
+    object: 'SignInAuthenticationMethod',
+    description: 'Track selection of authentication method in sign in (method)',
+    objectType: OBJECT_TYPES.DATA,
+  },
+  unknownAuthenticationMethod: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.failed,
+    object: 'SignInAuthenticationMethod',
+    description: 'Track selection of unknown authentication method in sign in (method)',
+    objectType: OBJECT_TYPES.DATA,
+  },
+  passcodeScreenOpened: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.opened,
+    object: 'SignInPasscodeScreen',
+    description: 'Track opening passcode sign in screen',
+    objectType: OBJECT_TYPES.PAGE,
+  },
+  passcodeScreenClosed: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.closed,
+    object: 'SignInPasscodeScreen',
+    description: 'Track closing passcode sign in screen',
+    objectType: OBJECT_TYPES.PAGE,
+  },
+  passcodeSubmitSucceeded: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.succeeded,
+    object: 'SignInPasscode',
+    description: 'Track successful passcode submit',
+    objectType: OBJECT_TYPES.DATA,
+  },
+  passcodeSubmitFailed: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.failed,
+    object: 'SignInPasscode',
+    description: 'Track failed passcode submit (reason)',
+    objectType: OBJECT_TYPES.DATA,
+  },
+  emailAuthScreenOpened: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.opened,
+    object: 'SignInEmailAuthScreen',
+    description: 'Track opening email auth sign in screen',
+    objectType: OBJECT_TYPES.PAGE,
+  },
+  emailAuthScreenClosed: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.closed,
+    object: 'SignInEmailAuthScreen',
+    description: 'Track cloSign email auth sign in screen',
+    objectType: OBJECT_TYPES.PAGE,
+  },
+  smsAuthScreenOpened: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.opened,
+    object: 'SignInSmsAuthScreen',
+    description: 'Track opening sms otp code sign in screen',
+    objectType: OBJECT_TYPES.PAGE,
+  },
+  smsAuthScreenClosed: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.closed,
+    object: 'SignInSmsAuthScreen',
+    description: 'Track cloSign sms otp code sign in screen',
+    objectType: OBJECT_TYPES.PAGE,
+  },
+  smsOtpSubmitSucceeded: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.succeeded,
+    object: 'SignInSmsOtp',
+    description: 'Track successful sms otp submit',
+    objectType: OBJECT_TYPES.DATA,
+  },
+  smsOtpSubmitFailed: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.failed,
+    object: 'SignInSmsOtp',
+    description: 'Track failed sms otp submit (reason)',
+    objectType: OBJECT_TYPES.DATA,
+  },
+  pushAuthScreenOpened: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.opened,
+    object: 'SignInPushAuthScreen',
+    description: 'Track opening push notification sign in screen',
+    objectType: OBJECT_TYPES.PAGE,
+  },
+  pushAuthScreenClosed: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.closed,
+    object: 'SignInPushAuthScreen',
+    description: 'Track closing push notification sign in screen',
+    objectType: OBJECT_TYPES.PAGE,
+  },
+  forgotPasswordClicked: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.clicked,
+    object: 'SignInForgotPasscode',
+    description: 'Tracks clicking of Forgot Passcode',
+    objectType: OBJECT_TYPES.BUTTON,
+  },
+  selfieSubmissionSuccess: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.succeeded,
+    object: 'SignInSelfie',
+    description: 'Tracks successful selfie submit',
+    objectType: OBJECT_TYPES.DATA,
+  },
+  selfieSubmissionFailed: {
+    category: COAWebEvent.Category.Onboarding,
+    action: COAWebEvent.Action.failed,
+    object: 'SignInSelfie',
+    description: 'Tracks failed selfie submit',
+    objectType: OBJECT_TYPES.DATA,
+  },
+} as const
+
+export const SignInTrackingEvent: Record<
+  keyof typeof SIGN_IN_EVENTS,
+  RetailEventOptions<string>
+> = SIGN_IN_EVENTS

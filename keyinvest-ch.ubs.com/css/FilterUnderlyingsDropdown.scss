@@ -1,0 +1,152 @@
+@import "../../../scss/global";
+
+.FilterUnderlyingsDropdown {
+
+  &.active {
+    position: initial;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .TextInput .input-container span.title {
+    color: #009FD3;
+  }
+
+  .FilterCharacters {
+    margin-top: 8px;
+    margin-right: 17px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    ul {
+      white-space:nowrap;
+      li {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 12px;
+        line-height: 16px;
+        color: #222222;
+        text-align: center;
+        padding: 12px 0;
+        width: 33px;
+        height: 40px;
+        background-color: #E6E6E6;
+        margin: 0 1px;
+        font-family: $mainFont;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: #646464;
+          color: #FFFFFF;
+        }
+
+        &.selected {
+          background-color: #646464;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  .listTypes {
+    margin-top: 10px;
+    li {
+      font-size: 16px;
+      line-height: 20px;
+      color: #1C1C1C;
+
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .underlyingsGroup {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      padding: 10px 10px 6px 0;
+      .underlyingsGroup {
+        li {
+          &:first-child,
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4)
+          {
+            border-top: 2px solid #E6E6E6;
+          }
+
+          &:nth-child(4n - 3) {
+            margin-left: 0;
+          }
+        }
+      }
+
+      &:focus {
+        label {
+          background: #F5F5F5;
+        }
+        outline: none;
+      }
+    }
+
+    label {
+      font-size: 16px;
+      color: #222222;
+      line-height: 21px;
+      cursor: pointer;
+      font-family: $mainFontLight;
+      display: flex;
+    }
+  }
+
+  .headingLetter {
+    color: #333333;
+    font-size: 16px;
+    line-height: 19px;
+    display: block;
+    font-family: $mainFontBold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    border-bottom: 2px solid #E6E6E6;
+    padding-bottom: 3px;
+  }
+
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .FilterUnderlyingsDropdown {
+    .listTypes {
+      margin-top: 5px;
+      padding-left: 0;
+      li {
+        display: inline-block;
+        padding-right: 10px;
+      }
+    }
+    .underlyingsGroup {
+      li {
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4)
+        {
+          border-top: 2px solid #E6E6E6;
+        }
+
+        &:nth-child(4n - 3) {
+          margin-left: 0;
+        }
+      }
+    }
+    .headingLetter {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}

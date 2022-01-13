@@ -1,0 +1,120 @@
+@import "../../scss/global";
+.UserProfileEditPage {
+  h1 {
+    font-family: $mainFontLight;
+    font-size: 30px;
+    line-height: 33px;
+    color: #1C1C1C;
+    font-weight: 100;
+    margin-bottom: 31px;
+  }
+
+  h2 {
+    font-family: $mainFontLight;
+    font-size: 24px;
+    line-height: 28px;
+    color: #1C1C1C;
+    font-weight: 200;
+    margin-bottom: 24px;
+  }
+
+  .language-select-dropdown {
+    margin-bottom: 52px;
+  }
+
+  .change-password {
+    margin-top: 37px;
+  }
+
+  .FormField {
+    margin-bottom: 10px;
+
+    &.language-select-dropdown {
+      margin-bottom: 52px;
+    }
+
+    &.salutation {
+      margin-bottom: 13px;
+    }
+  }
+
+  .ButtonsGroup {
+    margin-top: 28px;
+  }
+
+  .warning-text {
+    margin-top: 38px;
+  }
+
+  .Button.btn-size-standard {
+    font-size: 14px;
+  }
+
+  .error-alert, .success-alert {
+    margin-top: 28px;
+  }
+
+  .ProfileEditForm .DropdownField .StandardDropdown .dropdown-menu {
+    left: 0 !important;
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet)
+{
+  .UserProfileEditPage {
+    .FormField {
+      &.language-select-dropdown {
+        max-width: 267px;
+      }
+
+      .RadioInput {
+        max-width: 85px;
+      }
+
+      &.old-password {
+        max-width: 266px;
+      }
+      &.new-password{
+        max-width: 266px;
+      }
+    }
+
+    .new-password-field {
+      padding-right: 10px;
+    }
+    .confirm-new-password-field {
+      padding-left: 10px;
+    }
+
+    .btn-save {
+      max-width: 219px;
+    }
+    .btn-reset {
+      max-width: 127px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .UserProfileEditPage {
+    .FormField {
+      max-width: 572px;
+
+      &.new-password {
+        min-width: 266px;
+      }
+
+      &.confirm-new-password {
+        min-width: 266px;
+      }
+    }
+
+    .new-password-field {
+      padding-right: 20px;
+    }
+
+    .confirm-new-password-field {
+      padding-left: 20px;
+    }
+  }
+}

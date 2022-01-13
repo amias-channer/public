@@ -1,0 +1,250 @@
+@import "../../scss/global";
+.NewsStoriesBox {
+  margin: 29px 0;
+  > ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      border-top: 1px solid #BEBEBE;
+
+      &:last-child {
+        border-bottom: 1px solid #BEBEBE;
+      }
+    }
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding-left: 0;
+
+    > i {
+      font-size: 46px;
+      color: #444444;
+    }
+  }
+
+  .author-date {
+    font-family: $mainFontLight;
+    font-weight: 300;
+    color: #999999;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 3px;
+    padding-right: 20px;
+  }
+
+  div {
+    color: #1C1C1C;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+  }
+
+  .news-story-icon {
+    display: none;
+  }
+
+  .news-story-text {
+    padding: 6px 0 8px 20px;
+
+    a {
+      color: #1C1C1C;
+      cursor: pointer;
+    }
+  }
+
+  .light-box-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.2);
+    height: 120vh;
+    overflow-y: auto;
+
+    .news-story-icon {
+      display: initial;
+    }
+  }
+
+  .light-box {
+    background-color: #FFFFFF;
+  }
+
+  .header {
+    padding: 16px 16px 13px 16px;
+    border-bottom: 1px solid #F1F1F2;
+    position: fixed;
+    background-color: #FFFFFF;
+    width: 100%;
+
+    span > i {
+      font-size: 35px;
+    }
+  }
+
+  .content {
+    padding: 111px 16px 16px 16px;
+
+    h1 {
+      font-family: $mainFontLight;
+      font-size: 48px;
+      line-height: 52px;
+      color: #1C1C1C;
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
+
+    p {
+      margin-bottom: 25px;
+    }
+
+    .scrollable-content {
+      min-height: 100%;
+    }
+
+    .inner-container {
+      padding-right: 16px;
+    }
+    .HtmlText {
+    a {
+      &:before {
+        content: "\e918";
+        font-family: 'icomoon', serif;
+        font-size: 16px;
+        color: #444444;
+        margin-right: 14px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 24px;
+      color: #1C1C1C;
+      margin-bottom: 11px;
+    }
+  }
+
+  .NewsStoryIdeasList {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li {
+        font-size: 16px;
+        line-height: 24px;
+        padding-bottom: 10px;
+      }
+    }
+
+    i {
+      color: #007099;
+      font-size: 12px;
+      font-weight: bold;
+      margin-right: 13px;
+    }
+  }
+
+  .close-button-container {
+    text-align: right;
+    padding-top: 6px;
+    button {
+      >i {
+        font-size: 22px;
+      }
+      margin: 0;
+    }
+  }
+
+  .NewsStoryImage {
+    cursor: pointer;
+    padding: 10px 0 8px 0;
+  }
+
+  .author-info {
+    padding-top: 6px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@include media-breakpoint-only($mediaQueryMobile) {
+  .NewsStoriesBox {
+    .news-story-text {
+      padding: 6px 0 8px 0;
+    }
+  }
+}
+
+@include media-breakpoint-down($mediaQueryTablet) {
+  .light-box {
+    .content {
+      overflow-y: auto;
+      height: 100vh;
+    }
+  }
+}
+@include media-breakpoint-up($mediaQueryTablet) {
+  .NewsStoriesBox {
+    .news-story-icon {
+      display: block;
+    }
+
+    .header {
+      h2 {
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .NewsStoriesBox {
+
+    button {
+      text-align: right;
+    }
+
+    p {
+      line-height: 24px;
+    }
+
+    .light-box {
+      height: auto;
+      max-width: 808px;
+      margin: 128px auto 0;
+    }
+
+    .header {
+      position: static;
+      padding: 24px 36px 13px 36px;
+    }
+
+    .content {
+      padding: 23px 53px 16px 48px;
+
+      .scrollable-content {
+        height: calc(100vh - 400px) !important;
+        min-height: 200px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryDesktop) {
+  .NewsStoriesBox {
+    .light-box {
+      max-width: 1060px;
+    }
+
+    .content {
+      padding: 23px 102px;
+    }
+  }
+}

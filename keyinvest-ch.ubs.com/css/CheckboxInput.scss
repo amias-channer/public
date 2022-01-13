@@ -1,0 +1,19 @@
+@import "../../scss/global";
+
+.CheckboxInput {
+  font-family: $mainFont;
+  .custom-control {
+    padding-left: 0;
+    label {
+      &:before {
+        margin-left: -5px;
+      }
+      &:after {
+        margin-left: -5px;
+      }
+      span {
+        margin-left: 0;
+      }
+    }
+  }
+}

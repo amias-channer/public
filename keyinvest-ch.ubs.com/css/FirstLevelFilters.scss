@@ -1,0 +1,10 @@
+@import '../../../../scss/global';
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .FirstLevelFilters {
+    margin: 0 -7.5px;
+    .ToggleableTab {
+      padding: 0 7.5px;
+    }
+  }
+}

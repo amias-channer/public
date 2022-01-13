@@ -1,0 +1,58 @@
+@import "../../scss/global";
+.ProductInformationTeaser {
+  ul {
+    list-style: none;
+    margin-top: 27px;
+    padding: 0;
+
+    li {
+      margin-bottom: 13px;
+    }
+
+    a {
+      color: #000000;
+    }
+
+    i {
+      font-size: 20px;
+      margin-right: 10px;
+      font-family: $mainFontBold;
+      font-weight: 900;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn-arrowed {
+    padding: 6px 16px;
+    color: #FFFFFF;
+  }
+
+  .col-relative {
+    position: relative;
+    min-height: 160px;
+  }
+
+  .button-links {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+
+    li {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .ProductInformationTeaser {
+    ul {
+      margin-top: 0;
+      padding-left: 40px;
+    }
+  }
+}

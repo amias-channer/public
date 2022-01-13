@@ -1,0 +1,15 @@
+.MarketInstrumentTable {
+  position: relative;
+  .clickable {
+    cursor: pointer;
+    &.open, &:hover {
+      background-color: #F2F2F2;
+    }
+  }
+  th > span {
+    display: inline-block;
+  }
+  .instrument-table-details {
+    background-color: #F2F2F2;
+  }
+}

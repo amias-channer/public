@@ -1,0 +1,278 @@
+@import "../variables";
+
+.account_info_container {
+  position: relative;
+
+  p, a{
+    font-size: 18px;
+    color: $account-grey;
+    display: inline-block;
+    margin: 0;
+  }
+
+  .account-address {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow-x:hidden;
+    cursor: pointer;
+  }
+
+  .account-settings {
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+    left: 13px;
+    bottom: 8px;
+    color: $account-grey;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.account_link {
+  .account_link_img {
+    height: 24px;
+    width: 24px !important;
+    border-radius: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-top: -3px;
+  }
+}
+
+.account_image_container {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  .account-image {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &:hover::after {
+    content: "Edit";
+    text-transform: capitalize;
+    color: white;
+    width:100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    bottom:5px;
+    font-size: .8rem;
+    background: rgba(0,0,0,0.2);
+  }
+
+  &.large {
+    width: 150px !important;
+    height: 150px !important;
+
+    .account-image {
+      width: 150px !important;
+      height: 150px !important;
+    }
+  }
+}
+
+.no-after {
+  cursor: default;
+  &:hover::after {
+    content: "";
+    display:none;
+  }
+}
+
+.account_balance--header {
+  font-size: 30px;
+  color: $account-blue;
+  margin: 0px;
+}
+
+.account_balance--sub {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.AccountSettings {
+  text-align: center;
+  margin-top: 20px;
+
+  .settings_header {
+    font-size: 30px;
+  }
+
+  .settings_sub {
+    font-size: 22px;
+    color: $medium-grey;
+    font-weight: 100;
+  }
+
+  .account_image_container {
+    width: 100px;
+    height: 100px;
+
+    .account-image {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .settings_warning {
+    color: #4a4a4a;
+    padding: 20px 0px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .button-container {
+    widows: 100%;
+    text-align:center;
+    margin-top:35px;
+    margin-bottom: 30px;
+
+    .btn-settings {
+      width: 240px;
+      padding: 20px 0px;
+      border-radius: 50px;
+
+    }
+  }
+}
+
+@media(max-width: 600px) {
+  .account_balance--header {
+    font-size: 20px;
+    position: relative;
+    top: 18px;
+  }
+}
+
+.sharing_box_container {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+
+
+.opensea-dropdown {
+  border-radius: 5px;
+
+  &.share {
+    min-width: 150px;
+
+    @media (min-width: $bp-large) and (max-width: $bp-small) {
+      top: 36px !important;
+    }
+  }
+
+  &.share_dropdown {
+    li {
+      span, a {
+        display: flex;
+        align-items: center;
+
+        strong {
+          left: 11%;
+        }
+      }
+    }
+  }
+
+  &:first-child {
+    padding-top: 10px;
+  }
+
+  &:not(:first-child) {
+    li {
+      a, span {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  li  {
+    min-height: auto;
+    span {
+      display: block;
+
+    }
+    .copy-url {
+      position: relative;
+    }
+
+    a, span{
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: .8rem;
+      color: rgba(28, 31, 39, 0.4);
+    }
+
+    &:hover {
+      background: white;
+
+      a, span {
+        color: #1C1F27;
+      }
+    }
+  }
+
+  .opensea-icon {
+    font-size: 18px;
+    margin-right: 24px;
+    margin-left: 5px;
+  }
+
+  .opensea-twitter {
+    margin-left: 2px;
+  }
+}
+
+/* This is hacky but is necessary due to the way the dropdown works in materialize and how we cant add an offset below the origin:( */
+.special-dropdown {
+
+  @media(min-width: $bp-large) {
+    top: 125px!important;
+  }
+
+  @media(max-width: $bp-small) {
+    top: 450px!important;
+  }
+}
+
+.Avatar {
+  cursor: pointer;
+}
+
+.ShowAccount {
+  .asset_pill--ownership {
+    display: none !important;
+  }
+
+  @media(max-width: $bp-small) {
+    .FilterBar {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-bottom: 15px;
+    }
+    .Sidebar {
+      margin-top: -20px;
+      margin-bottom: 10px;
+    }
+  }
+}

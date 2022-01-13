@@ -1,0 +1,50 @@
+@import '../../../../scss/global';
+
+.BirthDatePickerField {
+  .StandardDatePicker {
+    display: block;
+    .SingleDatePicker {
+      display: block;
+    }
+    &.focused {
+      .top-label {
+        color: #919191;
+      }
+    }
+    .standard-date-picker-wrapper, .standard-date-picker-wrapper.focused {
+      width: 100%;
+      display: block;
+      border: 1px solid #A1A1A1;
+      padding: 5px 1px;
+    }
+    .DateInput {
+      width: 100%;
+      display: block;
+    }
+    .DateInput_input {
+      color: #1C1C1C;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $mainFont;
+    }
+    .top-label {
+      color: #919191;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .SingleDatePickerInput {
+      display: block;
+    }
+    .SingleDatePickerInput_calendarIcon {
+      position: absolute;
+      top: 4px;
+      right: 0;
+    }
+  }
+  .not-valid {
+    .standard-date-picker-wrapper, .standard-date-picker-wrapper.focused {
+      border: 1px solid #9C3C34;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import "../../scss/global";
+
+.MainFooter {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $mainFontLight;
+
+  color: $ubs-carbon;
+
+  h2 {
+    font-size: 16px;
+    color: $ubs-cod;
+  }
+
+  .fixed-bottom {
+    left: auto;
+    z-index: 999;
+  }
+
+  .footer-links a, a.footer-link {
+    color: $ubs-carbon;
+  }
+  .footer-links {
+    a {
+      display: block;
+      padding-bottom: 10px;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+    .link-separator {
+      padding: 0 10px;
+      display: none;
+    }
+  }
+
+  .content-white {
+    padding: 24px 0;
+    color: $ubs-cod;
+  }
+  .content-gray {
+    background-color: #F2F2F2;
+    padding: 52px 0 49px 0;
+    .row {
+      padding: 10px 0;
+    }
+  }
+  .support-button {
+    height: 70px;
+    width: 70px;
+    color: $white;
+    text-align: center;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    i, span {
+      display: block;
+    }
+    i {
+      font-size: 35px;
+    }
+    span {
+      font-size: 11px;
+      line-height: 12px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .MainFooter {
+    .footer-links {
+      a {
+        display: inline-block;
+        padding-bottom: 0;
+      }
+      .link-separator {
+        display: inline-block;
+      }
+    }
+
+  }
+}

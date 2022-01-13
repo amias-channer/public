@@ -1,0 +1,21 @@
+.IconInputText {
+  .Icon {
+    margin-right: 6px;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+
+  input {
+    border: none;
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 10px;
+    min-width: auto;
+    height: 100%;
+    display: inline-block;
+
+    &::placeholder {
+      color: #CCCCCC;
+    }
+  }
+}

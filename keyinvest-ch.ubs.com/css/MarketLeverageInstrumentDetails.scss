@@ -1,0 +1,43 @@
+@import '../../../../scss/global';
+
+.MarketLeverageInstrumentDetails {
+  padding: 25px 8px 20px;
+
+  .product-details-button {
+    border-radius: 2px;
+    min-height: 24px;
+    color: #FFFFFF;
+    font-family: $mainFont;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    width: 100%;
+    margin-top: 11px;
+  }
+  .bold-field {
+    .field-value {
+      font-family: $mainFontBold;
+    }
+  }
+
+  .other-fields-row {
+    margin-top: 26px;
+    border-top: 1px solid #D8D8D8;
+
+    .InlineKeyValueTable {
+      padding-top: 9px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .MarketLeverageInstrumentDetails {
+    padding-left: 46px;
+    padding-top: 18px;
+    padding-right: 36px;
+
+    .product-details-button {
+      width: auto;
+    }
+  }
+}

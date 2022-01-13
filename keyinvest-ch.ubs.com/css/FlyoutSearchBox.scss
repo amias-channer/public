@@ -1,0 +1,72 @@
+@import "../../scss/global";
+.FlyoutSearchBox {
+  min-height: 245px;
+  box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.36);
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  z-index: 3;
+
+  .flyout-search-box-wrapper {
+    padding: 20px 24px;
+  }
+
+  .search-list-col {
+    h3 {
+      color: #444444;
+      line-height: 39px;
+      font-size: 16px;
+      font-family: $mainFontLightBold;
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        line-height: 39px;
+        color: #007099;
+        font-size: 13px;
+      }
+    }
+  }
+
+
+  .Icon {
+    &.icon-plus {
+      color: #1C1C1C;
+      font-weight: bold;
+      background-color: #D8D8D8;
+      border-radius: 12px;
+      font-size: 12px;
+      padding: 2px;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .FlyoutSearchBox {
+    .search-list-col {
+      ul li {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .FlyoutSearchBox {
+    width: 500px;
+    left: -16px;
+    top: -10px;
+  }
+}
+
+@include media-breakpoint-up($mediaQueryDesktop) {
+  .FlyoutSearchBox {
+    width: 600px;
+    left: -25px;
+  }
+}

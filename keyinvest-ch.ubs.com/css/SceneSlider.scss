@@ -1,0 +1,90 @@
+@import "../../scss/global";
+
+.SceneSlider {
+  .swiprer-slide {
+    position: relative;
+  }
+  .slider-img {
+    max-width: 100%;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    height: 35px;
+    width: 35px;
+    margin-top: -17px;
+    z-index: 10;
+    cursor: pointer;
+    background-size: 50px 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    opacity: 0.6;
+    transition: opacity 0.9s;
+
+    &:before {
+      background-image: none;
+      content: "\e910";
+      font-family: $iconFont;
+      color: $black;
+      font-size: 21px;
+      line-height: 35px;
+      margin: 0 10px;
+    }
+  }
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 0;
+    left: auto;
+  }
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 0;
+    right: auto;
+    &:before {
+      content: "\e90e";
+    }
+  }
+  .swiper-pagination-bullets {
+    text-align: center;
+    > span {
+      height: 8px;
+      width: 8px;
+      background-color: #D8D8D8;
+      border: none;
+      border-radius: 8px;
+      display: inline-block;
+
+      &.swiper-pagination-bullet-active {
+        background-color: #1C1C1C;
+      }
+
+      &+span{
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .SceneSlider {
+    .slider-img {
+      height: 370px;
+    }
+    .swiper-button-prev, .swiper-button-next {
+      height: 69px;
+      width: 69px;
+      margin-top: -35px;
+      opacity: 0;
+      &:before {
+        font-size: 42px;
+        line-height: 69px;
+        margin: 0 15px;
+      }
+    }
+    &:hover {
+      .swiper-button-prev, .swiper-button-next {
+        opacity: 0.9;
+      }
+    }
+  }
+}

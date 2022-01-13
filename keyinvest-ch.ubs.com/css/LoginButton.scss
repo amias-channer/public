@@ -1,0 +1,13 @@
+@import "../../../scss/global";
+
+.LoginButton {
+  button.btn {
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 14px;
+    .Icon {
+      font-size: 8px;
+      padding-left: 10px;
+    }
+  }
+}

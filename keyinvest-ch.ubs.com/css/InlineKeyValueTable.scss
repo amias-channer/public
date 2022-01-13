@@ -1,0 +1,29 @@
+@import '../../scss/global';
+
+.InlineKeyValueTable {
+
+  .key-value-field {
+    margin-right: 10px;
+    .label {
+      color: #919191;
+      font-family: $mainFont;
+      font-size: 12px;
+      line-height: 24px;
+    }
+    .value {
+      color: #1C1C1C;
+      font-family: $mainFont;
+      font-size: 12px;
+      line-height: 24px;
+      text-align: right;
+    }
+  }
+  .separator {
+    margin-right: 10px;
+    vertical-align: middle;
+
+    &:last-child {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import "../../../../scss/global";
+
+.SliderContent {
+  img {
+    max-width: 100%;
+  }
+  .contents{
+    text-align: left;
+    left: 0;
+    bottom: auto;
+    font-family: $mainFontLight;
+    color: $black;
+    margin-top: 10px;
+
+    .title {
+      font-size: 30px;
+      line-height: 33px;
+      margin-bottom: 5px;
+    }
+
+    .text {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  .buttons {
+    margin-top: 10px;
+    .btn {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 16px;
+      font-family: $mainFontLight;
+      padding: 10px 16px 10px 16px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .SliderContent {
+    .contents {
+      margin-top: 25px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .SliderContent {
+    .contents {
+      position: absolute;
+      top: 45px;
+      left: 95px;
+      .title {
+        font-size: 38px;
+        line-height: 44px;
+        margin-bottom: 10px;
+        min-height: 44px;
+      }
+      .text {
+        min-height: 50px;
+      }
+    }
+    .buttons {
+      margin-top: 0;
+      position: absolute;
+      top: 273px;
+      right: 30px;
+      text-align: right;
+
+      &.left {
+        left: 30px;
+        right: auto;
+      }
+
+      .btn {
+        margin-top: 0;
+      }
+    }
+  }
+}

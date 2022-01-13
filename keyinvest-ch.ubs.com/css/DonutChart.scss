@@ -1,0 +1,220 @@
+@import "../../../scss/global";
+@import "../_chartist-settings.scss";
+//noinspection CssUnknownTarget,CssUnknownTarget
+@import "chartist/dist/scss/chartist.scss";
+@import "../../KeyValueTable/KeyValueTable";
+
+.ct-donut-chart {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin:0 0 10px 0;
+
+  .ct-chart, .ct-pie-chart-as-donut {
+    height: 288px;
+    width: 288px;
+
+    @for $i from 0 to length($ct-series-names) {
+      .ct-series-#{nth($ct-series-names, $i + 1)} {
+        .ct-slice-donut {
+          stroke: nth($ct-donut-series-colors, $i + 1);
+        }
+      }
+    }
+  }
+
+  .divider {
+    width: 100%;
+
+    hr {
+      float: right;
+      min-width: 572px;
+      border: 0;
+      height: 1px;
+      background: #BEBEBE;
+    }
+  }
+
+
+  .KeyValueTable {
+    @extend .KeyValueTable;
+    margin: 36px 0 0 0;
+    flex-grow: 1;
+
+    .field:first-of-type {
+      border-top-width: 1px;
+    }
+
+    .row {
+      &.hidden {
+        display: none;
+      }
+    }
+
+    .values {
+      .value {
+        position: relative;
+
+        &:first-child {
+          padding: 0 0 0 27px;
+
+          &:before {
+            content: '';
+            height: 17px;
+            width: 17px;
+            background: black;
+            display: block;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    @for $i from 0 to length($ct-donut-series-colors) {
+      .color-key-#{$i} {
+        .value:first-child:before {
+          background: nth($ct-donut-series-colors, $i + 1);
+        }
+      }
+    }
+  }
+
+  button {
+    margin: 15px 0 0 0;
+    color: $ubs-link;
+    position: relative;
+    padding: 0 0 0 20px;
+    font-family: $mainFont, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+
+    &:before {
+      content: '\e90b';
+      font-family: $iconFont;
+      font-size: 14px;
+      position: absolute;
+      left: 0;
+    }
+
+    &.btn-arrowed-up {
+      &:before {
+        content: '\e90d';
+      }
+    }
+  }
+
+  @include media-breakpoint-up($mediaQueryTablet) {
+    position: relative;
+
+    .ct-chart, .ct-pie-chart-as-donut {
+      height: 354px;
+      width: 354px;
+      margin: 0 auto;
+
+      @for $i from 0 to length($ct-series-names) {
+        .ct-series-#{nth($ct-series-names, $i + 1)} {
+          .ct-slice-donut {
+            stroke: nth($ct-donut-series-colors, $i + 1);
+          }
+        }
+      }
+    }
+
+    .KeyValueTable {
+      flex-grow: 1;
+      width: calc(50% - 25px);
+
+      .row {
+        &:first-child {
+          border-top: none;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      &:nth-child(2) {
+        .row {
+          &:last-child {
+            position: relative;
+            &:after {
+              content: '';
+              height:1px;
+              width: calc(200% + 25px);
+              position: absolute;
+              bottom: 0;
+              left:0;
+            }
+          }
+        }
+      }
+    }
+
+    .KeyValueTable+.KeyValueTable {
+      margin-left: 25px;
+    }
+
+    .buttons {
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up($mediaQueryNotebook) {
+    .ct-chart, .ct-pie-chart-as-donut {
+      height:304px;
+      width:304px;
+      margin-right:32px;
+    }
+    .KeyValueTable {
+      margin:0;
+      width: calc(50% - 304px - 32px - 30px);
+
+      &:nth-child(2) {
+        .row {
+          &:last-child {
+            &:after {
+              width: calc(200% + 30px);
+            }
+          }
+        }
+      }
+    }
+    .KeyValueTable+.KeyValueTable {
+      margin-left: 30px;
+    }
+
+    .buttons {
+      width: calc(100% - 304px - 30px);
+      margin-left: calc(304px + 30px);
+    }
+  }
+
+  @include media-breakpoint-up($mediaQueryDesktop) {
+    .ct-chart, .ct-pie-chart-as-donut {
+      height:266px;
+      width:266px;
+      margin-right:40px;
+    }
+    .KeyValueTable {
+      width: calc(100% / 3 - 266px - 40px - 37px);
+      &:nth-child(2) {
+        .row {
+          &:last-child {
+            &:after {
+              width: calc(300% + 37px * 2);
+            }
+          }
+        }
+      }
+    }
+    .KeyValueTable+.KeyValueTable {
+      margin-left: 37px;
+    }
+    .buttons {
+      width: calc(100% - 266px - 40px);
+      margin-left: calc(266px + 40px);
+    }
+  }
+}

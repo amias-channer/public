@@ -1,0 +1,145 @@
+@import "../../../scss/global";
+.ThemesListTable {
+  > table {
+    border-collapse:separate;
+    border-spacing: 0 15px;
+    padding: 0 5px;
+    > thead {
+      > tr {
+        > th {
+          > span {
+            color: #000000;
+            font-family: $mainFontLightBold;
+            font-size: 12px;
+            line-height: 14px;
+          }
+          &:first-child {
+            border-left: none;
+          }
+        }
+      }
+    }
+    > tbody {
+      border: none;
+      > tr {
+        &:hover {
+          box-shadow: 0 0 7px 0 rgba(0,0,0,0.3);
+          cursor: pointer;
+          border: none;
+        }
+        > td {
+          vertical-align: middle;
+          border-top: 1px solid #D7D7D7;
+          border-bottom: 1px solid #D7D7D7;
+          &:first-child {
+            border-left: 1px solid #D7D7D7;
+          }
+          &:last-child {
+            border-right: 1px solid #D7D7D7;
+          }
+        }
+      }
+    }
+  }
+  .value_negative {
+    color: #C63331;
+  }
+  .value_positive {
+    color: #6A7D39;
+  }
+  .title {
+    color: #1C1C1C;
+    font-family: $mainFontLight;
+    font-size: 20px;
+    line-height: 28px;
+    .text-container {
+      padding-left: 20px;
+    }
+    .avatar {
+      display: block;
+      border: 1px solid #eeeeee;
+      width: 72px;
+      height: 72px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  .chart-image {
+    width: 200px;
+  }
+  .count-title {
+    color: #222222;
+    font-family: $mainFontLight;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .count-title-mobile {
+    padding: 20px 0 20px 5px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ThemesListTable {
+    > table {
+      > tbody {
+        > tr {
+          box-shadow: none;
+          &:hover {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-only($mediaQueryMobile) {
+  .ThemesListTable {
+    .title .text-container .HtmlText {
+      max-width: 160px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .ThemeRow.details-expanded {
+      .title .text-container .HtmlText {
+        max-width: none;
+        overflow: visible;
+        text-overflow: clip;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .ThemesListTable {
+    > table {
+      > tbody {
+        >tr {
+          > td {
+            &:first-child {
+              min-width: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .ThemesListTable {
+    > table {
+      > tbody {
+        > tr {
+          > td {
+            &:first-child {
+              min-width: 350px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

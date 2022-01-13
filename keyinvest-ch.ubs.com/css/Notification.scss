@@ -1,0 +1,27 @@
+@import '../../../scss/global';
+
+.Notification {
+  position: relative;
+  margin-top: 20px;
+  > div {
+    padding: 8px 15px 8px 12px;
+    display: inline-block;
+
+    > span {
+      padding-left: 34px;
+      display: block;
+      color: #333333;
+      font-family: $mainFontBold;
+      font-size: 14px;
+      line-height: 28px;
+    }
+    .Icon {
+      font-size: 22px;
+      position: absolute;
+      margin-top: 1px;
+    }
+  }
+  .warning {
+    background: #FFF3D8;
+  }
+}

@@ -1,0 +1,68 @@
+@import "../../../../scss/global";
+.SetAlertNotificationPopup {
+  .icon-bell {
+    display: inline-block;
+    font-size: 25px;
+    margin-right: 10px;
+  }
+  .modal-dialog {
+    margin-top: 0;
+    max-width: 824px;
+    .modal-content {
+      padding: 29px 34px 30px 34px;
+    }
+  }
+
+  h1 {
+    display: inline-block;
+    font-size: 30px;
+    font-family: $mainFontLight;
+  }
+
+  .selectable-options {
+    margin-top: 24px;
+     h4 {
+       margin-bottom: 20px;
+     }
+  }
+
+  .NotificationOptionsForm {
+
+    ul {
+      padding: 0 0 0 30px;
+      li {
+        margin-bottom: 15px;
+      }
+    }
+
+    .CheckboxInput {
+      display: inline;
+    }
+    input {
+      display: inline-block;
+      max-width: 130px;
+      max-height: 21px;
+      margin: 0 10px;
+    }
+  }
+
+  h5 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .buttons {
+    margin-top: 30px;
+    margin-bottom: 33px;
+    .Button {
+      font-size: 12px;
+      min-width: 174px;
+    }
+  }
+
+  .disclaimer {
+    font-size: 14px;
+    color: #1C1C1C;
+    line-height: 20px;
+  }
+}

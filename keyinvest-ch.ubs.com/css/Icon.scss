@@ -1,0 +1,15 @@
+@import "../../scss/global";
+
+.Icon {
+  &.icon-xlsx {
+    .path1:before {
+      content: "\e92c";
+      color: rgb(68, 68, 68);
+    }
+    .path2:before {
+      content: "\e92d";
+      margin-left: -1em;
+      color: rgb(32, 115, 71);
+    }
+  }
+}

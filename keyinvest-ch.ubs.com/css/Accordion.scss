@@ -1,0 +1,43 @@
+@import '../../scss/global';
+.Accordion {
+
+  > ul {
+    list-style-type: none;
+    border: 1px solid #D8D8D8;
+    padding: 0;
+
+    > li {
+      border-bottom: 1px solid #D8D8D8;
+      line-height: 24px;
+
+      .title {
+        color: #1C1C1C;
+        font-size: 18px;
+        font-family: $mainFontLightBold;
+        margin-bottom: 5px;
+        max-width: calc(100% - 25px);
+        display: inline-block;
+      }
+
+      .head-section {
+        cursor: pointer;
+        padding: 7px 12px 0 10px;
+        .icon {
+          padding-top: 7px;
+          font-weight: bold;
+        }
+      }
+
+      .content {
+        color: #1C1C1C;
+        font-family: $mainFontLight;
+        font-size: 16px;
+        padding: 5px 12px 9px 10px;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

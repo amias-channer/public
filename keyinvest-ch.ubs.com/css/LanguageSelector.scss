@@ -1,0 +1,43 @@
+@import "../../scss/global";
+
+.LanguageSelector {
+
+  button {
+    font-size: 14px;
+  }
+
+  .no-bootstrap-style {
+    transform: none!important;
+    position: relative!important;
+  }
+  &.desktop {
+    .dropdown-menu-styled {
+      padding: 20px;
+      min-width: auto;
+      box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.36);
+      margin-top: 0;
+      margin-left: -20px;
+      border: none;
+      .dropdown-item {
+        margin: 0;
+        padding: 0;
+
+        border-bottom: 1px solid #E1E1E1;
+
+        &:last-child {
+          border: none;
+        }
+
+        &:hover, &.active {
+          background-color: #DEDEDE;
+        }
+
+        > span {
+          padding: 12px;
+          display: block;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

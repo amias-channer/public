@@ -1,0 +1,32 @@
+@import '../../../../../scss/global';
+
+.LevelFiltersContainerWithFiles {
+  .files-flyout {
+    padding: 12px 18px 0 0;
+    .FlyoutMenu {
+      .flyout-menu-wrapper {
+        min-width: 320px;
+        .DownloadLink {
+          font-family: $mainFont;
+          font-size: 16px;
+          .Icon {
+            font-size: 20px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .LevelFiltersContainerWithFiles {
+    .files-flyout {
+      .FlyoutMenu {
+        .flyout-menu-wrapper {
+          min-width: 410px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../../../../scss/global";
+
+.MarketInstrumentRowMobile {
+  &.open {
+    background-color: #F2F2F2;
+  }
+  border: 1px solid #D7D7D7;
+  padding: 10px;
+  margin-bottom: 20px;
+  .title {
+    font-family: $mainFont;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 36px;
+  }
+  .field {
+    font-size: 16px;
+    line-height: 22px;
+    .field-name {
+      font-family: $mainFontLightBold;
+      text-align: left;
+    }
+    .field-value {
+      font-family: $mainFont;
+      text-align: right;
+    }
+  }
+  .clickable {
+    width: 100%;
+    border-top: 1px solid #D7D7D7;
+    height: 25px;
+    margin-top: 15px;
+    > i {
+      color: #444444;
+      font-weight: bolder;
+    }
+  }
+}

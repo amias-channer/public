@@ -1,0 +1,115 @@
+@import '../../../scss/global';
+
+.YieldPopoverValue-popover .popover {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 10px 1px rgba(0,0,0,0.2);
+  border: none;
+  max-width: 350px;
+
+  .popover-body {
+    padding: 15px;
+  }
+  .name, .field-value, .identifiers {
+    color: #333333;
+    font-family: $mainFontLightBold;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .field-name {
+    font-family: $mainFontLight;
+    font-size: 14px;
+    color: #9a9a9a;
+    padding-right: 5px;
+  }
+  .field-value {
+    font-family: $mainFontLight;
+  }
+  .identifiers{
+    margin-top: 10px;
+    > div {
+      display: inline-block;
+      padding: 0 10px;
+      border-right: 1px solid #D8D8D8;
+      font-family: $mainFontLight;
+
+      &:last-child {
+        padding-right: 0;
+        border-right: none;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      /* To prevent double click selecting all inline tags */
+      &:before {
+        content: "";
+        display: block;
+      }
+    }
+  }
+}
+.YieldPopoverValue {
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 1px 1px 0;
+  min-width: 50px;
+  a {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: $mainFontLightBold;
+    color: #333333;
+
+    display: inline-block;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  &.positive-olive {
+    background: #6A7D39;
+    a {
+      color: #FFF;
+    }
+  }
+  &.positive-fern {
+    background: #B4B77B;
+  }
+  &.positive-lemongrass {
+    background: #DEDFB3;
+  }
+  &.positive-lemongrass-thirty-percent-less-opacity {
+    background: rgba(222,223, 179, 0.7);
+  }
+  &.positive-lemongrass-fifty-percent-less-opacity {
+    background: rgba(222,223, 179, 0.5);
+  }
+  &.positive-normal {
+    background: #96A474;
+    a {
+      color: #FFF;
+    }
+  }
+  &.positive-light {
+    background: #D2D8C3;
+  }
+  &.negative-light {
+    background: #E0C4C3;
+  }
+  &.negative-normal {
+    background: #B87773;
+    a {
+      color: #FFF;
+    }
+  }
+  &.negative-dark {
+    background: #9A3D37;
+    a {
+      color: #FFF;
+    }
+  }
+}

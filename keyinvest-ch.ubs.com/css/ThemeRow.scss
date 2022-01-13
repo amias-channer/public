@@ -1,0 +1,153 @@
+@import '../../../../scss/global';
+
+.ThemeRow {
+  &.details-expanded {
+    background-color: #F2F2F2;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+
+    //noinspection ALL
+    > td {
+      padding: 20px;
+      cursor: default;
+      cursor: auto;
+      position: relative;
+    }
+
+    &:hover {
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .close-button {
+      i {
+        font-size: 35px;
+      }
+    }
+
+    .field {
+      .field-name, .field-value {
+        padding-left: 10px;
+        border-left: 1px solid #D8D8D8;
+      }
+
+      .field-name {
+        color: #919191;
+        font-family: $mainFont;
+        font-size: 12px;
+        line-height: 14px;
+        padding-bottom: 7px;
+      }
+
+      .field-value {
+        .value {
+          padding-top: 3px;
+        }
+      }
+    }
+
+    .description {
+      color: #1C1C1C;
+      font-family: $mainFontLight;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .documents {
+      padding-bottom: 20px;
+      .DownloadLink {
+        display: block;
+        color: #000000;
+        font-family: $mainFontLight;
+        font-size: 16px;
+        line-height: 34px;
+      }
+    }
+
+    .theme-chart-underlying-disclaimer {
+      font-size: 12px;
+      line-height: 14px;
+      padding: 10px 10px;
+      background: #FFFF;
+    }
+
+    .title-container {
+      .title {
+        .text-container {
+          padding: 10px;
+        }
+      }
+    }
+    .ThemeDetailsTable {
+      margin-top: 30px;
+    }
+    .to-details-button {
+      margin-top: 25px;
+      color: #FFFFFF;
+      font-family: $mainFont;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .ThemeDetailsTableMobile {
+      margin-top: 20px;
+    }
+  }
+}
+
+
+@include media-breakpoint-down($mediaQueryMobile) {
+  .ThemeRow {
+    &.details-expanded {
+      .title-container {
+        .title {
+          .text-container {
+            padding: 10px 10px 10px 0;
+          }
+
+          .image-container {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryMobile) {
+  .ThemeRow {
+    &.details-expanded {
+      .close-container {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+@include media-breakpoint-up($mediaQueryTablet) {
+  .ThemeRow {
+    &.details-expanded {
+      .title-fields-container{
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .ThemeRow {
+    &.details-expanded {
+      .close-container {
+        position: relative;
+      }
+      .description {
+        padding-right: 40px;
+      }
+      .avatar {
+        width: 107px;
+        height: 107px;
+      }
+      .chart-interactive-container {
+        padding-top: 5px;
+      }
+    }
+  }
+}

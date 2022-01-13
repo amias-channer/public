@@ -1,0 +1,80 @@
+@import '../../../../../scss/global';
+
+.MyMarketIndicatorTileWithChart {
+  >.inner-wrapper {
+    .name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .mini-chart-container {
+      height: 37px;
+      width: 100%;
+    }
+  }
+  .button-delete {
+    display: none;
+    font-size: 12px;
+    vertical-align: top;
+    transition: all 0.2s;
+    &:hover {
+      font-size: 15px;
+      margin: -2px 0 0 -2px!important;
+    }
+  }
+  &:hover {
+    .button-delete {
+      display: block;
+    }
+  }
+}
+
+@include media-breakpoint-down($mediaQueryMobile) {
+  .MyMarketIndicatorTileWithChart {
+    margin-right: 0;
+  }
+}
+
+@include media-breakpoint-only($mediaQueryMobile) {
+  .MyMarketIndicatorTileWithChart {
+    width: 227px;
+    margin-right: 10px;
+
+    &:nth-child(even) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-only($mediaQueryTablet) {
+  .MyMarketIndicatorTileWithChart {
+    width: 227px;
+    margin-right: 9px;
+
+    &:nth-child(3n) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-only($mediaQueryNotebook) {
+  .MyMarketIndicatorTileWithChart {
+    width: 227px;
+    margin-right: 10px;
+
+    &:nth-child(4n) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryDesktop) {
+  .MyMarketIndicatorTileWithChart {
+    width: 227px;
+    margin-right: 10px;
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+  }
+}

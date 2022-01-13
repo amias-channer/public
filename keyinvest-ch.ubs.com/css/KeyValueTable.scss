@@ -1,0 +1,22 @@
+@import '../../scss/global';
+
+.KeyValueTable {
+  .title {
+    text-transform: capitalize;
+  }
+  .field {
+    border-bottom: 1px solid #D8D8D8;
+    padding: 10px 0 7px 0;
+    &:first-of-type {
+      border-top: 3px solid #d9d9d9;
+    }
+    .label, .value {
+      font-family: $mainFontLightBold;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .value {
+      font-family: $mainFontLight;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+@import "../variables";
+
+.AssetSell {
+  .datepicker-container input {
+    display: none;
+  }
+
+  input[type="time"] {
+    display: inline-block;
+    margin-bottom: 0px;
+    height: auto;
+    width: auto;
+  }
+
+  input[type="time"]::-webkit-clear-button {
+    display: none;
+  }
+
+  input[type="time"]::-webkit-inner-spin-button,
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+  .asset-sell-container {
+    // padding: 45px 0 100px 110px;
+    // width: 100%;
+
+    .asset-sell-padded {
+      padding: 20px 0 48px;
+
+      @media (max-width: $bp-small) {
+        padding-bottom: 10px;
+      }
+
+      @media (min-width: $bp-large) {
+        &:not(:first-of-type) {
+          padding-top: 62px;
+          padding-left: 15px;
+        }
+      }
+    }
+
+    .note {
+      padding: 15px;
+      background: rgba(242, 242, 242, 0.4);
+      border: 1px solid #f2f2f2;
+      border-radius: 5px;
+      // color: $light-text;
+    }
+
+    .asset-sell-header {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 20px;
+
+      img {
+        height: 80px;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .asset-sell-asset-detail {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    width: 100%;
+    cursor: pointer;
+
+    .asset-image {
+      width: 100px;
+      height: 80px;
+      border-radius: 6px;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 15px;
+      background-size: contain !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+    }
+
+    .asset-details {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 16px;
+      padding: 5px 0;
+
+      .asset-details-category {
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .asset-details-name {
+        font-weight: 600;
+        margin-bottom: 2px;
+        cursor: pointer;
+      }
+
+      .asset-details-price {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .asset-sell-subheader {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .asset-sell-input-section {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    .asset-sell-input-copy {
+      padding: 5px;
+      vertical-align: middle;
+
+      .header {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .description {
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 22px;
+        color: $light-text;
+      }
+    }
+  }
+
+  .asset-sell-review-copy {
+    color: $green;
+    margin: 30px 0 10px 0;
+    font-size: 14px;
+  }
+
+  .asset-sell-listing-date-switch {
+    margin-bottom: 12px;
+  }
+}

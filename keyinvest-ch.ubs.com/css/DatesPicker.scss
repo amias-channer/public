@@ -1,0 +1,51 @@
+@import '../../../../scss/global';
+
+$default-width: 100%;
+$default-min-width: 228px;
+$default-max-width: 300px;
+$default-items-per-row: 7;
+$default-column-width: percentage(1 / $default-items-per-row);
+
+.DatesPicker {
+  width: $default-width;
+  min-width: $default-min-width;
+  max-width: $default-max-width;
+  margin: 0 auto;
+
+  .title {
+    color: #1C1C1C;
+    font-family: $mainFont;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+  .separator {
+    border-bottom: 1px solid #D8D8D8;
+    margin: 4px 0 7px 0;
+  }
+
+  .grid-calendar {
+    margin: 0 auto;
+    .row {
+      margin: 0;
+      &:before {
+        display: table;
+        content: " ";
+      }
+    }
+    .grid-cell {
+      text-align: center;
+      display: inline-block;
+      float: left;
+      min-height: 1px;
+      position: relative;
+      width: $default-column-width;
+
+      > div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+}

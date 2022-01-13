@@ -1,0 +1,16 @@
+.FieldTooltip {
+  display: inline-block;
+  vertical-align: middle;
+  &.clickable {
+    cursor: pointer;
+  }
+  .Icon {
+    margin: 0 5px;
+    font-size: 19px;
+    line-height: 20px;
+    &.icon-question-circle {
+      color: #5A6F89;
+      font-size: 18px;
+    }
+  }
+}

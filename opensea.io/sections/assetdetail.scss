@@ -1,0 +1,1446 @@
+@import "../variables";
+
+.history-table-body-row {
+  padding: 20px 8px;
+  width: 100% !important;
+
+  &:nth-child(even) {
+    background: rgba(0, 0, 0, 0.01);
+  }
+
+  div {
+    float: left;
+    font-size: 15px;
+    color: $light-text;
+    line-height: 16px;
+  }
+
+  div:nth-child(1) {
+    width: 20%;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+
+    .material-icons {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+  }
+  div:nth-child(2) {
+    font-size: 14px;
+    width: 16%;
+    min-height: 2px;
+  }
+  div:nth-child(3),
+  div:nth-child(4) {
+    width: 22%;
+  }
+
+  .bid-history-offer-btn i.grey-chevron {
+    opacity: 0.75;
+    height: 12px;
+    width: 12px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+  .details__owner_link {
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.Bid.history-table-body-row {
+  div:nth-child(1) {
+    width: 15%;
+  }
+  div:nth-child(3) {
+    width: 15%;
+  }
+  div:nth-child(4) {
+    text-align: center;
+    width: 20%;
+  }
+  div:nth-child(5) {
+    width: 22%;
+  }
+}
+
+.details_container {
+  .light-text {
+    color: $light-text !important;
+  }
+
+  .details__token {
+    font-size: 1.2rem;
+    .details__token--address {
+      color: $light-text;
+    }
+  }
+
+  .details__description {
+    color: #9a9fa9 !important;
+    margin-top: 10px !important;
+    font-size: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+    text-overflow: ellipsis;
+  }
+
+  .details__price {
+    display: block;
+    font-size: 3rem;
+    color: $blue;
+
+    .details__price--symbol {
+      font-size: 2.4rem;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+.prices_container {
+  .prices--item {
+    margin: 20px 0px;
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 1.2rem;
+  }
+
+  .prices--item-text {
+    color: $blue;
+  }
+}
+
+.history_container {
+  padding: 0px !important;
+
+  .transaction_addr {
+    white-space: nowrap;
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 90%;
+    display: inline-block;
+    text-overflow: ellipsis;
+    color: $sea-green;
+  }
+
+  .transaction-event {
+    position: relative;
+    top: -3px;
+    margin-left: 3px;
+    display: inline-block;
+  }
+
+  .transaction_time {
+    font-size: 90%;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .material-icons {
+    font-size: 16px;
+  }
+  p {
+    margin: 0px;
+  }
+
+  h4,
+  h5,
+  h6 {
+    text-transform: capitalize;
+  }
+
+  & > .row {
+    padding: 15px 30px;
+    margin: 0;
+  }
+
+  .border-bottom {
+    margin: 0px !important;
+  }
+
+  .col {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+
+    label {
+      display: block;
+      text-align: center;
+      font-weight: 500;
+      margin-top: 10px;
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.sharing_container {
+  position: relative;
+}
+
+.trait {
+  color: black;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #3291e9;
+  white-space: pre-line;
+  overflow: hidden;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.DiscordPill {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid hsla(0, 0%, 80%, 0.3);
+  border-radius: 0 3px 3px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 8px 10px;
+  border-left: 4px solid #cacbce;
+
+  a {
+    color: #00b0f4;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  p {
+    color: #737f8d;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    margin-top: 6px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  img {
+    width: 80px;
+    height: auto;
+    float: right;
+  }
+}
+
+.ShowAsset {
+  background: #fbfbfb;
+}
+
+.ShowBundle {
+  .asset-history-container {
+    margin-top: 0px !important;
+  }
+}
+
+.sticky-asset-page-nav-container {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background: rgb(243, 243, 243);
+  padding: 11px 0;
+  box-shadow: 0 1px 8px -3px #999;
+
+  .container {
+    width: 81% !important;
+
+    .nav-btn {
+      height: 38px;
+      line-height: 38px;
+      padding: 0 15px;
+      color: $light-text;
+      margin-right: 25px;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(223, 224, 225);
+        color: rgba(0, 0, 0, 0.87);
+      }
+
+      .material-icons {
+        vertical-align: middle !important;
+        line-height: 32px !important;
+      }
+
+      span {
+        line-height: 40px !important;
+        font-size: 14px;
+      }
+
+      @media (max-width: $bp-xl) {
+        padding: 0px;
+      }
+
+      @media (max-width: $bp-large) {
+        span {
+          font-size: 10px;
+        }
+      }
+
+      @media (max-width: $bp-medium) {
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .selected {
+      background-color: rgb(223, 224, 225);
+      color: rgba(0, 0, 0, 0.87);
+
+      &:hover {
+        box-shadow: inset 0 0 0 0 $light-text;
+      }
+    }
+  }
+}
+
+.AssetAuctionTraits {
+  color: rgba(0, 0, 0, 0.87);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .asset-property-container {
+    .trait_property {
+      cursor: pointer;
+      width: 170px;
+      text-align: center;
+      border: solid 1px #2d9cdb;
+      background-color: #edfbff;
+      border-radius: 6px;
+      margin: 0 10px 10px 0;
+      float: left;
+      padding: 14px;
+
+      & > div {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .trait_property-type {
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #2d9cdb;
+        margin-top: -5px;
+        opacity: 0.8;
+      }
+
+      .trait_property-header {
+        color: rgba(0, 0, 0, 0.87);
+        line-height: 30px;
+        font-size: 15px;
+      }
+
+      .trait_property-sub {
+        color: $light-text;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .asset-stats-container {
+    .asset-section-body {
+      a {
+        &:last-child {
+          & > .trait_stat {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    .body-full {
+      max-height: auto;
+      width: 100%;
+      overflow: auto;
+    }
+
+    .body-less {
+      max-height: 405px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .expand_stats {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      color: #2d9cdb;
+      cursor: pointer;
+      padding: 10px 0px;
+    }
+
+    .trait_stat {
+      margin-bottom: 15px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 25px;
+
+      .trait_stat-header-container {
+        position: relative;
+        width: 100%;
+
+        .trait_stat-header-title {
+          float: left;
+          color: rgba(0, 0, 0, 0.87);
+        }
+
+        .trait_stat-header-value {
+          float: right;
+          text-align: right;
+          color: $light-text;
+
+          .date {
+            color: $primary-6;
+          }
+        }
+      }
+
+      .trait_numeric {
+        padding-bottom: 0px;
+        display: flex;
+        justify-content: space-between;
+
+        .trait_stat-header-title {
+          color: #2d9cdb;
+          font-size: 2.5rem;
+          vertical-align: top;
+          height: auto;
+          line-height: 2.5rem;
+          flex-grow: 1;
+          width: 45%;
+          text-align: center;
+        }
+
+        .trait_stat-header-value {
+          display: inline-block;
+          vertical-align: top;
+          text-transform: none;
+          float: none;
+          text-align: start;
+          flex-grow: 1;
+          width: 55%;
+          padding-left: 10px;
+
+          .date {
+            margin-left: -10px;
+          }
+
+          @media (max-width: $bp-small) {
+            width: 65%;
+          }
+
+          h5 {
+            vertical-align: top;
+            margin-top: 0px;
+            color: #1c1f27;
+            font-size: 16px;
+            text-transform: none;
+            margin: 0px;
+          }
+
+          h6 {
+            text-transform: none;
+            color: rgba(28, 31, 39, 0.6);
+            font-size: 14px;
+            margin-top: 3px;
+          }
+        }
+      }
+
+      .trait_stat-bar-container {
+        width: 100%;
+        height: 14px;
+        border-radius: 14px;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+        position: relative;
+        background: #f3f3f3;
+        margin-top: 4px;
+
+        .trait_stat-bar-fill {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 30%;
+          height: 14px;
+          background: $blue;
+          border-top-left-radius: 14px;
+          border-bottom-left-radius: 14px;
+        }
+      }
+    }
+
+    .trait_stat-numeric {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.Asset2 {
+  .asset-description-container,
+  .asset-section-title,
+  .card-list-header,
+  .sticky-asset-page-nav-container {
+    .material-icons {
+      margin-right: 6px;
+    }
+  }
+
+  .asset-section-title,
+  span {
+    & > .material-icons,
+    & > a > .material-icons {
+      vertical-align: bottom;
+    }
+  }
+
+  .asset-section-aligned-left {
+    flex-basis: 67%;
+    margin-right: 3%;
+  }
+
+  .asset-section-aligned-right {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .asset-section-title {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 20px;
+  }
+
+  .asset-section-body {
+    padding-top: 20px;
+    width: 100%;
+    position: relative;
+  }
+
+  .asset-description-container {
+    margin: 35px 0;
+  }
+
+  .chevron,
+  .grey-chevron {
+    height: 12px;
+    width: 12px;
+    margin: 0px 10px;
+  }
+
+  .show-more-toggle {
+    padding: 25px 15px;
+    color: $blue;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    .material-icons {
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  .asset-history-container {
+    width: 100%;
+    margin: 35px 0 0;
+
+    .asset-history-graph-container {
+      height: 200px;
+      margin: 25px 0 55px 0;
+    }
+
+    .history-table-header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 0 5px 15px 5px;
+      width: 100% !important;
+      min-height: 40px;
+
+      div {
+        text-transform: uppercase;
+        float: left;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      div:nth-child(1) {
+        width: 15%;
+
+        @media (min-width: $bp-xl) {
+          width: 20%;
+        }
+      }
+      div:nth-child(2) {
+        width: 16%;
+      }
+      div:nth-child(3),
+      div:nth-child(4) {
+        width: 22%;
+      }
+    }
+  }
+
+  .asset-contract-description-container {
+    display: flex;
+    flex-direction: row;
+
+    a {
+      text-transform: uppercase;
+      font-weight: 600;
+      display: flex;
+      margin-bottom: 6px;
+
+      i {
+        margin-top: -2px;
+      }
+    }
+
+    .asset-contract-image {
+      height: 66px;
+      width: 84px;
+      border-radius: 8px;
+      position: absolute;
+      left: 0;
+      background-size: cover !important;
+      cursor: pointer;
+    }
+
+    .asset-contract-description {
+      width: 100%;
+      padding-left: 100px;
+      min-height: 66px;
+    }
+  }
+
+  .details_container {
+    position: relative;
+    padding-top: 10px;
+    padding-right: 0px;
+
+    .collection-title-share-wrapper {
+      position: relative;
+
+      .collection-title-container {
+        margin-top: 15px;
+        padding-right: 95px;
+
+        .asset-link {
+          font-size: 16px;
+          color: $light-text;
+        }
+        .asset-title {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: 28px;
+          font-weight: 600;
+          margin: 0;
+          text-transform: none;
+          color: rgba(0, 0, 0, 0.87);
+        }
+      }
+    }
+
+    .owner-viewers-container {
+      color: $light-text;
+      font-size: 14px;
+      width: 100%;
+      margin: 15px 0 20px 0;
+      line-height: 24px;
+
+      .owner-container {
+        &.inline {
+          display: inline-block;
+        }
+        &:not(.inline) {
+          float: left;
+          width: 50%;
+          @media (max-width: 1325px) {
+            width: 100%;
+          }
+        }
+        line-height: 30px;
+
+        .material-icons {
+          cursor: pointer;
+        }
+
+        .owner-image {
+          cursor: pointer;
+          height: 24px;
+          width: 24px;
+          border-radius: 24px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 8px;
+          margin-top: -4px;
+        }
+      }
+
+      .viewers-container {
+        float: right;
+        text-align: right;
+        width: 50%;
+      }
+    }
+  }
+
+  .desc_toggle {
+    cursor: pointer;
+    color: #2d9cdb;
+  }
+
+  .auction-detail-container {
+    border-radius: 6px;
+    &:not(.no-border) {
+      border: 1px solid rgba(0, 0, 0, 0.075);
+    }
+
+    .auction-detail-padding {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .auction-ends-in-container {
+      font-size: 12px;
+      font-weight: 600;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+      color: $light-text;
+
+      .material-icons {
+        display: inline-block;
+        vertical-align: bottom;
+        margin-right: 6px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .auction-pricing-container {
+    padding-top: 15px;
+    padding-left: 20px;
+
+    a {
+      color: inherit;
+      font-weight: 500;
+    }
+
+    hr {
+      margin: 4px 2px 4px 0;
+      border-color: $blue;
+    }
+
+    .auction-listed-for-label {
+      color: $light-text;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .auction-price-last-sold-price-container {
+      display: flex;
+      flex-direction: column;
+
+      .auction-price {
+        color: rgba(0, 0, 0, 0.87);
+        float: left;
+        font-size: 32px;
+        font-weight: 600;
+
+        @media (max-width: $bp-small) {
+          font-size: 28px;
+        }
+      }
+
+      .last-sold-price-container {
+        float: left;
+        width: 200px;
+        margin-left: 15px;
+        margin-top: 4px;
+
+        .material-icons {
+          vertical-align: bottom;
+          float: left;
+          font-size: 40px;
+          color: $light-text;
+        }
+
+        .last-sold-price {
+          font-size: 14px;
+          color: $light-text;
+
+          div {
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .auction-buy-offer-container {
+    padding: 5px 20px 20px 20px;
+    width: 100%;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    .auction-primary-btn {
+      font-size: 15px;
+      font-weight: 600;
+      outline: 0;
+      border: 0;
+      width: 49%;
+      float: left;
+      text-align: center;
+      text-transform: uppercase;
+      background: $blue;
+      border-radius: 5px;
+      height: 50px;
+      line-height: 50px;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      .chevron {
+        height: 12px;
+        width: 12px;
+        margin-left: 10px;
+      }
+      &:disabled {
+        pointer-events: none;
+        opacity: 0.4;
+      }
+    }
+
+    .auction-secondary-btn {
+      font-size: 15px;
+      font-weight: 600;
+      outline: 0;
+      width: 49%;
+      margin-left: 2%;
+      float: left;
+      text-align: center;
+      text-transform: uppercase;
+      border: 1px solid $blue;
+      border-radius: 5px;
+      height: 50px;
+      line-height: 50px;
+      color: $blue;
+      cursor: pointer;
+
+      .blue-chevron {
+        height: 12px;
+        width: 12px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .auction-submit-offer-container-outer {
+    padding: 5px 20px 20px 20px;
+    width: 100%;
+
+    .auction-offer-label {
+      padding: 10px 4px 5px 4px;
+      color: $light-text;
+      font-size: 14px;
+      width: 100%;
+
+      span:nth-child(1) {
+        width: 50%;
+        float: left;
+      }
+
+      span:nth-child(2) {
+        float: right;
+        text-align: right;
+        cursor: pointer;
+
+        &:hover {
+          text-transform: underline;
+        }
+      }
+    }
+  }
+
+  .auction-cancel-container,
+  .auction-referral-container {
+    border-top: 1px solid rgba(0, 0, 0, 0.075);
+  }
+
+  .auction-referral-container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.025);
+    }
+
+    .referral-icon {
+      background: rgb(241, 199, 87);
+      text-align: center;
+      border-radius: 16px;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 10px;
+      color: rgba(0, 0, 0, 0.75);
+      font-weight: 700;
+      margin-right: 10px;
+      padding: 4px 8px 2px;
+
+      i {
+        font-size: 14px;
+      }
+    }
+
+    .referral-earn-amount {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .referral-copy {
+      display: inline-block;
+      vertical-align: middle;
+      color: $light-text;
+      font-size: 14px;
+    }
+  }
+
+  .details_image_container {
+    margin-top: 20px;
+
+    .card-image-container {
+      background-color: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: inset 0 -1px 1px 0 rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      height: 500px;
+
+      .circle-id {
+        width: 100%;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          background-color: #fff;
+          width: 120px;
+          height: 120px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100px;
+          border: solid 1px #e2e2e2;
+        }
+      }
+
+      img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        max-height: 100%;
+      }
+
+      .asset-img-contain {
+        background-size: contain !important;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100%;
+      }
+    }
+
+    .asset-link {
+      font-size: 16px;
+      color: $light-text;
+      margin-top: 10px;
+      display: inline-block;
+      background-image: url("../../public/static/images/external-link.png");
+      background-size: 0.9rem;
+      background-position: 96% 40%;
+      background-repeat: no-repeat;
+      padding-right: 30px;
+
+      @media (max-width: $bp-small) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .image-basics-container {
+    margin-bottom: 80px;
+  }
+
+  .spacer {
+    height: 100px;
+    width: 100%;
+  }
+
+  .asset-other-assets-container {
+    margin-bottom: 0px !important;
+
+    .card-list-header {
+      color: rgba(0, 0, 0, 0.87);
+      line-height: 20px;
+    }
+  }
+
+  @media (max-width: $bp-small) {
+    .asset-contract-description-container {
+      display: table;
+      position: relative;
+      table-layout: fixed; // to not overflow with .clearfix
+    }
+
+    .spacer {
+      height: 80px !important;
+    }
+
+    .container {
+      width: 92%;
+    }
+
+    .details_image_container {
+      text-align: center;
+      margin-top: 0px;
+
+      .card-image-container {
+        height: 200px;
+        margin: 0 auto;
+        max-width: 80%;
+      }
+    }
+
+    .details_container {
+      width: 98% !important;
+      .collection-title-share-wrapper {
+        .collection-title-container {
+          .collection {
+            font-size: 14px !important;
+          }
+          .title {
+            font-size: 18px !important;
+          }
+        }
+      }
+      .owner-viewers-container {
+        margin: 15px 0 25px 0 !important;
+      }
+
+      .auction-buy-offer-container {
+        .auction-primary-btn {
+          margin-bottom: 10px;
+          width: 100%;
+        }
+
+        .auction-secondary-btn {
+          width: 100%;
+          float: left;
+          margin-left: 0;
+        }
+      }
+    }
+    .image-basics-container {
+      margin-bottom: 10px !important;
+    }
+    .sticky-asset-page-nav-container {
+      .container {
+        width: 92% !important;
+        text-align: center;
+      }
+    }
+
+    .asset-section-title {
+      font-size: 16px !important;
+      padding-bottom: 5px !important;
+    }
+
+    .AssetDetail {
+      .AssetAuctionTraits {
+        display: table;
+      }
+
+      .asset-section-body {
+        padding-top: 10px !important;
+      }
+
+      .asset-section-aligned-right {
+        float: left;
+        width: 100%;
+      }
+      .asset-section-aligned-left {
+        float: left;
+        width: 100%;
+      }
+
+      .asset-property-container {
+        .trait_property {
+          width: 48% !important;
+          float: left;
+          margin: 1% !important;
+          border-radius: 10px;
+          padding: 8px;
+
+          .trait_property-header {
+            font-size: 15px;
+          }
+          .trait_property-sub {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .asset-stats-container {
+        margin-top: 15px;
+
+        .asset-section-body {
+          padding-top: 10px !important;
+
+          .trait_stat-header-container {
+            .trait_stat-header-title {
+              font-size: 16px;
+            }
+            .trait_stat-header-value {
+              margin-top: 4px;
+            }
+          }
+
+          .trait_numeric {
+            padding: 10px;
+            padding-bottom: 0px;
+            display: flex;
+            justify-content: space-between;
+
+            .trait_stat-header-title {
+              font-size: 2rem;
+              line-height: 3rem;
+            }
+          }
+        }
+      }
+
+      .asset-description-container {
+        margin: 15px 0;
+
+        .asset-section-body {
+          padding-top: 15px !important;
+
+          .asset-contract-image {
+            left: auto !important;
+            right: 0 !important;
+          }
+
+          .asset-contract-description {
+            padding-left: 0 !important;
+            padding-right: 100px !important;
+          }
+        }
+
+        .asset-section-aligned-right {
+          padding-top: 15px !important;
+        }
+      }
+    }
+
+    .asset-history-container {
+      margin: 15px 0 0;
+      overflow-x: scroll;
+
+      .listing-history-header-aux {
+        display: none;
+      }
+
+      .asset-section-body:not(.asset-section-body_flex) {
+        width: 800px !important;
+      }
+    }
+    .asset-other-assets-container {
+      width: 99%;
+      margin-left: 1%;
+      margin-right: 0;
+      margin-bottom: 0px !important;
+
+      .category_list_header {
+        padding-bottom: 5px !important;
+      }
+
+      .card-list-header {
+        color: rgba(0, 0, 0, 0.87);
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+@media (min-width: $bp-small) {
+  .sharing_container {
+    position: relative;
+    top: 8px;
+    i {
+      position: relative;
+      top: -8px;
+    }
+  }
+
+  .sharing_container_alt {
+    top: -8px;
+
+    i {
+      position: relative;
+      top: -8px;
+    }
+  }
+}
+
+.boost_traits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boost_trait {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+
+  @media (min-width: $bp-small) {
+    &:nth-child(2n + 2) {
+      margin-left: 10px;
+    }
+  }
+
+  @media (max-width: $bp-small) {
+    margin-top: 10px;
+    width: 100%;
+    text-align: start;
+  }
+
+  .boost_info {
+    display: block;
+    text-align: center;
+
+    @media (max-width: $bp-small) {
+      text-align: start;
+      display: inline-block;
+      vertical-align: top;
+    }
+    h6,
+    p {
+      font-size: 16px;
+      margin: 0px;
+      text-transform: unset;
+      display: block;
+
+      @media (max-width: $bp-small) {
+        display: block;
+        vertical-align: top;
+        font-size: 12px;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  p {
+    color: rgba(28, 31, 39, 0.6);
+    @media (max-width: $bp-small) {
+      margin-top: 5px !important;
+    }
+  }
+}
+
+// Taken from https://medium.com/@andsens/radial-progress-indicator-using-css-a917b80c43f9
+.radial-progress {
+  $circle-size: 100px;
+  $circle-background: white;
+  $circle-color: #6bd9fc;
+  $inset-size: 70px;
+  $inset-color: #2d9cdb;
+  $transition-length: 1s;
+  $shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+  $percentage-color: #2d9cdb;
+  $percentage-font-size: 18px;
+  $percentage-text-width: 57px;
+
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 12px;
+  width: $circle-size;
+  height: $circle-size;
+
+  @media (max-width: $bp-small) {
+    width: 70px;
+    height: 70px;
+    margin-top: 0px;
+  }
+
+  background-color: $circle-background;
+  border-radius: 50%;
+  border: solid 1px $ultralight-grey;
+  box-sizing: border-box;
+
+  &:hover {
+    .inset {
+      .icon {
+        i {
+          display: none;
+        }
+
+        &:after {
+          content: attr(data-assetvalue);
+          font-size: $percentage-font-size;
+
+          @media (max-width: $bp-small) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .circle {
+    .mask,
+    .fill,
+    .shadow {
+      width: $circle-size;
+      height: $circle-size;
+
+      @media (max-width: $bp-small) {
+        width: 70px;
+        height: 70px;
+      }
+      position: absolute;
+      border-radius: 50%;
+    }
+    .mask,
+    .fill {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transition: -webkit-transform $transition-length;
+      transition: -ms-transform $transition-length;
+      transition: transform $transition-length;
+      border-radius: 50%;
+    }
+    .mask {
+      clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+
+      @media (max-width: $bp-small) {
+        clip: rect(0px, 70px, 70px, 35px);
+      }
+      .fill {
+        clip: rect(0px, $circle-size/2, $circle-size, 0px);
+        @media (max-width: $bp-small) {
+          clip: rect(0px, 35px, 70px, 0px);
+        }
+        background-color: $circle-color;
+      }
+    }
+  }
+  .inset {
+    width: $inset-size;
+    height: $inset-size;
+    position: absolute;
+    margin-left: ($circle-size - $inset-size)/2;
+    margin-top: ($circle-size - $inset-size)/2;
+
+    @media (max-width: $bp-small) {
+      width: 40px;
+      height: 40px;
+      margin-left: (70px - 40px)/2;
+      margin-top: (70px - 40px)/2;
+    }
+
+    background-color: $inset-color;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      color: white;
+      font-size: 30px;
+      width: auto;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      .material-icons {
+        margin-right: 0px;
+      }
+
+      @media (max-width: $bp-small) {
+        top: -28%;
+        left: 22%;
+      }
+    }
+    .percentage {
+      width: $percentage-text-width;
+      //position:    absolute;
+      //top:         ($inset-size - $percentage-font-size) / 2;
+      //left:        ($inset-size - $percentage-text-width) / 2;
+
+      line-height: 1;
+      text-align: center;
+
+      color: #feffff;
+      font-weight: 400;
+      font-size: $percentage-font-size;
+    }
+  }
+
+  $i: 0;
+  $increment: 180deg / 100;
+  @while $i <= 100 {
+    &[data-progress="#{$i}"] {
+      .circle {
+        .mask.full,
+        .fill {
+          -webkit-transform: rotate($increment * $i);
+          -ms-transform: rotate($increment * $i);
+          transform: rotate($increment * $i);
+        }
+        .fill.fix {
+          -webkit-transform: rotate($increment * $i * 2);
+          -ms-transform: rotate($increment * $i * 2);
+          transform: rotate($increment * $i * 2);
+        }
+      }
+      .inset .percentage:before {
+        content: "#{$i}%";
+      }
+    }
+
+    $i: $i + 1;
+  }
+}
+
+@media (max-width: $bp-small) {
+  .sharing_container {
+    top: 8px;
+  }
+
+  .bid-header-btn {
+    left: 0px !important;
+  }
+}

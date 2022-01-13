@@ -1,0 +1,61 @@
+@import '../../../../scss/global';
+
+.MarketIndicatorTileWithChart {
+  >.inner-wrapper {
+
+    .mini-chart-container {
+      height: 37px;
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down($mediaQueryMobile) {
+  .MarketIndicatorTileWithChart {
+    margin-right: 0;
+  }
+}
+
+@include media-breakpoint-only($mediaQueryMobile) {
+  .MarketIndicatorTileWithChart {
+    width: 227px;
+    margin-right: 10px;
+
+    &:nth-child(even) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-only($mediaQueryTablet) {
+  .MarketIndicatorTileWithChart {
+    width: 227px;
+    margin-right: 9px;
+
+    &:nth-child(3n) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-only($mediaQueryNotebook) {
+  .MarketIndicatorTileWithChart {
+    width: 227px;
+    margin-right: 10px;
+
+    &:nth-child(4n) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryDesktop) {
+  .MarketIndicatorTileWithChart {
+    width: 227px;
+    margin-right: 10px;
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+  }
+}

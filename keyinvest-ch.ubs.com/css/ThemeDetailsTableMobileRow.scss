@@ -1,0 +1,37 @@
+@import '../../../../../scss/global';
+
+.ThemeDetailsTableMobileRow {
+  padding: 0 10px;
+  .inner-row-wrapper {
+    padding: 12px;
+    background: #FFFFFF;
+    border: 1px solid #D7D7D7;
+    .title {
+      padding-top: 10px;
+      padding-bottom: 15px;
+      color: #333333;
+      font-family: $mainFontLightBold;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+    .identifier {
+      padding-bottom: 10px;
+    }
+    .field-name {
+      color: #919191;
+      font-family: $mainFontLight;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    .field-value {
+      font-family: $mainFontLight;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .ask {
+      border-left: 1px solid #D8D8D8;
+      padding-left: 15px;
+    }
+  }
+}

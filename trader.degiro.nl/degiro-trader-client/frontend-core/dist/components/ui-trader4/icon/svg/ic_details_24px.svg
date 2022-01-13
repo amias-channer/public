@@ -1,0 +1,1 @@
+export default "<svg viewBox=\"0 0 24 24\"><path d=\"M21.6 4v16H2.4V4h19.2zm-2 2H4.4v12h15.2V6zM9.2 12.8v2.8H6.4v-2.8h2.8zm8.4.4v2h-6.8v-2h6.8zM9.2 8.4v2.8H6.4V8.4h2.8zm8.4.4v2h-6.8v-2h6.8z\"/></svg>";

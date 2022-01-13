@@ -1,0 +1,20 @@
+.MarketGenericInstrumentTable {
+  margin-top: 21px;
+
+  > table {
+    span {
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    i.icon-more {
+      font-size: 25px;
+      color: #646464;
+    }
+
+    i.sort-icon {
+      font-size: 9px;
+      margin-left: 10px;
+    }
+  }
+}

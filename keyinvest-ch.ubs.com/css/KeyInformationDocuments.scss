@@ -1,0 +1,17 @@
+.KeyInformationDocuments {
+  .field {
+    padding-top: 14px;
+    &:first-of-type {
+      border-top: 3px solid #d9d9d9;
+    }
+  }
+
+  .StandardDropdown {
+    margin-bottom: 20px;
+  }
+
+  .Button {
+    padding: 6px 16px;
+    margin-left: 10px;
+  }
+}

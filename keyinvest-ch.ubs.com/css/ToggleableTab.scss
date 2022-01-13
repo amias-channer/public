@@ -1,0 +1,63 @@
+@import '../../../../../scss/global';
+
+.ToggleableTab {
+  &.active {
+    position: relative;
+    .inner-toggleable {
+      background-color: #EFEFEF;
+      &:after {
+        position: absolute;
+        bottom: -12px;
+        right: 0;
+        left: 0;
+        height: 12px;
+        background-color: #EFEFEF;
+        content: '\ ';
+        z-index: 0;
+      }
+    }
+  }
+  &:not(.active){
+    .inner-toggleable {
+      &:hover {
+        cursor: pointer;
+        background-color: #646464;
+        color: #FFFFFF;
+      }
+    }
+  }
+  .inner-toggleable {
+    padding: 10px 4px;
+    background-color: #DEDEDE;
+    text-align: center;
+    > span {
+      font-size: 16px;
+      line-height: 20px;
+      font-family: $mainFont;
+    }
+    > i {
+      display: none;
+      font-size: 22px;
+      float: right;
+      margin-top: 1px;
+    }
+  }
+}
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .ToggleableTab {
+    &.active {
+      .inner-toggleable {
+        &:after {
+          margin: 0 7.5px;
+        }
+      }
+    }
+    .inner-toggleable {
+      padding: 12px 18px;
+      text-align: left;
+      > i {
+        display: inline-block;
+      }
+    }
+  }
+}

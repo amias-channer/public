@@ -1,0 +1,43 @@
+.ProfilerBanner {
+  position: fixed;
+  top: 0;
+  z-index: 9999999;
+  background-color: #06b0dd;
+  background-color: rgba(6, 176, 221, 0.7);
+  box-shadow: 0 0 6px #349bbd;
+  border-radius: 0 0 10px 0;
+  .container {
+    max-width: 200px;
+    max-height: 100px;
+    overflow-x: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    .profiler-link {
+      border-bottom: 2px solid;
+      display: inline-block;
+      color: white;
+      font-size: 12px;
+      padding: 5px 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  .close {
+    position: absolute;
+    right: 0;
+    float: right;
+    padding: 0;
+    margin: 0;
+    height: 24px;
+    color: white;
+    > i {
+      padding: 0;
+      margin: 0;
+      font-size: 20px;
+    }
+  }
+}

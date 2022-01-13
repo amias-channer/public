@@ -1,0 +1,72 @@
+@import "../../../scss/global";
+.FilterDatesPicker {
+  &.active {
+    > button {
+      border: 2px solid #009BD2;
+    }
+
+    .menu {
+      display: block;
+    }
+  }
+
+  margin-top: 32px;
+
+  h4 {
+    font-family: $mainFont;
+    color: #949494;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+
+  > button {
+    padding: 14px 0 10px 10px;
+    border: 1px solid #A1A1A1;
+    background: #ffffff;
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    position: relative;
+  }
+
+  .open-end {
+    color: #0D0D0D;
+    font-family: $mainFont;
+    font-size: 12px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .selected-item {
+    display: inline-block;
+  }
+
+  .dropdown-radio-icon {
+    position: absolute;
+    font-size: 8px;
+    top: 0;
+    right: 0;
+    height: 75%;
+    width: 30px;
+    border-left: 1px solid #AAAAAA;
+    vertical-align: middle;
+    margin: 5px 0;
+  }
+
+  .icon-triangle-down {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: #444444;
+  }
+
+  .disabled {
+    color: #D8D8D8;
+  }
+
+  .outline {
+    border: 2px solid #009BD2;
+  }
+}

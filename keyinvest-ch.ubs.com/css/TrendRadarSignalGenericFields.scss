@@ -1,0 +1,70 @@
+@import '../../../../../scss/global';
+
+.TrendRadarSignalGenericFields {
+  margin-bottom: 32px;
+  .generic-field {
+    .field-key {
+      font-family: $mainFont;
+      font-size: 13px;
+      line-height: 15px;
+      color: #646464;
+      padding-bottom: 4px;
+    }
+    .field-value {
+      font-family: $mainFontBold;
+      font-size: 16px;
+      line-height: 24px;
+      color: #333333;
+      padding-bottom: 0;
+    }
+  }
+  .bordered {
+    .generic-field {
+      border-bottom: 1px solid #D8D8D8;
+      padding-top: 10px;
+      padding-bottom: 8px;
+      .field-key, .field-value {
+        border-right: 1px solid #D8D8D8;
+        border-left: none;
+      }
+      &:first-child {
+        .field-key, .field-value {
+          padding-left: 0;
+        }
+        &:after {
+          content: ' ';
+          position: absolute;
+          bottom: -10px;
+          right: -10px;
+          border: 10px solid #F2F2F2;
+          background: initial;
+          z-index: 2;
+        }
+      }
+      &:nth-child(2) {
+        .field-key, .field-value {
+          padding-right: 0;
+          border-right: none;
+        }
+      }
+    }
+    &:nth-child(2) {
+      .generic-field {
+        border-bottom: none;
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .TrendRadarSignalGenericFields {
+    .generic-field {
+      .field-key {
+        padding-bottom: 14px;
+      }
+    }
+  }
+}

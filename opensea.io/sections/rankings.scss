@@ -1,0 +1,52 @@
+.rankings_container {
+  .flex_table {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .flex_table--body {
+    overflow-x: inherit;
+    min-width: 1200px;
+  }
+
+  .flex_table .flex_table--body .table_row .table_cell {
+    align-items: center;
+    display: flex;
+  }
+
+  .flex_table--header h6 {
+    width: 14%;
+    &:first-of-type {
+      width: 16%;
+    }
+  }
+
+  .rankings-category_image {
+    width: 24px;
+    border-radius: 50%;
+  }
+
+  .rankings-category_title {
+    font-size: 14px;
+    margin-left: 7px;
+    width: 140px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    color: #9e9e9f;
+
+    a {
+      color: #9e9e9f;
+      font-weight: normal;
+    }
+  }
+
+  .rankings-category_wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+}

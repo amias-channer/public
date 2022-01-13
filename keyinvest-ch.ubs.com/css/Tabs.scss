@@ -1,0 +1,58 @@
+@import '../../scss/global';
+
+.Tabs {
+  .btn-wrapper {
+    border-bottom: 1px solid #BEBEBE;
+    margin-bottom: 17px;
+
+    .btn {
+      padding: 10px 14px 10px 17px;
+      background:none;
+      font-size: 16px;
+      color: #1C1C1C;
+      font-family: $mainFontLight;
+      display: inline-block;
+      margin-right: 2px;
+      border: 1px solid #BEBEBE;
+      border-bottom: none;
+      &:hover {
+        background-color: #EEEEEE;
+      }
+      &.active {
+        background-color: #646464;
+        color: #ffffff;
+      }
+    }
+
+    .dropdown {
+      .dropdown-menu {
+        width: 100%;
+      }
+
+      .dropdown-toggle:after {
+        vertical-align: bottom;
+        margin-left: 11px;
+        margin-bottom: 11px;
+      }
+
+      .btn {
+        padding: 4px 0 3px 0;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        color: #000000;
+
+        > span {
+          display: inline-block;
+          width: calc(100% - 27px);
+          height: 100%;
+          padding-top: 13px;
+          padding-left: 10px;
+          padding-bottom: 17px;
+          border-right: 1px solid #AAAAAA;
+        }
+      }
+    }
+  }
+
+}

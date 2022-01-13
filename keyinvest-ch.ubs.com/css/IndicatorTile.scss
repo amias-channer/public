@@ -1,0 +1,96 @@
+@import '../../../scss/global';
+.home-mode {
+  .IndicatorTile {
+    > .inner-wrapper {
+      height: 72px;
+      .name {
+        font-size: 13px;
+        line-height: 15px;
+      }
+
+      .value {
+        font-size: 20px;
+        line-height: 23px;
+      }
+
+      .diff {
+        font-size: 16px;
+        line-height: 19px;
+      }
+      .values {
+        text-align: right;
+        .diff, .pushable-val {
+          text-align: right;
+          display: block;
+        }
+      }
+    }
+  }
+}
+.IndicatorTile {
+  margin-bottom: 10px;
+  max-width: 320px;
+  border: 1px solid #D7D7D7;
+
+  > .inner-wrapper {
+    display: block;
+    text-decoration: none;
+    color: $black;
+    height: 50px;
+    cursor: pointer;
+    font-family: $mainFont;
+    padding: 10px;
+
+    &:hover {
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .name {
+      font-size: 13px;
+      line-height: 15px;
+      color: #333333;
+    }
+
+    .value {
+      font-size: 15px;
+      line-height: 17px;
+    }
+
+    .diff {
+      font-size: 13px;
+      line-height: 15px;
+      padding-left: 8px;
+    }
+    .values {
+      text-align: right;
+      .value, .diff, .pushable-val {
+        text-align: right;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down($mediaQueryMobile) {
+  .IndicatorTile {
+    width: 138.97px;
+  }
+}
+
+@include media-breakpoint-only($mediaQueryTablet) {
+  .IndicatorTile {
+    width: 175.45px;
+  }
+}
+
+@include media-breakpoint-only($mediaQueryNotebook) {
+  .IndicatorTile {
+    width: 153.27px;
+  }
+}
+
+@include media-breakpoint-up($mediaQueryDesktop) {
+  .IndicatorTile {
+    width: 186px;
+  }
+}

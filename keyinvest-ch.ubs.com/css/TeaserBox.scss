@@ -1,0 +1,74 @@
+@import '../../scss/global';
+
+.TeaserBox {
+  .item {
+    img.teaser-img {
+      width: 100%;
+    }
+  }
+
+  .teaser-headline,
+  .teaser-text {
+    color: #1C1C1C;
+    padding-bottom: 10px;
+  }
+  .teaser-headline {
+    font-family: $mainFontLightBold;
+    padding-top: 17px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .teaser-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .teaser-links {
+    > div {
+      padding-bottom: 16px;
+    }
+  }
+}
+
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .TeaserBox {
+    .item {
+      border: none;
+      padding-bottom: 28px;
+      .teaser-block:first-child {
+        padding-right: 10px;
+        padding-left: 0;
+      }
+      .teaser-block:nth-child(2) {
+        padding-right: 0;
+        padding-left: 10px;
+      }
+      &.reversed {
+        .teaser-block:first-child {
+          padding-right: 0;
+          padding-left: 10px;
+        }
+        .teaser-block:nth-child(2) {
+          padding-right: 10px;
+          padding-left: 0;
+        }
+      }
+    }
+    .teaser-headline,
+    .teaser-text {
+      color: #1C1C1C;
+      padding-bottom: 10px;
+    }
+    .teaser-headline {
+      font-family: $mainFontLight;
+      padding-top: 17px;
+      font-size: 30px;
+      line-height: 33px;
+    }
+    .teaser-text {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

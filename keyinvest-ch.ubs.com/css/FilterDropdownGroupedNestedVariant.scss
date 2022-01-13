@@ -1,0 +1,29 @@
+@import '../../../scss/global';
+
+.FilterDropdownGroupedNestedVariant {
+
+  /* @check FilterDropdownGroupedNested.scss */
+
+  .nesting-level-0 {
+    > .NestableListItem {
+      font-size: 16px;
+      line-height: 19px;
+      font-family: $mainFontLightBold;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: none;
+    }
+  }
+
+  .not-visible {
+    display: block;
+    pointer-events: none;
+    label{
+      opacity: 0.5;
+      color: #dddddd;
+      &:before {
+        border: #dddddd solid 1px;
+      }
+    }
+  }
+}

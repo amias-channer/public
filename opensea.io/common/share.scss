@@ -1,0 +1,43 @@
+.sharing_box {
+  border: solid 1px #f2f2f2;
+  display: inline-block;
+  padding: 2px 5px;
+  cursor: pointer;
+  position: relative;
+  vertical-align: top;
+
+
+  i {
+    font-size: 15px;
+    vertical-align: middle;
+  }
+
+  a, span {
+    font-size: .9rem;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+
+    @media(max-width: $bp-small) {
+      font-size: .7rem;
+    }
+  }
+
+  a, i, span {
+    color: rgba(28, 31, 39, 0.4);
+  }
+
+  @media(max-width: $bp-small) {
+    width: 40px;
+    height: 28px;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.sharing_box--share {
+  margin-left: 5px;
+}

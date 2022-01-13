@@ -1,0 +1,48 @@
+@import "../../../scss/global";
+.FilterDropdownNonSearchable {
+
+  &.FilterDropdown.active {
+    box-shadow: unset;
+    background-color: inherit;
+    .menu {
+      padding-top: 23px;
+    }
+
+    h4 {
+      margin-bottom: 3px;
+    }
+  }
+
+  h4 {
+    font-family: $mainFont;
+    color: #1C1C1C;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    font-weight: 400;
+    margin-top: 14px;
+  }
+
+  .all-option {
+   padding-bottom: 10px;
+  }
+
+  .TextInput .input-group-append {
+    border-left: none;
+  }
+  .filter-label {
+    color: #7A7A7A;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+
+  .label-text {
+    padding: 0 10px;
+  }
+
+  .icon-triangle-up {
+    font-size: 8px;
+    padding-right: 8px;
+  }
+}

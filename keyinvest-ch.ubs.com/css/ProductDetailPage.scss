@@ -1,0 +1,116 @@
+@import '../../scss/global';
+
+.ProductDetailPage {
+  h1 {
+    color: #333333;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+  h2 {
+    color: #333333;
+    font-family: $mainFontLight;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 10px;
+
+    &.title {
+      margin: 50px 0 25px 0;
+    }
+  }
+  .product-description, .ProductIdentifiers, .product-underlyings-names {
+    color: #333333;
+    font-family: $mainFontLight;
+    font-size: 16px;
+    line-height: 28px;
+    > span {
+      padding-right: 5px;
+      b {
+        font-family: $mainFontLightBold;
+      }
+    }
+  }
+  .product-chart {
+    min-height: 574px;
+    .is-loading {
+      top: calc(50% - 80px);
+    }
+  }
+  .price-tiles-container {
+    margin: 0 -2px;
+  }
+  .last-price-update {
+    color: #646464;
+    font-family: $mainFontLight;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    padding-bottom: 7px;
+  }
+
+  .tenor-weights-chart {
+    .ChartBar {
+      .ct-bar-val-text {
+        font-size: 12px;
+        color: #646464;
+      }
+
+      .ct-grid {
+        stroke: #bebebe;
+        stroke-dasharray: 2px;
+      }
+
+      .ct-series .ct-bar {
+        stroke:#585148;
+      }
+    }
+  }
+
+  .last-update-date {
+    font-size: 12px;
+  }
+
+  h2.tenor-chart-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .AsyncBarChart {
+    margin-top: 15px;
+  }
+
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .ProductDetailPage {
+    .key-value-tables {
+      .tables-left {
+        padding-right: 15px;
+      }
+      .tables-right {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+@media print {
+  .ProductDetailPage {
+    .key-value-tables {
+      .tables-left {
+        padding-right: 15px;
+      }
+      .tables-right {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down($mediaQueryTablet) {
+  .UnderlyingChartTable {
+    overflow: auto;
+  }
+}

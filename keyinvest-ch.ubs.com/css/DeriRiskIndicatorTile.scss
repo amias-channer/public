@@ -1,0 +1,135 @@
+@import "../../../../scss/global";
+.DeriRiskIndicatorTile {
+
+  margin-bottom: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &.active {
+    opacity: 1;
+  }
+
+  h2 {
+    color: #333333;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: $mainFontLightBold;
+  }
+
+  h5 {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $mainFontLight;
+    color: #919191;
+  }
+
+  .indicator-text {
+    color: #6A7D39;
+    &.Short {
+      color: #7d3939;
+    }
+    &.Neutral {
+      color: #5a6f89;
+    }
+  }
+
+  i {
+    color: #6A7D39;
+  }
+
+  .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 26px solid #6A7D39;
+  }
+
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 26px solid #7d3939;
+  }
+
+  .rectangle {
+    background-color: #5a6f89;
+    width: 40px;
+    height: 18px;
+  }
+
+  .last-update {
+    color: #919191;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    display: block;
+  }
+
+  .wrapper {
+    border: 1px solid #D7D7D7;
+    padding: 10px;
+  }
+}
+
+@include media-breakpoint-only($mediaQueryTablet) {
+  .DeriRiskIndicatorTile {
+    &.tile-left {
+      padding-right: 8px;
+    }
+
+    &.tile-right {
+      padding-left: 8px;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryTablet) {
+  .DeriRiskIndicatorTile {
+    opacity: 1;
+
+    &.active {
+      .wrapper {
+        position: relative;
+        &:after,
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left:0;
+          right: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          margin: auto;
+          z-index: 1;
+        }
+
+        &:after {
+          border-color: #FFFFFF transparent transparent transparent;
+          border-width: 13px;
+          bottom: -26px;
+        }
+
+        &:before {
+          border-color: #D7D7D7 transparent transparent transparent;
+          border-width: 14px;
+          bottom: -28px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .DeriRiskIndicatorTile {
+    &.tile-left {
+      padding-right: 15px;
+    }
+
+    &.tile-right {
+      padding-left: 15px;
+    }
+  }
+}

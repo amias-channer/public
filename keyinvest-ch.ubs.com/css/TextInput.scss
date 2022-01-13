@@ -1,0 +1,79 @@
+@import '../../scss/global';
+
+.TextInput {
+  .input-group {
+    border: 1px solid #A1A1A1;
+    padding: 5px 1px;
+    background: inherit;
+    z-index: 3;
+
+    &.outline {
+      border: 2px solid #009BD2;
+    }
+  }
+
+  .input-group-text {
+    border: none;
+    background:none;
+    font-size: 8px;
+    padding-top: 18px;
+    border-left: 1px solid #AAAAAA;
+    > i {
+      color: #1C1C1C;
+    }
+  }
+
+  .input-container {
+
+    background-color: #FFFFFF;
+
+    &.disabled {
+      background-color: #e6e6e6;
+    }
+
+    span.title {
+      position: absolute;
+      color: #919191;
+      font-size: 12px;
+      line-height: 14px;
+      top: 6px;
+      left: 8px;
+      text-transform: capitalize;
+      z-index: 4;
+    }
+
+    input, textarea {
+      border: none;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 18px 8px 4px;
+      text-align: left;
+      color: #1C1C1C;
+      border-radius: 0;
+      background-color: inherit;
+      font-family: $mainFont;
+
+      &::placeholder {
+        text-transform: capitalize;
+      }
+    }
+    textarea {
+      min-height: 90px;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  input.disabled, textarea.disabled {
+    user-select : none;
+    -moz-user-select : none;
+    -webkit-user-select : none;
+    color: gray;
+    cursor: pointer;
+  }
+
+}

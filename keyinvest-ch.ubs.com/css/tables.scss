@@ -1,0 +1,136 @@
+@import './global';
+
+.table-default {
+  .sticky-table-table {
+    width: 100%;
+  }
+
+  &.table-top-borderless {
+    > tbody {
+      border-top: none;
+      > tr:first-child {
+        > td {
+          border-top: none;
+        }
+      }
+    }
+  }
+
+  > thead {
+    &:after {
+      content: "\ ";
+      display: block;
+      color: transparent;
+      height: 2px;
+    }
+  }
+
+  > thead > tr > th, .h-th {
+    font-family: $mainFontLightBold;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 6px;
+    border-left: 1px solid #D8D8D8;
+    border-top: none;
+    border-bottom: none;
+    vertical-align: bottom;
+  }
+
+  > tbody {
+    margin-top: 2px;
+    border-top: 2px solid #BEBEBE;
+  }
+
+  > tbody > tr, .b-tr {
+    border-bottom: 1px solid #D8D8D8;
+  }
+
+  > tbody tr:last-child {
+    border-bottom: none;
+    td {
+      border-bottom: 1px solid #dee2e6;
+    }
+  }
+
+  > tbody > tr > td, .b-td {
+    padding: 7px 12px;
+    font-family: $mainFontLight;
+
+    &.flyout-td {
+      padding-right: 0;
+      padding-left: 0;
+      height: 1px;
+
+      .Flyout {
+        height: 100%;
+        @-moz-document url-prefix() {
+          display: inline-table;
+          height: 100%;
+          width: 100%;
+        }
+        border-left: 1px solid #D8D8D8;
+        border-right: 1px solid #D8D8D8;
+        padding: 12px;
+      }
+    }
+  }
+}
+
+.table-container-rows-hover-effect {
+  width: calc(100% - 10px);
+  margin: 0 auto 10px auto;
+  overflow: inherit;
+  padding: 0 5px;
+
+  > table {
+    @-moz-document url-prefix() {
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    > tbody {
+      > tr {
+        &:hover {
+          box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+          cursor: pointer;
+          border-color: transparent;
+
+          > td.flyout-td .Flyout {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-html-text-component {
+  tr {
+    cursor: pointer;
+  }
+
+  td a {
+    color: #1c1c1c;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.table-default-container {
+  table  {
+    td a {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      color: #007099;
+    }
+    tr {
+      cursor: default;
+    }
+  }
+
+}

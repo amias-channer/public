@@ -1,0 +1,41 @@
+@import '../../../scss/global';
+
+.LifeCycle {
+  overflow-x: auto;
+  padding: 0 3px;
+  .inner-wrapper {
+    height: 215px;
+    min-width: 976px;
+    position: relative;
+    .timeline {
+      height: 6px;
+      width: calc(100% - 4px);
+      margin: 0 2px;
+      background-color: #585148;
+      top: 107px;
+      position: absolute;
+      &:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: #585148;
+        position: absolute;
+        left: -1px;
+        top: -7px;
+      }
+    }
+  }
+}
+
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .LifeCycle {
+    padding: 0;
+    .inner-wrapper {
+      width: 100%;
+      overflow-x: hidden;
+    }
+  }
+}
+

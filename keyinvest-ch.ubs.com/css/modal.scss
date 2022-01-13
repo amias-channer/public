@@ -1,0 +1,43 @@
+@import './global';
+
+body.modal-open #root {
+  overflow: hidden;
+}
+.modal-dialog {
+  .modal-header {
+    border-bottom: none;
+    padding: 0;
+  }
+  .modal-content {
+    padding: 25px 10px 0 10px;
+    .modal-body .CmsComponent {
+      padding-right: 15px;
+    }
+  }
+  .modal-footer {
+    display: block;
+    border-top: none;
+    padding-bottom: 0;
+  }
+
+  &.modal-full.modal-dialog {
+    min-width: 100%;
+    margin: 0;
+
+    .modal-content {
+      min-height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .modal-dialog {
+    .modal-content {
+      padding: 25px 50px 40px 50px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../../../scss/global";
+@import "src/components/Chart/chartist-settings";
+
+.ChartBar {
+  .ct-series {
+    .ct-bar {
+      stroke: #D7C2AB;
+    }
+    &:last-child {
+      .ct-bar {
+        stroke: #889761;
+      }
+    }
+  }
+  .ct-label {
+    color: #333333;
+    font-family: $mainFont;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .ct-bar-val-text {
+    color: #333333;
+    font-size: 12px;
+    line-height: 25px;
+    text-align: center;
+    font-family: $mainFont;
+  }
+}

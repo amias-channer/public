@@ -1,0 +1,12 @@
+@import "../../../scss/global";
+@include media-breakpoint-up($mediaQueryTablet) {
+  .MyWatchList {
+    .sorting-wrapper {
+      padding-left: 15px;
+    }
+
+    .ButtonFlyoutSearchBox {
+      padding-top: 2px;
+    }
+  }
+}

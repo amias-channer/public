@@ -1,0 +1,19 @@
+.MarketGenericInstrumentRowMobile {
+  button {
+
+   span {
+      display: block;
+      text-align: left;
+      color: #007099;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &.expanded {
+      height: auto;
+      background-color: #D8D8D8;
+      color: #444444;
+      padding-bottom: 21px;
+    }
+  }
+}

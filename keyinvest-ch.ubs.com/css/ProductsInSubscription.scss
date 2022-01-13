@@ -1,0 +1,114 @@
+@import "../../scss/global";
+.ProductsInSubscription {
+
+  .table-container-rows-hover-effect {
+    width: 100%;
+    overflow: auto;
+    margin: 0;
+    padding: 1px;
+  }
+
+  h1 {
+    font-size: 30px;
+    color:#1C1C1C;
+    font-family: $mainFontLight;
+    font-weight: normal;
+    padding-bottom: 22px;
+    margin-bottom: 0;
+  }
+
+  .Tabs .btn-wrapper .btn {
+    line-height: 22px;
+    &.active {
+      background-color: #D8D8D8;
+      color: #1C1C1C;
+      border: 1px solid #D8D8D8;
+    }
+  }
+
+  .products-in-subscription-table {
+
+    > thead > tr > th > span {
+      display: block;
+    }
+
+    > thead > tr > th:first-child {
+      min-width: 150px;
+    }
+
+    .termsheet-link {
+      text-align: center;
+
+      .icon-pdf {
+        font-size: 25px;
+        z-index: 99999;
+      }
+    }
+  }
+
+  .expanded-content {
+    color: #007099;
+    font-size: 14px;
+    line-height: 16px;
+
+    .expanded-content-title {
+      margin-top: 8px;
+      margin-bottom: 5px;
+      padding-left: 10px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid #EEEEEE;
+    }
+
+    .expanded-content-body {
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+          padding-top: 5px;
+          padding-bottom: 11px;
+          border-bottom: 1px solid #EEEEEE;
+        }
+      }
+    }
+
+    .Icon {
+      color: #000;
+      margin-right: 18px;
+      margin-left: 6px;
+      font-size: 15px;
+    }
+  }
+
+  .downloadable-documents {
+    margin-top: 5px;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      li {
+        font-size: 14px;
+        .Icon {
+          color: #000000;
+          margin-right: 4px;
+          font-size: 16px;
+        }
+
+        padding: 11px 0;
+        text-align: left;
+      }
+    }
+  }
+  span.highlight {
+    color: #EF1010;
+  }
+}
+
+@include media-breakpoint-up($mediaQueryNotebook) {
+  .ProductsInSubscription {
+    h1 {
+      padding-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../scss/global';
+
+.ArrowedLink {
+  color: $ubs-link;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $mainFont;
+  .link-icon {
+    font-size: 11px;
+    font-weight: bolder;
+  }
+}

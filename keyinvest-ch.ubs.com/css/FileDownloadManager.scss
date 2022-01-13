@@ -1,0 +1,12 @@
+@import '../../scss/global';
+
+.FileDownloadManager {
+  margin: 0 auto;
+  padding: 10px 0 0 20px;
+  background-color: #F9F9F9;
+  border-bottom: 1px solid #FFF;
+  max-width: 620px;
+  &.fixed-bottom {
+    left: 0;
+  }
+}

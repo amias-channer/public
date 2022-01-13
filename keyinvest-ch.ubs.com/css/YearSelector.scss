@@ -1,0 +1,53 @@
+@import '../../../../../scss/global';
+
+$items-per-row: 5;
+$column-width: percentage(1 / $items-per-row);
+
+.YearSelector {
+  .grid-calendar {
+    .grid-cell {
+      width: $column-width;
+    }
+  }
+
+
+  .swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -17px;
+    margin-left: -2px;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    background-size: 50px 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 1;
+
+    &.swiper-button-disabled {
+      opacity: 0;
+    }
+
+    &:before {
+      background-image: none;
+      content: "\e910";
+      font-family: $iconFont;
+      color: $black;
+      font-size: 8px;
+      line-height: 35px;
+      margin: 0;
+    }
+  }
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 0;
+    left: auto;
+  }
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 0;
+    right: auto;
+    &:before {
+      content: "\e90e";
+    }
+  }
+
+}

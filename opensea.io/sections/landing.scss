@@ -1,0 +1,177 @@
+@import "../variables";
+
+$asset-type-height: 330px;
+$asset-stat-height: 300px;
+$asset-border: solid 1px #99cfde;
+
+.Partners {
+  width: 100%;
+  height: 180px;
+  background-color: #007ea8;
+  text-align: center;
+  font-size: 27px;
+
+  .Partners_content {
+    padding: 25px 10px;
+    opacity: 0.5;
+  }
+
+  p {
+    margin: 0px;
+  }
+
+  .y-combinator {
+    position: relative;
+    width: 270px;
+    margin: 0 auto;
+
+    color: white;
+    font-size: 35px;
+  }
+}
+
+.AssetTypeStatistics {
+  overflow: hidden;
+
+  .card {
+    border-radius: $border-radius !important;
+  }
+
+  .asset_item {
+    height: $asset-stat-height;
+    background-color: #d8f5ff;
+    text-align: center;
+    border-right: $asset-border;
+    position: relative;
+
+    img {
+      width: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+    }
+
+    h3 {
+      color: $assets-blue;
+      font-size: 24px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .asset_item-stat,
+  .asset_item-graph {
+    text-align: center;
+    color: #7fa8b5;
+    font-size: 16px;
+    border-bottom: solid 1px $grey;
+    width: 100%;
+
+    h6 {
+      margin-top: 15px;
+    }
+
+    .asset_item-stat--main {
+      color: $assets-blue;
+      font-size: 22px;
+      margin: 15px 5px;
+    }
+  }
+
+  .asset_item-graph {
+    height: $asset-stat-height;
+    position: relative;
+    border-left: solid 1px $grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 250px;
+    }
+  }
+}
+
+.AssetTypePreview {
+  display: inline;
+
+  .card {
+    border-radius: $border-radius !important;
+  }
+
+  .asset_preview {
+    display: inline-block;
+    width: 230px;
+    height: $asset-type-height;
+    margin-right: 15px;
+    position: relative;
+
+    img {
+      width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -78%);
+    }
+
+    .asset_preview-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: auto;
+      height: 28%;
+      text-align: center;
+      background: #e3f2ff;
+      color: $assets-blue;
+
+      .asset_preview-name {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 20px;
+        margin: 5px 10px;
+      }
+
+      .asset_preview-sub {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) and (min-width: 601px) {
+  .asset_item {
+    h3 {
+      font-size: 1.4rem !important;
+    }
+  }
+
+  .asset_item-stat--main {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .AssetTypeStatistics {
+    .asset_item {
+      height: 114px;
+      overflow: hidden;
+      border-bottom: $asset-border;
+
+      img {
+        width: 16%;
+        left: 50%;
+        transform: translate(-50%, -90%);
+      }
+    }
+  }
+}

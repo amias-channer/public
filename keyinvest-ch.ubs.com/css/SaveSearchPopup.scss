@@ -1,0 +1,22 @@
+.SaveSearchPopup {
+  .modal-dialog {
+    max-width: 800px;
+    margin-top: 0;
+  }
+  .save-container {
+    border: 1px solid #D8D8D8;
+    padding: 10px;
+  }
+  .search-name-input {
+    .input-group {
+      padding: 0;
+      border: 0;
+      input {
+        padding: 0 10px;
+        line-height: 19px;
+        font-size: 16px;
+        height: 27px;
+      }
+    }
+  }
+}

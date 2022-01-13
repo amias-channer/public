@@ -1,0 +1,427 @@
+@import "../variables";
+
+.card-light {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+}
+
+.card-inset {
+  background-color: white;
+  border-radius: 0px;
+  box-shadow: inset 0px 1px 3px rgba(0,0,0,0.4);
+}
+
+.card {
+  overflow: hidden;
+  transition: all 0.1s ease-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 5px 0 rgba(0, 0, 0, 0.12), 0 5px 1px -2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 0px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-action {
+    text-align: right;
+  }
+
+  .card-duration {
+    position: absolute;
+    font-size: 12px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.9);
+    opacity: 0.95;
+    color: #2E363B;
+    border-bottom-left-radius: 5px;
+    padding: 4px 8px;
+    line-height: 16px;
+
+    i.left {
+      margin-right: 8px;
+      font-size: 15px;
+    }
+  }
+
+  .asset_pills {
+    width: auto;
+    height: 24px;
+    position: absolute;
+    left: 10px;
+    bottom: -13px;
+    z-index: 1;
+    text-align: left;
+    overflow: hidden;
+
+    .asset_pill {
+      border: 1px solid #E2E6EF;
+      background: white;
+      border-radius: 50px;
+      color: #828282;
+      font-size: 12px;
+      padding: 2px;
+      padding-top: 3px;
+      padding-right: 7px;
+      width: auto;
+      height: 24px;
+      display: inline-block;
+      vertical-align: top;
+
+      &:nth-child(n + 2) {
+        margin-left: 5px;
+      }
+
+      .asset_pill-image {
+        position: relative;
+        display: inline-block;
+        width: 16px;
+        border-radius: 100px;
+        height: 16px;
+        vertical-align: top;
+        img {
+          display: inline-block;
+          height: inherit;
+          width:100%;
+          height: 100%;
+          max-height: 16px;
+          min-height: unset;
+
+          border-radius: 50%;
+        }
+
+      }
+
+      span {
+        margin-left: 5px;
+        position: relative;
+        top: -1px;
+        display: inline-block;
+      }
+    }
+
+    .asset_pill--name {
+      max-width: 158px;
+      
+      span {
+        white-space: nowrap;
+        max-width: 77px;
+        font-weight: 400;
+        text-overflow: ellipsis;
+        display: inline-block;
+        overflow: hidden;
+      }
+
+      @media (max-width: $bp-small) {
+        max-width:90px;
+      }
+    }
+
+    .asset_pill--white {
+      color: white;
+      border-color: white;
+    }
+
+    .asset_pill--new {
+      background: #23DC7D;
+      border-color: #23DC7D;
+
+      @media(max-width: $bp-small) {
+        span {
+          margin-left: 3px;
+        }
+      }
+    }
+
+    .asset_pill--rare {
+      background: #B04CED;
+      border: solid 1px #B04CED;
+    }
+
+    .asset_pill--veryrare {
+      background: #764CED;
+      border: solid 1px #764CED;
+    }
+
+    .asset_pill--legendary {
+      background:  #ED4CD3;
+      border: solid 1px  #ED4CD3;
+    }
+
+    .asset_pill--time {
+       background:  #F28A29;
+       border: solid 1px #F28A29;
+       padding: 3px;
+
+       i {
+         font-size: 18px;
+         vertical-align: top;
+         line-height: 1.6rem;
+         margin-right: 3px;
+       }
+    }
+
+  }
+
+  .card-price {
+    color: $blue;
+  }
+
+  .card-image {
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    // height: 90%;
+    margin: auto;
+    position: relative;
+
+    .token-id-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      text-align: center;
+      border: solid 1px #e2e2e2;
+      
+      width: 60px;
+      height: 60px;
+      color: #828282;
+
+      background-color: white;
+    }
+
+    img, .card-media {
+      height:100%;
+      max-height: 300px;
+      min-height: 188px;
+      object-fit: contain;
+    }
+    img.placeholder {
+      position: absolute;
+    }
+  }
+
+  .card-content {
+    color: #86888C!important;
+    text-align: start!important;
+    padding: 20px 13px !important;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 0;    
+
+    .card-bundle-name {
+      font-weight: normal;
+      font-size: 12px;
+      color: #2E363B;
+      width: 60%;
+      height: 30px;
+      margin-top: 0px;
+      white-space: normal;
+      text-overflow: ellipsis;
+      text-transform: none;
+      overflow: hidden;
+      line-height: 14px;
+      display: inline-block;
+    }
+
+    .asset_prices {
+      width: 43%;
+      height: 30px;
+      text-align: end;
+      padding-left: 2px;
+      line-height: 18px;
+
+      @media(max-width: $bp-small) {
+        line-height: 13px;
+      }
+
+      .price-now {
+        margin-top: -4px;
+        width: 100%;
+      }
+
+      small {
+        display: block;
+      }
+
+      div {
+        font-weight: 600;
+        color: #2E363B;
+      }
+    }
+
+  }
+}
+
+.list-card {
+  .card-image {
+    transition: width .5s ease-in-out;
+    img, .card-media {
+      transition: width .5s ease-in-out;
+      object-fit: cover;
+      width:100%;
+      // height:200px;
+    }
+  }
+}
+
+
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.horizontal-card {
+  //width: 100%;
+  background: #fff;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.Asset {
+  width: 205px;
+  margin-right: $margin-default;
+  margin-bottom: $margin-default;
+  display: inline-block;
+  .card-image {
+    img, .card-media {
+      height: 250px;
+    }
+  }
+  .card-image {
+    padding: 0;
+
+    .blue-filter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      height: 120%;
+      width: 120%;
+      background-color: rgba(50, 145, 233, 0.15);
+    }
+  }
+}
+
+.Asset {
+  float: none;
+
+  @media(max-width: $bp-tablet-small) {
+    width: 100%;
+    height: 250px;
+
+    .card {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .hit-card {
+    height: 285px;
+
+    @media(max-width: $bp-small) {
+      height: 100%;
+    }
+    .asset_pills {
+      @media(max-width: $bp-tablet-small) {
+        bottom: -15px;
+        
+        .asset_pill {
+          padding: 9px 3px;
+          padding-right: 6px;
+          height: 17px;
+  
+          .asset_pill-image {
+            bottom: 8px;
+            position: relative;
+          }
+  
+          span {
+            font-size: 10px;
+            position: relative;
+            top: -6px;
+            vertical-align: top;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-left: 5px;
+            display: inline-block;
+            width: calc(100% - 23px);
+          }
+        }
+      }
+  
+    }
+    .card-duration {
+      @media(max-width: $bp-tablet-small) {
+        padding: 5px 8px;
+  
+        i.left {
+          margin-right: 5px;
+          font-size: 15px!important; 
+        }
+      }
+    }
+    .card-image {
+      height: 77%;
+      transition: width .5s ease-in-out;
+      img, .card-media {
+        transition: width .5s ease-in-out;
+        width:100%;
+        height: 100%;
+        // height:200px;
+      }
+  
+      @media(max-width: $bp-tablet-small) {
+        height: 75%;
+  
+        img, .card-media {
+          height: 100%!important;
+          min-height: unset;
+        }
+      }
+    }
+  
+    .card-content {
+      background-color: white;
+
+      .asset_prices {
+        .last-sale {
+          @media(max-width: $bp-tablet-small) {
+            & {
+              line-height: 8px;
+            }
+          }
+        }
+      }
+  
+      @media(max-width: $bp-tablet-small) {
+        font-size:11px;
+      }
+    }
+  }
+}
+
+.last-sale {
+  @media(max-width: $bp-small) {
+    font-size: 65%;
+  }
+}

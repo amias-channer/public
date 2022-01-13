@@ -1,0 +1,32 @@
+.WethModal {
+
+  .Weth_content {
+    text-align: center;
+
+    .Weth_header {
+      font-size: 36px;
+      color: #1C1F27;
+      line-height: normal;
+      font-size: 36px;
+      text-transform: initial;
+      letter-spacing: 0.0357143em;
+    }
+  
+    p {
+      text-align: start;
+      line-height: 23px;
+      font-size: 16px;
+  
+      span {
+        color: #1C1F27;
+      }
+    }
+  
+    .close_modal {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.DeriRiskTable {
+  table {
+    td:last-child,
+    td:nth-last-child(2),
+    td:nth-last-child(3) {
+      text-align: right;
+    }
+  }
+}

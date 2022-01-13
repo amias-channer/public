@@ -1,0 +1,14 @@
+@import "../../../scss/global";
+.FilterListItem {
+  label {
+    line-height: 22px;
+    display: block;
+  }
+
+  &:focus {
+    label {
+      background: #F5F5F5;
+    }
+    outline: none;
+  }
+}

@@ -1,0 +1,25 @@
+// copy pasted from business project, but probably will be moved soon to aqueduct-web project.
+// https://bitbucket.org/revolut/revolut-biz-frontend/src/master/src/tracker/revTracker/RevTracker.ts
+export enum OBJECT_TYPES {
+  BUTTON = 'BUTTON',
+  SEARCH_BOX = 'SEARCH_BOX',
+  TEXT_BOX = 'TEXT_BOX',
+  SELECT_BOX = 'SELECT_BOX',
+  LIST_ITEM = 'LIST_ITEM',
+  PAGE = 'PAGE',
+  MODAL = 'MODAL',
+  LINK = 'LINK',
+  DOCUMENT = 'DOCUMENT',
+  SPLIT_VIEW = 'SPLIT_VIEW',
+  BANNER = 'BANNER',
+  TOAST = 'TOAST',
+  TAB = 'TAB',
+  TOGGLE = 'TOGGLE',
+  RADIO_BUTTON = 'RADIO_BUTTON',
+  DATA = 'DATA',
+  URL = 'URL',
+  HINT = 'HINT',
+  TILE = 'TILE',
+  ELEMENT = 'ELEMENT',
+  WIDGET = 'WIDGET',
+}

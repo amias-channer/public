@@ -1,0 +1,41 @@
+@import '../../../../scss/global';
+
+.DropdownField {
+  position: relative;
+  border: 1px solid #A1A1A1;
+  .StandardDropdown {
+    &.active {
+      .dropdown-head .dropdown-toggle .dropdown-toggle-placeholder {
+        color: #919191;
+        font-size: 12px;
+        line-height: 14px;
+        font-family: $mainFontLight;
+      }
+    }
+    .dropdown-head {
+      padding: 0;
+      width: 100%;
+      .dropdown-toggle {
+        min-width: auto;
+        width: 100%;
+        border: none;
+        &:hover {
+          border: none;
+        }
+        .dropdown-toggle-placeholder {
+          font-size: 16px;
+          font-family: $mainFont;
+          color: #8E959B;
+        }
+      }
+    }
+    .dropdown-menu {
+      min-width: auto;
+      width: 100%;
+      left: -4px!important;
+    }
+  }
+  &.not-valid {
+      border: 1px solid #9C3C34;
+  }
+}
